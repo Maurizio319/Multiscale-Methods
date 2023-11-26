@@ -1,0 +1,116 @@
+\section{Classical mechanics}
+
+the space is expressed in 3 dimesnions, while the time is expressed in a single indipendent dimension. From the point of view of classical mechanics, it is sufficient to know the S0 state of the system
+
+$$(\vec{q_0}, \vec{p_0}) \rightarrow (\vec{q}, \vec{p})$$
+
+where q represents the positions and p the momenta.
+\\
+three mathematical objects are fundamental
+\begin{itemize}
+    \item Universe: affine space with 4D, no origin, everything is defined in there
+    \item Time: if $t_a = t_b$ then a and b are simultaneous
+    \item Distance: separation between simultaneous events 
+    $$
+        P(a, b) = \sqrt{(a-b) (a-b)} = ||a-b||
+    $$
+\end{itemize}
+
+The Gallilean space has to remain invariant after the following transformations:
+\begin{itemize}
+    \item Unviform motion: $g_1(t, \vec{x}) = (t, \vec{x} + vt) \forall t \in R$
+    where v is a constant velocity
+    \item Invariance under translation: $g_2(t, \vec{x}) = (t + s, \vec{x} + s) \forall s \in R^3$
+    where s is a shift in time and space
+    \item Invariance under spatial rotaion: $g_3(t, \vec{x}) = (t, R\vec{x})$
+    where R is a rotation matrix applied to $\vec{x}$ such that $R: R^3 \rightarrow R^3$
+    consequently, the distances are maintained between points 
+\end{itemize}
+
+\subsection{Time intervals and time evolution}
+the evolution of the motion of a system is defined as mapping:
+$$
+\vec{x} : I \rightarrow R^n
+$$
+
+where n is the number of coordinates in the system. At each time point in the interval of time I, you can obtain the coordinates of the points.
+You can also obtain the speed and the acceleration by computing the derivatives.\\
+The image of x in the interval of time I is defined as the trajectory, which is a collection of points in all the point of I.
+a law of motion can describe the time evolution of a system.\\
+In classical mechanics, by defining a model for computing the forces, you define the system
+
+$$
+\vec{F}(\vec{x}, \dot{\vec{x}}, t) \propto \dot{\dot{x}}
+$$
+
+In the case of isolated systems, dependenceo n time should nto be present to allow the invariances written above. Also, since after a translation of the form $\vec{x} = \vec{x} + \vec{s}$ shouldn't change the description of the system (there are not objective coordinates but only relative positions). consequently, you can write that the acceleration of a system at a particular time point in a Gallilean system is in the form:
+$$
+\dot{\dot{x}}_i = \phi_i\left(({\vec{x_j} - \vec{x_i}}), ({\dot{\vec{x_j}} - \dot{\vec{x_i}}})\right)
+$$
+
+but also, because of rotational invariance
+
+$$
+\phi\left(R \vec{x}, R \vec{\dot{x}} \right) =  R \phi(\vec{x}, \dot{\vec{x}})
+$$
+
+The invariance laws are true until a force acts, and it performes a work on the system
+
+\begin{align*}
+    W(A \rightarrow B) = \int_A^B{\phi d \vec{x}} \\
+    W(A \rightarrow B \rightarrow A) = \oint{\phi d \vec{x}} &= \int_A^B{\phi d \vec{x}} + \int_B^A{\phi d \vec{x}}& \\
+    & = \int_\Sigma {\nabla \times \phi d\sigma} &\text{Gauss theorem, sigma is the surface enclosed by path} \\
+    & = - \int{\left(\nabla \times \nabla U\right) d \sigma}
+\end{align*}
+
+in the equation, if the quantity is 0, then the integral computed on the right and on the left are equal. This is real when the forces in the system are all conservative.
+
+\subsection{Lagrangian mechanics}
+it relies on the action
+\begin{align*}
+S : \text{action} = \int{[\vec{x}, \vec{x_a}, \vec{x_b}, T]}\\
+                &= \int_a^b{dt L(\vec{x, \dot{\vec{x}}, t})}
+\end{align*}
+where a and b are respectively starting and ending position. T is the time interval.\\
+The Lagrangian is calculated as $L = K - U$, where K is the kinetic energy and U the potential.
+Interestingly, the action has a minimum value when it is considered the real path.
+
+$$
+\frac{\partial S}{\partial \vec{x}}(\alpha^*) = 0
+$$
+where $\alpha^*$ is the real path
+
+The correct path is obtained through the Euler-Lagrange equation:
+
+\begin{equation}
+    \frac{\partial}{\partial t} \left(\frac{\partial L}{\partial \vec{x}}\right) = \frac{\partial L}{\partial \dot{\vec{x}}}
+\end{equation}
+
+if $\frac{\partial L}{\partial t} = 0$, then the associated conserved quantity
+$$
+\sum{q_i p_i} - L = H
+$$
+where H is the Hamiltonian, if it is conserved, the energy of the system is conserved.\\
+There are the so called Hamilton's equations.
+
+\subsection{Statistical mechanics}
+Lagrangian mechanics is for single trajectories, but not for more complicated systems, with higher degrees of freedo (N atoms in our).
+We want to define a phase space, where points are defined as $\vec{p} \vec{q}$. The calculation of a quantity A is as follows:
+$$
+A = \frac{1}{\tau} \int_{t_0}^{t_0+\tau} a(\vec{q}, \vec{p}) \, dt
+$$
+
+In the limit of $\tau \rightarrow \infty$, you define the value of the macroquantity A by taking into consideration volumes.
+
+$$
+A = \int d\vec{q} \, d\vec{p} \, \rho(\vec{q}, \vec{p}) \, a(\vec{q}, \vec{p})
+$$
+
+\begin{definition}
+    A stochastic process is said to be in an ergodic regime if an observable's ensemble average is equal to the time average.
+\end{definition}
+
+An ensemble is a set of systems identical in terms of some fundamental parameters but with different initial values
+%#TODO chiarisci meglio
+
+In the case in which N, V, E are the conserved macroquantities, then you are in a microcanonical system.
