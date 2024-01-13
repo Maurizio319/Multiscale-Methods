@@ -265,6 +265,9 @@ INPUT /home/maurizio/.miktex/texmfs/install/fonts/tfm/jknappen/ec/ecbx1440.tfm
 INPUT /home/maurizio/.miktex/texmfs/install/fonts/tfm/jknappen/ec/ecbx1200.tfm
 INPUT /home/maurizio/.miktex/texmfs/install/fonts/tfm/jknappen/ec/ecrm0700.tfm
 INPUT /home/maurizio/.miktex/texmfs/install/fonts/tfm/jknappen/ec/ecrm0500.tfm
+INPUT ./chapters/3-Model_BornHopp_Potential.tex
+INPUT ./chapters/3-Model_BornHopp_Potential.tex
+INPUT chapters/3-Model_BornHopp_Potential.tex
 INPUT principal.aux
 INPUT ./principal.out
 INPUT ./principal.out
@@ -300,5 +303,9 @@ INPUT /home/maurizio/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr7.
 INPUT /home/maurizio/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr7.pfb
 INPUT /home/maurizio/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /home/maurizio/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT /home/maurizio/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy5.pfb
+INPUT /home/maurizio/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy5.pfb
 INPUT /home/maurizio/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 INPUT /home/maurizio/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy7.pfb
+INPUT /home/maurizio/.miktex/texmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb
+INPUT /home/maurizio/.miktex/texmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb

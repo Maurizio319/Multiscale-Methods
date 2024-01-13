@@ -4,3 +4,5 @@
 \contentsline {subsection}{\numberline {1.1.1}Time intervals and time evolution}{3}{subsection.1.1.1}%
 \contentsline {subsection}{\numberline {1.1.2}Lagrangian mechanics}{4}{subsection.1.1.2}%
 \contentsline {subsection}{\numberline {1.1.3}Statistical mechanics}{4}{subsection.1.1.3}%
+\contentsline {section}{\numberline {1.2}Nature is not quantum}{5}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Born-Oppenheimer approximation}{5}{subsection.1.2.1}%

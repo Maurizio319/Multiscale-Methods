@@ -1,0 +1,49 @@
+\section{Nature is not quantum}
+Nature is quantum, but in many cases, you need classical mechanics to allow the production of simulations.
+A classical representation is wrong in principle, but allows to address the task.
+An Hamiltonian can be written like this:
+
+\begin{align*}
+    \hat{H} &= - \sum_i{\frac{\hbar}{2} \Delta_i^2} - \sum_{I}{\frac{\hbar^2 }{2M_I} \Delta_I^2} + \sum_{i,j}\frac{1}{|r_{ij}|} + \sum_{i,j}\frac{Z_i Z_j}{r_{ij}} - \sum_{i, I}{\frac{Z_I}{r_{iI}}} \\
+            &= \hat{T_r} + \hat{T_n} + \hat{U_{en}} + \hat{U_ee} + \hat{U_{nn}}
+\end{align*}
+
+This Hamiltonian can be used to compute and solve the Schrodinger equation.
+
+\subsection{Born-Oppenheimer approximation}
+it starts with defining the following ansatz:
+
+$$
+\psi = \phi(\vec{r}) \chi(\vec{R})
+$$
+
+where $\phi$ represents the function related to the electrons and $\chi$ the function related to nuclei. According to the adiabatic approximation, you can estimate the nuclei
+to move much slower than the electrons. Since the mass of an electron $m_e \sim \frac{1}{1000} M_n$, then you can assume as true that approximation, and neglige nucleus kinetics.
+Consequently, you can solve the dynamical problem through the following steps:
+
+\begin{enumerate}
+    \item Solve problem with the electrons, given that the nuclei are considered fixed
+    \item Solve the problem for the nuclei.
+\end{enumerate}
+
+Because of the previous named approximations, you can say that $\hat{T}_n$ and $U_{nn}$ are approximately = 0, since you assume that in a time interval
+the nuclei don't move. Consequently,
+
+$$
+    \hat{H} = = \hat{T_e(\vec{r})} + \hat{U_{ee}(\vec{r})} + \hat{U_{en}(\vec{r}, \vec{R})}
+$$
+
+also, you can say that
+
+$$
+    \phi(\vec{r}, \vec{R}) = \sum_k{\phi_k(\vec{r}, \vec{R}) \chi_k({\vec{R}})}
+$$
+
+then
+
+\begin{align*}
+    &\hat{H} \psi = E \psi &\\
+    &\sum_{k'}{\hat{H} \phi_{k'} \chi_{k'}} = E \sum{\phi_{k'} \chi_{k'}} &\\
+    &\sum_{k'}{<\phi_{k'}|\hat{H}|\phi_{k'}> |\chi_{k'}}> = E \sum_{k'}{<\phi_{k}|\phi_{k'}> |\chi_{k'}>} & \text{From which Kronecker delta}
+    &\sum_{k'}{<\phi_{k'}|\hat{H}|\phi_{k'}> |\chi_{k'}}> = E |\chi_{k}> & 
+\end{align*}
