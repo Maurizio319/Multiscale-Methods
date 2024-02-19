@@ -1,0 +1,79 @@
+\subsection{The Model}
+The objective was to create a polymer model with a coarse-graining resolution of 5000 bps. The region of interest was ANPEP, it had a length of 2000000 bps and was considered in human genomes. 
+The model creation was done by using code written by Marco Di Stefano.
+The total Genome length was obtained from the UCSC genome browser
+\cite{UCSCGenomeBrowser}
+.
+
+\subsubsection{The computation of the parameters for Coarse Graining}
+Both parameters for the CG model (table \ref{tab: parameters FS}) and the CG model were calculated. The number of bps wrapping around a bead in the FS method was considered to be 150, while instead the linker portion was considered to be of length 50 bps. The thickness of a bead (of a nucleosome) was taken as equal to 10 nm, while instead the default Kuhn length was set to 50 nms. The genome densities are imposed to be the same for the FS and the CG model.
+
+\begin{table}[H]
+\begin{tabular}{|l|l|c|}
+\hline
+\textbf{Property} & \textbf{Formula} & \textbf{Value}\\
+\hline
+\textbf{nuFS (DNA content of a monomer in b.)} &  & 150+50 bps\\
+\hline
+\textbf{bFS} (Diameter of a bead in nm) & & 10 nm\\
+\hline
+\textbf{lkFS} (Kuhn length of the chain  in FS) & & 50 nm \\
+\hline
+\textbf{NFS} (Number of monomers to represent the chromosome) & & 30000\\
+\hline
+\textbf{NkFS} (Number of Kuhn lengths of the chain) & & 6000\\
+\hline
+\textbf{rhoFS} (Genome density in bp/nm³) & & 0.012\\
+\hline
+\textbf{rhokFS} (Genome density in Kuhn lengths bp/nm³) & & 1.2e-05\\
+\hline
+\textbf{LFS} (Polymer contour length) & & 300000 nm\\
+\hline
+\textbf{LeFS} (Entanglement length of the chain in nm) & & 8022.22 nm\\
+\hline
+Number of monomers in a Kuhn length FS & & 5\\
+\hline
+\textbf{lkFSnuFS\_bFS} (DNA content of a Kuhn length FS) & & 1000 bp\\
+\hline
+\end{tabular}
+\label{tab: parameters FS}
+\caption{Parameters calculated for the Fine Scale (FS) model}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[H]
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Property} & \textbf{Formula} & \textbf{Value}\\
+\hline
+\textbf{nuCG (DNA content of a monomer in b.)} & \textit{const.} & 5000 bps\\
+\hline
+\textbf{bCG} (Diameter of a bead in nm) & \textit{const.} & 43.0155 nm\\
+\hline
+\textbf{lkCG} (Kuhn length of the chain  in CG) & $\sqrt{\text{lkCGnuCG\_bCG} * \text{lkFSbFS\_nuFS}}$ & 290.65 nm \\
+\hline
+\textbf{NCG} (Number of monomers to represent the chromosome) & $\frac{\text{DNA\_content}}{\nu_{CG}} \times \text{n\_copies}$& 1200\\
+\hline
+\textbf{sideCG} (size of the cubic simulation box) & $\frac{{(N_{CG} \cdot \nu_{CG} / \rho_{FS})^{1/3}}}{{b_{FS}}}
+$ & 18.4515\\
+\hline
+\textbf{NkCG} (Number of Kuhn lengths of the chain) & $\frac{N_{CG} * b_{CG}}{lk_{CG}}$ & 177.597\\
+\hline
+\textbf{rhoCG} (Genome density in bp/nm³) & \textit{const.} & 0.012\\
+\hline
+\textbf{rhokCG} (Genome density in Kuhn lengths bp/nm) & $\frac{\rho_{CG} \cdot b_{CG}}{\nu_{CG} \cdot \text{lk}_{CG}}$ & $3.55194e-07$ \\
+\hline
+
+\textbf{LCG} (Polymer contour length) & $N_{CG} * b_{CG}$& 51618 nm\\
+\hline
+\textbf{LeCG} (Entanglement length of the chain in nm) & & 1379.51 nm\\
+\hline
+Number of monomers in a Kuhn length CG & & 6.75687\\
+\hline
+\textbf{lkCGnuCG\_bCG} (DNA content of a Kuhn length CG) & & 33791\\
+\hline
+\end{tabular}
+\label{tab: parameters CG}
+\caption{Parameters calculated for the coarse-grained (CG) model}
+\end{table}

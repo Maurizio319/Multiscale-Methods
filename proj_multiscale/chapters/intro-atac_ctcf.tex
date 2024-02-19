@@ -1,0 +1,13 @@
+\subsection{ATAC-sequencing and CTCF sequencing}
+ATAC-sequencing is a technology that allows for the identification of open-
+chromatin regions \cite{buenrostroTranspositionNativeChromatin2013a, grandiChromatinAccessibilityProfiling2022}. In order to work, it requires the addition of TN-5,
+a hyper-active transposase. The latter is preloaded with sequencing adapters
+\cite{grandiChromatinAccessibilityProfiling2022}
+to induce a contempourary reaction of fragmentation and ligation of the pieces released, in
+a process called segmentation. The obtained adapted fragments are then amplified and sequenced. Once the reads are generated, a peak-calling algorithm (in our case MACS-2 
+\cite{zhangModelbasedAnalysisChIPSeq2008a}
+) is used to determine which portions of the genome present ATAC peaks, and areas where there are
+significant enrichments of aligned reads with respect to the background. A significant enrich-
+ment of reads is possible only in accessible regions, which are generally also the most active
+ones and with available sites for transcription factors binding.
+CTCF data, named in chapter ..., were obtained through a classical CHIP-sequencing.
