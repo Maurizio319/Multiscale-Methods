@@ -1,0 +1,35 @@
+\begin{thebibliography}{1}
+\urlstyle{rm}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname doiprefix\endcsname\relax\def\doiprefix{DOI: }\fi
+\providecommand{\bibinfo}[2]{#2}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem{paroBiologyChromatin2021}
+\bibinfo{author}{Paro, P. D.~R.}, \bibinfo{author}{Grossniklaus, P. D.~U.},
+  \bibinfo{author}{Santoro, D.~R.} \& \bibinfo{author}{Wutz, P. D.~A.}
+\newblock \bibinfo{title}{Biology of {{Chromatin}}}.
+\newblock In \emph{\bibinfo{booktitle}{Introduction to {{Epigenetics}}
+  [{{Internet}}]}}, \doiprefix\url{10.1007/978-3-030-68670-3_1}
+  (\bibinfo{publisher}{{Springer}}, \bibinfo{year}{2021}).
+
+\bibitem{ernstChromatinstateDiscoveryGenome2017}
+\bibinfo{author}{Ernst, J.} \& \bibinfo{author}{Kellis, M.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Chromatin-state discovery and
+  genome annotation with {{ChromHMM}}}}.
+\newblock {\emph{\JournalTitle{Nature Protocols}}}
+  \textbf{\bibinfo{volume}{12}}, \bibinfo{pages}{2478--2492},
+  \doiprefix\url{10.1038/nprot.2017.124} (\bibinfo{year}{2017}).
+
+\bibitem{tanCelltypespecificPrediction3D2023}
+\bibinfo{author}{Tan, J.} \emph{et~al.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Cell-type-specific prediction of
+  {{3D}} chromatin organization enables high-throughput in silico genetic
+  screening}}.
+\newblock {\emph{\JournalTitle{Nature Biotechnology}}}
+  \textbf{\bibinfo{volume}{41}}, \bibinfo{pages}{1140--1150},
+  \doiprefix\url{10.1038/s41587-022-01612-8} (\bibinfo{year}{2023}).
+
+\end{thebibliography}

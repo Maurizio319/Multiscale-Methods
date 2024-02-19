@@ -1,4 +1,5 @@
 \documentclass[fleqn,10pt]{wlscirep}
+% \usepackage{biblatex}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{subcaption}
@@ -38,10 +39,10 @@
 
 \usepackage{xcolor}
 \definecolor{bgcode}{RGB}{230, 230, 230}  % Bkg color for code block 70 70 70
-\usepackage{minted}
-\usemintedstyle{sas}  % Style for code block
-\usepackage{lmodern}  % To allow bold font inside a code block
-\setminted{bgcolor=bgcode} 
+% \usepackage{minted}
+% \usemintedstyle{sas}  % Style for code block
+% \usepackage{lmodern}  % To allow bold font inside a code block
+% \setminted{bgcolor=bgcode} 
 %\setminted{bgcolor=bgcode, formatcom=\color{white}} 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -93,8 +94,8 @@
 
 \input{chapters/06-Glossary.tex}
 
+% \bibliographystyle{plain}
 {\footnotesize
-\bibliography{bibliography.bib}
-}
+\bibliography{bibliography.bib}}
 
 \end{document}
