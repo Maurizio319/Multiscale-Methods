@@ -15,21 +15,71 @@
   [{{Internet}}]}}, \doiprefix\url{10.1007/978-3-030-68670-3_1}
   (\bibinfo{publisher}{{Springer}}, \bibinfo{year}{2021}).
 
+\bibitem{shareefExtendedrepresentationBisulfiteSequencing2021}
+\bibinfo{author}{Shareef, S.~J.} \emph{et~al.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Extended-representation bisulfite
+  sequencing of gene regulatory elements in multiplexed samples and single
+  cells}}.
+\newblock {\emph{\JournalTitle{Nat Biotechnol}}} \textbf{\bibinfo{volume}{39}},
+  \bibinfo{pages}{1086--1094}, \doiprefix\url{10.1038/s41587-021-00910-x}
+  (\bibinfo{year}{2021}).
+
+\bibitem{kimCTCFMultifunctionalProtein2015a}
+\bibinfo{author}{Kim, S.}, \bibinfo{author}{Yu, N.-K.} \&
+  \bibinfo{author}{Kaang, B.-K.}
+\newblock \bibinfo{journal}{\bibinfo{title}{{{CTCF}} as a multifunctional
+  protein in genome regulation and gene expression}}.
+\newblock {\emph{\JournalTitle{Exp Mol Med}}} \textbf{\bibinfo{volume}{47}},
+  \bibinfo{pages}{e166--e166}, \doiprefix\url{10.1038/emm.2015.33}
+  (\bibinfo{year}{2015}).
+
+\bibitem{buenrostroTranspositionNativeChromatin2013a}
+\bibinfo{author}{Buenrostro, J.~D.}, \bibinfo{author}{Giresi, P.~G.},
+  \bibinfo{author}{Zaba, L.~C.}, \bibinfo{author}{Chang, H.~Y.} \&
+  \bibinfo{author}{Greenleaf, W.~J.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Transposition of native chromatin
+  for fast and sensitive epigenomic profiling of open chromatin,
+  {{DNA-binding}} proteins and nucleosome position}}.
+\newblock {\emph{\JournalTitle{Nat Methods}}} \textbf{\bibinfo{volume}{10}},
+  \bibinfo{pages}{1213--1218}, \doiprefix\url{10.1038/nmeth.2688}
+  (\bibinfo{year}{2013}).
+
+\bibitem{grandiChromatinAccessibilityProfiling2022}
+\bibinfo{author}{Grandi, F.~C.}, \bibinfo{author}{Modi, H.},
+  \bibinfo{author}{Kampman, L.} \& \bibinfo{author}{Corces, M.~R.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Chromatin accessibility profiling
+  by {{ATAC-seq}}}}.
+\newblock {\emph{\JournalTitle{Nat Protoc}}} \textbf{\bibinfo{volume}{17}},
+  \bibinfo{pages}{1518--1552}, \doiprefix\url{10.1038/s41596-022-00692-9}
+  (\bibinfo{year}{2022}).
+
+\bibitem{zhangModelbasedAnalysisChIPSeq2008a}
+\bibinfo{author}{Zhang, Y.} \emph{et~al.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Model-based {{Analysis}} of
+  {{ChIP-Seq}} ({{MACS}})}}.
+\newblock {\emph{\JournalTitle{Genome Biology}}} \textbf{\bibinfo{volume}{9}},
+  \bibinfo{pages}{R137}, \doiprefix\url{10.1186/gb-2008-9-9-r137}
+  (\bibinfo{year}{2008}).
+
 \bibitem{ernstChromatinstateDiscoveryGenome2017}
 \bibinfo{author}{Ernst, J.} \& \bibinfo{author}{Kellis, M.}
 \newblock \bibinfo{journal}{\bibinfo{title}{Chromatin-state discovery and
   genome annotation with {{ChromHMM}}}}.
-\newblock {\emph{\JournalTitle{Nature Protocols}}}
-  \textbf{\bibinfo{volume}{12}}, \bibinfo{pages}{2478--2492},
-  \doiprefix\url{10.1038/nprot.2017.124} (\bibinfo{year}{2017}).
+\newblock {\emph{\JournalTitle{Nat Protoc}}} \textbf{\bibinfo{volume}{12}},
+  \bibinfo{pages}{2478--2492}, \doiprefix\url{10.1038/nprot.2017.124}
+  (\bibinfo{year}{2017}).
 
 \bibitem{tanCelltypespecificPrediction3D2023}
 \bibinfo{author}{Tan, J.} \emph{et~al.}
 \newblock \bibinfo{journal}{\bibinfo{title}{Cell-type-specific prediction of
   {{3D}} chromatin organization enables high-throughput in silico genetic
   screening}}.
-\newblock {\emph{\JournalTitle{Nature Biotechnology}}}
-  \textbf{\bibinfo{volume}{41}}, \bibinfo{pages}{1140--1150},
-  \doiprefix\url{10.1038/s41587-022-01612-8} (\bibinfo{year}{2023}).
+\newblock {\emph{\JournalTitle{Nat Biotechnol}}} \textbf{\bibinfo{volume}{41}},
+  \bibinfo{pages}{1140--1150}, \doiprefix\url{10.1038/s41587-022-01612-8}
+  (\bibinfo{year}{2023}).
+
+\bibitem{UCSCGenomeBrowser}
+\bibinfo{title}{{{UCSC Genome Browser Home}}}.
+\newblock \bibinfo{howpublished}{https://genome.ucsc.edu/}.
 
 \end{thebibliography}

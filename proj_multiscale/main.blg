@@ -6,51 +6,45 @@ The style file: naturemag-doi.bst
 Reallocating 'name_of_file' (item size: 1) to 17 items.
 Database file #1: bibliography.bib
 Warning--I didn't find a database entry for "liauAdaptiveChromatinRemodeling2017a"
-Warning--I didn't find a database entry for "shareefExtendedrepresentationBisulfiteSequencing2021"
-Warning--I didn't find a database entry for "kimCTCFMultifunctionalProtein2015a"
-Warning--I didn't find a database entry for "buenrostroTranspositionNativeChromatin2013a"
-Warning--I didn't find a database entry for "grandiChromatinAccessibilityProfiling2022"
-Warning--I didn't find a database entry for "zhangModelbasedAnalysisChIPSeq2008a"
-Warning--I didn't find a database entry for "UCSCGenomeBrowser"
-You've used 3 entries,
+You've used 9 entries,
             2380 wiz_defined-function locations,
-            1031 strings with 10466 characters,
-and the built_in function-call counts, 1281 in all, are:
-= -- 87
-> -- 32
+            1066 strings with 11754 characters,
+and the built_in function-call counts, 3668 in all, are:
+= -- 254
+> -- 97
 < -- 0
-+ -- 16
-- -- 8
-* -- 165
-:= -- 143
-add.period$ -- 9
-call.type$ -- 3
-change.case$ -- 5
++ -- 49
+- -- 24
+* -- 478
+:= -- 398
+add.period$ -- 26
+call.type$ -- 9
+change.case$ -- 11
 chr.to.int$ -- 0
-cite$ -- 3
-duplicate$ -- 107
-empty$ -- 122
-format.name$ -- 11
-if$ -- 251
+cite$ -- 9
+duplicate$ -- 309
+empty$ -- 341
+format.name$ -- 32
+if$ -- 725
 int.to.chr$ -- 0
-int.to.str$ -- 3
-missing$ -- 25
-newline$ -- 25
-num.names$ -- 3
-pop$ -- 21
+int.to.str$ -- 9
+missing$ -- 74
+newline$ -- 54
+num.names$ -- 8
+pop$ -- 55
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 21
+skip$ -- 62
 stack$ -- 0
-substring$ -- 62
-swap$ -- 103
+substring$ -- 194
+swap$ -- 308
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 7
-width$ -- 4
-write$ -- 44
-(There were 7 warnings)
+while$ -- 20
+width$ -- 10
+write$ -- 111
+(There was 1 warning)
