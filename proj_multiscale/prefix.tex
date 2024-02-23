@@ -1,0 +1,102 @@
+\documentclass[fleqn,10pt]{wlscirep}
+
+\usepackage{nicefrac}
+\usepackage{xcolor,mdframed}
+\usepackage{siunitx} %to add picoseconds
+
+
+% \usepackage{biblatex}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{subcaption}
+\usepackage{tikz}
+\usepackage{geometry}
+\usepackage{nicefrac}
+\usepackage{multirow}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{titlepic}
+%\usepackage[demo]{graphicx}
+\usepackage{floatrow}
+\usepackage{epstopdf}
+\usepackage{multirow, booktabs}
+%\usepackage[table]{xcolor}
+
+\epstopdfDeclareGraphicsRule{.tga}{png}{.png}{%
+  convert #1 \OutputFile
+}
+\AppendGraphicsExtensions{.tga}
+
+ \geometry{
+ left=15mm,
+ rmargin = 2 cm
+ }
+ 
+%  add marginal notes
+\usepackage{marginnote}
+\renewcommand\marginfont{%
+    \normalfont\scriptsize\itshape
+}
+
+% to wrap figures and text
+\usepackage{graphicx}
+\usepackage{wrapfig}
+
+\usepackage{xcolor}
+\definecolor{bgcode}{RGB}{230, 230, 230}  % Bkg color for code block 70 70 70
+% \usepackage{minted}
+% \usemintedstyle{sas}  % Style for code block
+% \usepackage{lmodern}  % To allow bold font inside a code block
+% \setminted{bgcolor=bgcode} 
+%\setminted{bgcolor=bgcode, formatcom=\color{white}} 
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\renewcommand{\headrulewidth}{1pt} % Line under header
+
+% \usepackage{nameref}
+% \makeatletter
+% \newcommand*{\currentname}{\@currentlabelname}
+% \makeatother
+
+% \fancyhead[R]{\nouppercas Section \thesection\ \rightmark}} % Section number and name on the right
+
+
+\newenvironment{important}[1][]{%
+   \begin{mdframed}[%
+      backgroundcolor={red!15}, hidealllines=true,
+      skipabove=0.7\baselineskip, skipbelow=0.7\baselineskip,
+      splitbottomskip=2pt, splittopskip=4pt, #1]%
+   \makebox[0pt]{% ignore the withd of !
+      \smash{% ignor the height of !
+         \fontsize{32pt}{32pt}\selectfont% make the ! bigger
+         \hspace*{-19pt}% move ! to the left
+         \raisebox{-2pt}{% move ! up a little
+            {\color{red!70!black}\sffamily\bfseries !}% type the bold red !
+         }%
+      }%
+   }%
+}{\end{mdframed}}
+
+\newenvironment{info}[2][]{%
+   \begin{mdframed}[%
+      backgroundcolor={yellow!15}, hidealllines=true,
+      skipabove=0.7\baselineskip, skipbelow=0.7\baselineskip,
+      splitbottomskip=2pt, splittopskip=4pt, #1]%
+   \makebox[0pt]{% ignore the withd of !
+      \smash{% ignor the height of !
+         \fontsize{32pt}{32pt}\selectfont% make the ! bigger
+         \hspace*{-19pt}% move ! to the left
+         \raisebox{-2pt}{% move ! up a little
+            {\color{yellow!70!black}\sffamily\bfseries !}% type the bold red !
+         }%
+      }%
+   }%
+}{\end{mdframed}}
+
+
+
+
+\DeclareUnicodeCharacter{2212}{-}
+

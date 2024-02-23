@@ -1,75 +1,16 @@
-\documentclass[fleqn,10pt]{wlscirep}
-% \usepackage{biblatex}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{subcaption}
-\usepackage{tikz}
-\usepackage{geometry}
-\usepackage{nicefrac}
-\usepackage{multirow}
-\usepackage{gensymb}
-\usepackage{multicol}
-\usepackage{graphicx}
-\usepackage{titlepic}
-%\usepackage[demo]{graphicx}
-\usepackage{floatrow}
-\usepackage{epstopdf}
-\usepackage{multirow, booktabs}
-%\usepackage[table]{xcolor}
+\input{prefix.tex}
 
-\epstopdfDeclareGraphicsRule{.tga}{png}{.png}{%
-  convert #1 \OutputFile
-}
-\AppendGraphicsExtensions{.tga}
-
- \geometry{
- left=15mm,
- rmargin = 2 cm
- }
- 
-%  add marginal notes
-\usepackage{marginnote}
-\renewcommand\marginfont{%
-    \normalfont\scriptsize\itshape
-}
-
-% to wrap figures and text
-\usepackage{graphicx}
-\usepackage{wrapfig}
-
-\usepackage{xcolor}
-\definecolor{bgcode}{RGB}{230, 230, 230}  % Bkg color for code block 70 70 70
-% \usepackage{minted}
-% \usemintedstyle{sas}  % Style for code block
-% \usepackage{lmodern}  % To allow bold font inside a code block
-% \setminted{bgcolor=bgcode} 
-%\setminted{bgcolor=bgcode, formatcom=\color{white}} 
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\renewcommand{\headrulewidth}{1pt} % Line under header
-
-% \usepackage{nameref}
-% \makeatletter
-% \newcommand*{\currentname}{\@currentlabelname}
-% \makeatother
-
-% \fancyhead[R]{\nouppercas Section \thesection\ \rightmark}} % Section number and name on the right
-
-
-
-
-\DeclareUnicodeCharacter{2212}{-}
-
-\title{Analysis of the H164N mutant $\text{M}^{\text{pro}}$ protein in interaction with the GCP-376 ligand}
+\title{PLACE HOLDER} %#TODO change title
 \date{}
 
 \author[]{Maurizio Gilioli}
+
 
 % -----------------------------------------------------------------
 % \titlepic{\includegraphics[width=\textwidth]{Images/sfondo.dat.tga}}
 
 \begin{document}
+
 
 \maketitle
 % \begin{tikzpicture}[remember picture,overlay]
@@ -79,6 +20,8 @@
 % \end{tikzpicture}
 
 \tableofcontents
+
+\graphicspath{images/}
 
 \input{chapters/00-abstract}
 

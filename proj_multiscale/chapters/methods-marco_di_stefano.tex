@@ -1,39 +1,94 @@
+% !TeX root = ../main.tex
+
 \subsection{The Model}
-The objective was to create a polymer model with a coarse-graining resolution of 5000 bps. The region of interest was ANPEP, it had a length of 2000000 bps and was considered in human genomes. 
+The objective was to create a polymer model with a coarse-graining resolution of 5000 bp. The region of interest was ANPEP, it had a length of 2000000 bp and was considered in human genomes. 
 The model creation was done by using code written by Marco Di Stefano.
 The total Genome length was obtained from the UCSC genome browser
 \cite{UCSCGenomeBrowser}
-.
+. All the simulations were performed making use of periodic boundaries (chapter % \ref{})
+
+All the simulations were performed making use of the \textit{run\_lammps} function inserted in the TADPHYS package. The \textit{bond\_style} that was set for LAMMPS
+\cite{thompsonLAMMPSFlexibleSimulation2022}
+was the the \textit{fene} bond style whose potential is written in equation \ref{eq: FENE potential}. 
+
+The FENE potential is a finite extensible nonlinear elastic potential and is generally used for polymer models. The first term is attractive, the second Lennard-Jones (LJ) term is repulsive. The first term extends to $R_0$, the maximum extent of the bond. The second term is cutoff at $2^{\nicefrac{1}{6}} \sigma$, the minimum of the LJ potential
+\cite{thompsonLAMMPSFlexibleSimulation2022}
+. The K is an $\nicefrac{\text{energy}}{\text{distance}^2}$ measure
+
+\begin{equation} \label{eq: FENE potential}
+    E = -0.5 K R_0^2 \ln{\left[1 - \left(\frac{r}{R_0}\right)^2\right]} + 4 \epsilon \left[\left(\frac{\sigma}{r}\right)^{12} - \left(\frac{\sigma}{r}\right)^6\right] + \epsilon
+\end{equation}
+
+The following specifications were made for the FENE interactions:
+
+\begin{enumerate} %#TODO unit of measures
+    \item 30.0: Maximum force the bond can withstand. It represents the stiffness or strength of the bond.
+    \item 1.5: Maximum extension of the bond. This is the maximum distance at which the bond can be stretched.
+    \item 1.0: Equilibrium bond length. This is the ideal or equilibrium distance between the bonded particles.
+    \item 1.0: Bond force constant. It affects how quickly the potential energy increases as the bond length deviates from the equilibrium length.
+\end{enumerate}
+
+To allow for the excluded-volume interactions, a simple Lennard-Jones potential was included, written as in equation
+
+\begin{align}
+    E_{LJ} &= 4 \epsilon \left[\left(\frac{r_0}{r}\right)^{12} - \left(\frac{r_0}{r}\right)^6\right]&& r < r_c \nonumber\\
+           &= 4 \epsilon \left[\left(\frac{2^{\nicefrac{1}{6}}\sigma}{r}\right)^{12} - \left(\frac{2^{\nicefrac{1}{6}}\sigma}{r}\right)^6\right]&& r < r_c 
+\end{align}
+
+
+Three parameters are set:
+
+\begin{enumerate} %#TODO units of measure
+    \item $\epsilon$ (energy unit): 1.0, Note that $\sigma$ is defined in the LJ formula as the zero-crossing distance for the potential, not as the energy minimum at $r_0 = 2^{\nicefrac{1}{6}} \sigma$ .
+    \item $\sigma$ (distance unit): 1.0
+    \item LJ cutoff (distance unit): 1.12246152962189
+
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FOLDER 00a_coarse_graining
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{The computation of the parameters for Coarse Graining}
-Both parameters for the CG model (table \ref{tab: parameters FS}) and the CG model were calculated. The number of bps wrapping around a bead in the FS method was considered to be 150, while instead the linker portion was considered to be of length 50 bps. The thickness of a bead (of a nucleosome) was taken as equal to 10 nm, while instead the default Kuhn length was set to 50 nms. The genome densities are imposed to be the same for the FS and the CG model.
+Both parameters for the CG model (table \ref{tab: parameters FS}) and the CG model were calculated. The number of bp wrapping around a bead in the FS method was considered to be 150, while instead the linker portion was considered to be of length 50 bp (table \ref{tab: parameters FS}). The thickness of a bead (of a nucleosome) was taken as equal to 10 nm, while instead the default Kuhn length was set to 50 nms. The genome densities ($\rho_{FS} = \rho_{CG} = 0.012\; \text{bp}/\text{nm}^3$) are imposed to be the same for the FS and the CG model.
+
+%#TODO reference!
+.
+The beads and bonds have all the same length, consequently, the contour length is exactly the product between the number of beads and the size of the beads in the FS and in the CG model. The DNA content was 2000000 bp. To find the parameters for the CG model, the DNA content of the Kuhn segments ($Dlk_{CG}$) were tuned to match the desired value of DNA content in CG beads ($\nu_{CG}$).
+
+%#TODO what is c?
 
 \begin{table}[H]
+
 \begin{tabular}{|l|l|c|}
 \hline
 \textbf{Property} & \textbf{Formula} & \textbf{Value}\\
 \hline
-\textbf{nuFS (DNA content of a monomer in b.)} &  & 150+50 bps\\
+\textbf{$c$} & \textit{const.} & 19\\
 \hline
-\textbf{bFS} (Diameter of a bead in nm) & & 10 nm\\
+\textbf{$\nu_{FS}$} (DNA content of a monomer in b.) & \textit{const.} & 150+50 bp = 200 bp\\
 \hline
-\textbf{lkFS} (Kuhn length of the chain  in FS) & & 50 nm \\
+\textbf{$b_{FS}$} (Diameter of a bead in nm) & \textit{const.} & 10 nm\\
 \hline
-\textbf{NFS} (Number of monomers to represent the chromosome) & & 30000\\
+\textbf{$lk_{FS}$} (Kuhn length of the chain  in FS) & \textit{const.} & 50 nm \\
 \hline
-\textbf{NkFS} (Number of Kuhn lengths of the chain) & & 6000\\
+\textbf{$\rho_{FS}$} (Genome density) &\textit{const.} & $0.012\; \text{bp}/\text{nm}^3$ \\ %#TODO da dove?
 \hline
-\textbf{rhoFS} (Genome density in bp/nm³) & & 0.012\\
+\textbf{$N_{FS}$} (Number of monomers to represent the chromosome) & $\frac{\text{DNAcontent}}{\nu_{FS}} * \text{ncopies}$ & 30000 mon.\\
 \hline
-\textbf{rhokFS} (Genome density in Kuhn lengths bp/nm³) & & 1.2e-05\\
+\textbf{$N^k_{FS}$} (Number of Kuhn lengths of the chain) & $\frac{N_{FS} * b_{FS}}{lk_{FS}}$ & 6000 k. l.\\
 \hline
-\textbf{LFS} (Polymer contour length) & & 300000 nm\\
+\textbf{$\rho^k_{FS}$} (Genome density in Kuhn lengths) & $\frac{\rho_{FS} \cdot b_{FS}}{\nu_{FS} \cdot \text{lk}_{FS}}$& $1.2e-05$ 1/nm³\\
 \hline
-\textbf{LeFS} (Entanglement length of the chain in nm) & & 8022.22 nm\\
+\textbf{$L_{FS}$} (Polymer contour length) & $N_{FS} * b_{FS}$ & 300000 nm\\
 \hline
-Number of monomers in a Kuhn length FS & & 5\\
+\textbf{$Le_{FS}$} (Entanglement length of the chain in nm) & $lk_{FS} * \left(\frac{c}{\rho^k_{FS} * lk_{FS}^3}\right)^2$ & 8022.22 nm\\
 \hline
-\textbf{lkFSnuFS\_bFS} (DNA content of a Kuhn length FS) & & 1000 bp\\
+Number of monomers in a Kuhn length FS & $lk_{FS}/b_{FS}$ & 5 mon.\\
+\hline
+$Blk_{FS}$ (Bead content of a Kuhn length FS) & $(lk_{FS} \cdot b_{FS})/\nu_{FS}$ & 2.5 $\text{nm}^2$/bp  \\
+\hline
+$Dlk_{FS}$ (DNA content of a Kuhn length FS) & $(lk_{FS} \cdot \nu_{FS})/b_{FS}$ & 1000 $\text{bp}$\\
 \hline
 \end{tabular}
 \label{tab: parameters FS}
@@ -43,37 +98,94 @@ Number of monomers in a Kuhn length FS & & 5\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{table}[H]
-\begin{tabular}{|l|c|c|}
+    \begin{tabular}{|l|c|c|}
+        \hline
+        \textbf{Property} & \textbf{Formula} & \textbf{Value}\\
 \hline
-\textbf{Property} & \textbf{Formula} & \textbf{Value}\\
+\textbf{$c$} & \textit{const.} & 19\\
 \hline
-\textbf{nuCG (DNA content of a monomer in b.)} & \textit{const.} & 5000 bps\\
+$\nu_{CG}$ (DNA content of a monomer in b.) & \textit{const.} & 5000 bp\\
 \hline
-\textbf{bCG} (Diameter of a bead in nm) & \textit{const.} & 43.0155 nm\\
+$Dlk_{CG}$ (DNA content of a Kuhn length CG) & \textit{tuned const.} & 33791 bp\\
 \hline
-\textbf{lkCG} (Kuhn length of the chain  in CG) & $\sqrt{\text{lkCGnuCG\_bCG} * \text{lkFSbFS\_nuFS}}$ & 290.65 nm \\
+$\phi_{CG}$ (Volumetric density of the chain in the CG model for IMR90 cell-type) & \textit{const.} & $0.1$ \\ %#TODO che MEASURE ha?
 \hline
-\textbf{NCG} (Number of monomers to represent the chromosome) & $\frac{\text{DNA\_content}}{\nu_{CG}} \times \text{n\_copies}$& 1200\\
+\textbf{$\rho_{CG}$} (Genome density in bp/nm³) & \textit{const.} & $0.012\; \text{bp}/\text{nm}^3$\\
 \hline
-\textbf{sideCG} (size of the cubic simulation box) & $\frac{{(N_{CG} \cdot \nu_{CG} / \rho_{FS})^{1/3}}}{{b_{FS}}}
-$ & 18.4515\\
+$b_{CG}$ (Diameter of a bead in nm) & $\sqrt{\left(\sqrt{\frac{{Dlk_{CG}}}{{Blk_{FS}}}}\right) / \rho_{CG} \cdot \frac{6}{\pi} \cdot \phi_{CG}}
+$ & 43.0155 nm\\
 \hline
-\textbf{NkCG} (Number of Kuhn lengths of the chain) & $\frac{N_{CG} * b_{CG}}{lk_{CG}}$ & 177.597\\
+\textbf{$lk_{CG}$} (Kuhn length of the chain  in CG) & $\sqrt{Dlk_{CG} * Blk_{FS}}$ & 290.65 nm \\
 \hline
-\textbf{rhoCG} (Genome density in bp/nm³) & \textit{const.} & 0.012\\
+Number of monomers in a Kuhn length CG & $lk_{CG}/b_{CG}$ & 6.75687 mon.\\
 \hline
-\textbf{rhokCG} (Genome density in Kuhn lengths bp/nm) & $\frac{\rho_{CG} \cdot b_{CG}}{\nu_{CG} \cdot \text{lk}_{CG}}$ & $3.55194e-07$ \\
+\textbf{$N_{CG}$} (Number of monomers to represent the chromosome) & $\frac{\text{DNAcontent}}{\nu_{CG}} * \text{ncopies}$& 1200 mon.\\
+\hline
+$\text{side}_{CG}$ (size of the cubic simulation box) & $\frac{{(N_{CG} \cdot \nu_{CG} / \rho_{CG})^{1/3}}}{{b_{CG}}}
+$ & 18.4515 nm\\
+\hline
+\textbf{$N^k_{CG}$} (Number of Kuhn lengths of the chain) & $(N_{CG} * b_{CG})/{lk_{CG}}$ & 177.597 k. l.\\
+\hline
+\textbf{$\rho^k_{CG}$} (Genome density in Kuhn lengths bp/nm) & $\frac{\rho_{CG} \cdot b_{CG}}{\nu_{CG} \cdot \text{lk}_{CG}}$ & $3.55194$e-07 \nicefrac{bp}{nm} \\
 \hline
 
-\textbf{LCG} (Polymer contour length) & $N_{CG} * b_{CG}$& 51618 nm\\
+\textbf{$L_{CG}$} (Polymer contour length) & $N_{CG} * b_{CG}$& 51618 nm\\
 \hline
-\textbf{LeCG} (Entanglement length of the chain in nm) & & 1379.51 nm\\
-\hline
-Number of monomers in a Kuhn length CG & & 6.75687\\
-\hline
-\textbf{lkCGnuCG\_bCG} (DNA content of a Kuhn length CG) & & 33791\\
+\textbf{$Le_{CG}$} (Entanglement length of the chain in nm) & $lk_{CG} * \left(\frac{c}{\rho^k_{CG} * lk_{CG}^3}\right)^2$ & 1379.51 nm\\
 \hline
 \end{tabular}
 \label{tab: parameters CG}
 \caption{Parameters calculated for the coarse-grained (CG) model}
 \end{table}
+
+%#TODO how do you find the side?
+
+%#TODO inserire chromatin_volumetric_density.sh?
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CARTELLA 00_generate_initial_conformation_rosette
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Once found the coarse graining parameters, rosettes for 100 replicates were built, with a radius of 12.0 nm inside a cubic box of 300 nm. The particle radius was set to 0.5 nm. In each replicate, three equal chains were built, by setting a different random seed each time. The total number of particles in each chain was of 400 beads.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CARTELLA 01_compression_to_desired_phi_rosette
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Once the rosettes were made, a decompaction was performed starting from the compacted rosettes. A range of values of pressure was tested from 0.1 to 1 with steps every 0.1. For each replicate, a new random seed was generated and stored.
+Before attempting the decompression, the minimal energy structure was found by taking into consideration a stopping energy tolerance of $1*10^{-4}$, a stopping tolerance force of $1*10^{-6}$, a maximal number of iterations and evaluations of 100000 steps. %#TODO maybe chiarisci questo
+The process was long 1000 steps with a duration of \SI{0.001}{\pico\second}.
+and the final structure was taken as the decompressed one.
+persistence length (PL) regulates the potential produced by angle interaction.
+The optimal pressure was attested at 0.192 %#TODO what measure
+
+
+\begin{equation} \label{eq: persistence length}
+    PL = lk_{CG} / b_{CG} / 2
+\end{equation}
+
+%#TODO chiarisci faccenda angle style e angle value
+%#TODO put figures about pressure.
+
+% \begin{figure}[H]
+%     \centering
+%     % \includegraphics{images}
+%     \caption{Pressure values associated to the corresponding resulting box sides for the first 10 replicates are depicted. The target value for the side of the box is indicated by the red dashed line and is equal to 18.4515 nm (table \ref{tab: parameters CG}). The corresponding pressure was taken for the next steps. The optimal pressure was attested at 0.192} %#TODO add unit of measure
+%     \label{fig:enter-label}
+% \end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CARTELLA 02_estimate_time_conversion_rosette
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+% #TODO PUT A COMMENT TO SUMMARIZE EVERYTHING
+% \begin{important}
+%     ciao
+% \end{important}
+

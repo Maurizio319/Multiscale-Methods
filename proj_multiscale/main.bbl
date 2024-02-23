@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 \urlstyle{rm}
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{\texttt{#1}}\fi
@@ -69,6 +69,13 @@
   \bibinfo{pages}{2478--2492}, \doiprefix\url{10.1038/nprot.2017.124}
   (\bibinfo{year}{2017}).
 
+\bibitem{steveplimptonLAMMPS}
+\bibinfo{author}{{Steve Plimpton}}, \bibinfo{author}{{Aidan Thompson}},
+  \bibinfo{author}{{Stan Moore}}, \bibinfo{author}{{Axel Kohlmeyer}} \&
+  \bibinfo{author}{{Richard Berger}}.
+\newblock \bibinfo{title}{{{LAMMPS}}}.
+\newblock \bibinfo{howpublished}{https://www.lammps.org/\#gsc.tab=0}.
+
 \bibitem{tanCelltypespecificPrediction3D2023}
 \bibinfo{author}{Tan, J.} \emph{et~al.}
 \newblock \bibinfo{journal}{\bibinfo{title}{Cell-type-specific prediction of
@@ -78,8 +85,25 @@
   \bibinfo{pages}{1140--1150}, \doiprefix\url{10.1038/s41587-022-01612-8}
   (\bibinfo{year}{2023}).
 
+\bibitem{encodeprojectconsortiumIntegratedEncyclopediaDNA2012}
+\bibinfo{author}{{ENCODE Project Consortium}}.
+\newblock \bibinfo{journal}{\bibinfo{title}{An integrated encyclopedia of
+  {{DNA}} elements in the human genome}}.
+\newblock {\emph{\JournalTitle{Nature}}} \textbf{\bibinfo{volume}{489}},
+  \bibinfo{pages}{57--74}, \doiprefix\url{10.1038/nature11247}
+  (\bibinfo{year}{2012}).
+
 \bibitem{UCSCGenomeBrowser}
 \bibinfo{title}{{{UCSC Genome Browser Home}}}.
 \newblock \bibinfo{howpublished}{https://genome.ucsc.edu/}.
+
+\bibitem{thompsonLAMMPSFlexibleSimulation2022}
+\bibinfo{author}{Thompson, A.~P.} \emph{et~al.}
+\newblock \bibinfo{journal}{\bibinfo{title}{{{LAMMPS}} - a flexible simulation
+  tool for particle-based materials modeling at the atomic, meso, and continuum
+  scales}}.
+\newblock {\emph{\JournalTitle{Computer Physics Communications}}}
+  \textbf{\bibinfo{volume}{271}}, \bibinfo{pages}{108171},
+  \doiprefix\url{10.1016/j.cpc.2021.108171} (\bibinfo{year}{2022}).
 
 \end{thebibliography}
