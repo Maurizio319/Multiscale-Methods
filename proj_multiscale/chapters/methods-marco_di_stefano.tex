@@ -1,6 +1,6 @@
 % !TeX root = ../main.tex
 
-\subsection{The Model}
+\subsection{The Model} \label{chap: the model description}
 The objective was to create a polymer model with a coarse-graining resolution of 5000 bp. The region of interest was ANPEP, it had a length of 2000000 bp and was considered in human genomes. 
 The model creation was done by using code written by Marco Di Stefano.
 The total Genome length was obtained from the UCSC genome browser
@@ -30,7 +30,7 @@ The following specifications were made for the FENE interactions:
 
 To allow for the excluded-volume interactions, a simple Lennard-Jones potential was included, written as in equation
 
-\begin{align}
+\begin{align} \label{eq: lennard jones potential}
     E_{LJ} &= 4 \epsilon \left[\left(\frac{r_0}{r}\right)^{12} - \left(\frac{r_0}{r}\right)^6\right]&& r < r_c \nonumber\\
            &= 4 \epsilon \left[\left(\frac{2^{\nicefrac{1}{6}}\sigma}{r}\right)^{12} - \left(\frac{2^{\nicefrac{1}{6}}\sigma}{r}\right)^6\right]&& r < r_c 
 \end{align}
@@ -45,11 +45,14 @@ Three parameters are set:
 
 \end{enumerate}
 
+The steps performed will be described through the following dot list:
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % FOLDER 00a_coarse_graining
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{The computation of the parameters for Coarse Graining}
+\paragraph{The computation of the parameters for Coarse Graining:}
+
 Both parameters for the CG model (table \ref{tab: parameters FS}) and the CG model were calculated. The number of bp wrapping around a bead in the FS method was considered to be 150, while instead the linker portion was considered to be of length 50 bp (table \ref{tab: parameters FS}). The thickness of a bead (of a nucleosome) was taken as equal to 10 nm, while instead the default Kuhn length was set to 50 nms. The genome densities ($\rho_{FS} = \rho_{CG} = 0.012\; \text{bp}/\text{nm}^3$) are imposed to be the same for the FS and the CG model.
 
 %#TODO reference!
@@ -139,13 +142,14 @@ $ & 18.4515 nm\\
 \end{table}
 
 %#TODO how do you find the side?
-
 %#TODO inserire chromatin_volumetric_density.sh?
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % CARTELLA 00_generate_initial_conformation_rosette
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Generation of the initial conformation rosettes:}
 
 Once found the coarse graining parameters, rosettes for 100 replicates were built, with a radius of 12.0 nm inside a cubic box of 300 nm. The particle radius was set to 0.5 nm. In each replicate, three equal chains were built, by setting a different random seed each time. The total number of particles in each chain was of 400 beads.
 
@@ -154,9 +158,11 @@ Once found the coarse graining parameters, rosettes for 100 replicates were buil
 % CARTELLA 01_compression_to_desired_phi_rosette
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\paragraph{Finding the optimal pressure:}
+
 Once the rosettes were made, a decompaction was performed starting from the compacted rosettes. A range of values of pressure was tested from 0.1 to 1 with steps every 0.1. For each replicate, a new random seed was generated and stored.
 Before attempting the decompression, the minimal energy structure was found by taking into consideration a stopping energy tolerance of $1*10^{-4}$, a stopping tolerance force of $1*10^{-6}$, a maximal number of iterations and evaluations of 100000 steps. %#TODO maybe chiarisci questo
-The process was long 1000 steps with a duration of \SI{0.001}{\pico\second}.
+The process was long 1000 steps with a duration of \SI{0.001}{\pico\second}. %#TODO is it correct?
 and the final structure was taken as the decompressed one.
 persistence length (PL) regulates the potential produced by angle interaction.
 The optimal pressure was attested at 0.192 %#TODO what measure
@@ -181,6 +187,37 @@ The optimal pressure was attested at 0.192 %#TODO what measure
 % CARTELLA 02_estimate_time_conversion_rosette
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\paragraph{Decompaction and relaxation:}
+
+Once the optimal value for the pressure was found (0.192) %#TODO unit of measure
+for each replicate, other two simulations respectively $5,000,000$ and $25,000,000$ steps long were performed (not after a minimization phase). This time, the step was set to have a temporal length of \SI{0.0012}{\pico\second} In both the cases MSD values were collected every 100 steps. A frame was dumped every 5000 steps. At the end, the trajectories were collected and analyzed by computing the \textit{RMSD}, \textit{Rg} and the autocorrelation function as described in chapter \ref{chap: trajectory analysis}. For the sake of simplicity, the collection was accomplished by capturing one frame for every 50,000 steps.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CARTELLA 03_estimate_time_conversion_rosette
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Computing matrices of contact:}
+
+Once defined the step at which the simulations were considered to be at the equilibrium, some dictionaries produced with \textit{ChromHMM}
+\cite{chilledhousevibesLearningChromatinStates2015,ernstChromatinstateDiscoveryGenome2017}
+, by using CTCF and ATAC-seq data, were used to define the identity of the beads. During the next steps, we will try to select the best attraction parameters; the stepwise algorithm \ref{algo: comparison} is being currently tested. All the beads were considered to have a radius of 0.5 %#TODO unit of measure
+long. To quantify attraction potentials, a new Lennard-Jones potential was added (as defined in equation \ref{eq: lennard jones potential}). In particular, the cutoff distance $r_0$ was set to be equal to:
+
+$$
+r_0 = r_{\text{cutoff}} = \sigma * 2.5
+$$
+
+% repulsion interactions
+% $$
+% r_0 = r_{\text{cutoff}} = 3 * 2^{\nicefrac{1}{6}}
+% $$
+
+Once the interaction parameters are set, other 1 second long simulations are performed with the intention of generating contact maps. Only the interactions occurring intra-chain were considered. 
+%#TODO how and when there is a contact?
+
+
+% #TODO non so se aggiungere questo discorso. come vengono assegnate ai bin le biglie?
+% #TODO Since the real map and the CG map had different resolutions (5,000 and 10,000 respectively), the beads from the coarse gra 
 
 
 

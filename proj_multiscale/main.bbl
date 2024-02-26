@@ -69,6 +69,11 @@
   \bibinfo{pages}{2478--2492}, \doiprefix\url{10.1038/nprot.2017.124}
   (\bibinfo{year}{2017}).
 
+\bibitem{chilledhousevibesLearningChromatinStates2015}
+\bibinfo{author}{{Chilled House Vibes}}.
+\newblock \bibinfo{title}{Learning {{Chromatin States}} from {{ChIP-seq Data}}:
+  {{ChromHMM}} - {{Luca Pinello}}} (\bibinfo{year}{2015}).
+
 \bibitem{steveplimptonLAMMPS}
 \bibinfo{author}{{Steve Plimpton}}, \bibinfo{author}{{Aidan Thompson}},
   \bibinfo{author}{{Stan Moore}}, \bibinfo{author}{{Axel Kohlmeyer}} \&
@@ -105,5 +110,37 @@
 \newblock {\emph{\JournalTitle{Computer Physics Communications}}}
   \textbf{\bibinfo{volume}{271}}, \bibinfo{pages}{108171},
   \doiprefix\url{10.1016/j.cpc.2021.108171} (\bibinfo{year}{2022}).
+
+\bibitem{sumaElectricFieldDrivenTrappingPolyelectrolytes2018}
+\bibinfo{author}{Suma, A.}, \bibinfo{author}{Di~Stefano, M.} \&
+  \bibinfo{author}{Micheletti, C.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Electric-{{Field-Driven Trapping}}
+  of {{Polyelectrolytes}} in {{Needle-like Backfolded States}}}}.
+\newblock {\emph{\JournalTitle{Macromolecules}}} \textbf{\bibinfo{volume}{51}},
+  \bibinfo{pages}{4462--4470}, \doiprefix\url{10.1021/acs.macromol.8b00019}
+  (\bibinfo{year}{2018}).
+
+\bibitem{linHiCRepPyFast2021}
+\bibinfo{author}{Lin, D.}, \bibinfo{author}{Sanders, J.} \&
+  \bibinfo{author}{Noble, W.~S.}
+\newblock \bibinfo{journal}{\bibinfo{title}{{{HiCRep}}.py: Fast comparison of
+  {{Hi-C}} contact matrices in {{Python}}}}.
+\newblock {\emph{\JournalTitle{Bioinformatics}}} \textbf{\bibinfo{volume}{37}},
+  \bibinfo{pages}{2996--2997}, \doiprefix\url{10.1093/bioinformatics/btab097}
+  (\bibinfo{year}{2021}).
+
+\bibitem{yangHiCRepAssessingReproducibility2017}
+\bibinfo{author}{Yang, T.} \emph{et~al.}
+\newblock \bibinfo{journal}{\bibinfo{title}{{{HiCRep}}: Assessing the
+  reproducibility of {{Hi-C}} data using a stratum-adjusted correlation
+  coefficient}}.
+\newblock {\emph{\JournalTitle{Genome Res}}} \textbf{\bibinfo{volume}{27}},
+  \bibinfo{pages}{1939--1949}, \doiprefix\url{10.1101/gr.220640.117}
+  (\bibinfo{year}{2017}).
+
+\bibitem{HomoSapiensGenome}
+\bibinfo{title}{Homo sapiens genome assembly {{GRCh38}} - {{NCBI}} - {{NLM}}}.
+\newblock
+  \bibinfo{howpublished}{https://www.ncbi.nlm.nih.gov/datasets/genome/GCF\_000001405.26/}.
 
 \end{thebibliography}

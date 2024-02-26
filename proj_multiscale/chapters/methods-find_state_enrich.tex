@@ -1,0 +1,21 @@
+\subsection{Finding enriched states in 5 kbs long beads}
+
+To find the enriched states, the procedure in process \ref{algo: enriched states} was followed. The fold change for a state in a bin was found by taking the ratio of the proportion in the specific chromosome and in the bin. Once done that, the state with the highest fold-change was assigned to the bin.
+
+
+\begin{algorithm}
+    \caption{Finding enriched states in 5-kb long bins}\label{algo: enriched states}
+    \KwResult{Enriched states}
+    $n = 0$\;
+    \ForAll{chromosomes}{Find proportions of the states in the chromosome}
+    \ForEach{bin}{
+        Calculate bin proportions for each state
+        Compute the fold changes
+        Assign the state with the highest fold change
+    }
+    Generate .bed files
+    Visualization in IGV of regions of interests
+    \tcc{each bin is 5 kb long}
+\end{algorithm}
+
+%#TODO maybe it would be the case to talk about other possibilities

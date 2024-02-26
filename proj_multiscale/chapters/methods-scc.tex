@@ -1,0 +1,26 @@
+% !TeX root = ../main.tex
+\subsubsection{the SCC metric} \label{chap: SCC method}
+
+The SCC metric is described in the paper written by Yang and colleagues in 2017
+\cite{linHiCRepPyFast2021,yangHiCRepAssessingReproducibility2017}
+. It is a Stratum Adjusted Correlation Coefficient and can quantify the similarity between an Hi-C matrix and another.
+In general, the most common techniques to use in these situations is either to analyze the matrices by eye, or, in a certainly more precise way, to calculate a Pearson/Spearman correlation coefficient. However Hi-C data have certain unique characteristics, including domain structures (such as topological association domain (TAD) and A/B compartments) and distance dependence. Indeed, the chromatin interaction frequencies between two genomic loci, on average, decrease substantially as their genomic distance increases. Standard correlation approaches do not take into consideration these structures and may lead to incorrect conclusions
+\cite{linHiCRepPyFast2021,yangHiCRepAssessingReproducibility2017}
+.
+
+The SCC metric could be seen as a weighted Pearson coefficient, as written in equation \ref{eq: SCC}. \\
+
+\noindent Variables\\ 
+\begin{tabular}{lll} 
+    $N_k$ & $k \in K$ & Number of observations in stratum $k$; \\ 
+    $X_k$ & $k \in K$ & Observations in stratum $k$ in matrix $X$; \\
+    $Y_k$ & $k \in K$ & Observations in stratum $k$ in matrix $Y$; \\ \
+    $r_{1k} = \frac{\sum_{i=1}^{N_k}{x_{ik}y_{ik}}}{N_k} - \frac{\sum_{i=1}^{N_k}{x_{ik}} \sum_{j=1}^{N_k}{y_{jk}}}{N_k^2} = E(X_k Y_k) - E(X_k)E(Y_k)$ & $k \in K$ & Correlation between $X_k$ and $Y_k$; \\ 
+    $r_{2k} = \sqrt{\text{var}(X_k) \cdot \text{var}(Y_k)}$ & $k \in K$ & Square root of the product between the variances of $X_k$ and $Y_k$;\\
+    $\rho_k = r_{1k}/r_{2k}$ & $k \in K$ & Pearson coefficient related to bin k; \\ 
+\end{tabular}\\
+
+\noindent Formula\\ 
+\begin{align} \label{eq: SCC}
+    \rho_s =  \sum_{k=1}^K{\left(\frac{N_k r_{2k}}{\sum_{k=1}^K{N_k r_{2k}}}\right)\rho_k}
+\end{align} \\

@@ -1,4 +1,16 @@
 \subsection{ChromHMM allows the sequential characterization of DNA regions}
 ChromHMM is a tool which helps in the annotation of genomic DNA by using epigenomic information
 \cite{ernstChromatinstateDiscoveryGenome2017}
-. The way it learns chromatin states signatures by using a multivariate hidden Markov model: In each genomic position, it returns the most probable chromatinic state (segments) and other useful information, such as the emission/transition parameters of the states, the abundance of the states at the TSS (Transcriptional Starting Site), at the TES (Transcriptional Ending site), and other important portions of the genome (CPG islands, exons, genes). In the case of my study, ChromHMM was used to
+. The way it learns chromatin states signatures by using a multivariate hidden Markov model: In each genomic position, it returns the most probable chromatin state (segments) and other useful information, such as the emission/transition parameters of the states, the abundance of the states at the TSS (Transcriptional Starting Site), at the TES (Transcriptional Ending site), and other important portions of the genome (CPG islands, exons, genes)
+\cite{chilledhousevibesLearningChromatinStates2015,ernstChromatinstateDiscoveryGenome2017}. 
+
+The package works through two functions in particular, which are the following
+\cite{ernstChromatinstateDiscoveryGenome2017}
+:
+\begin{enumerate}
+    \item \textbf{\textit{BinarizeBam}}: converts a set of bam files of aligned reads into binarized data files in a specified output directory, which can then be used as input to LearnModel. When using this command, it has to be specified the bin size, that in the case of this project was set to be 200 bps.
+    \item  \textbf{\textit{LearnModel}}: takes a set of binarized data files, learns chromatin state models, and by default produces a segmentation, generates browser output with default settings, and calls OverlapEnrichment and NeighborhoodEnrichments with default settings for the specified genome assembly. A webpage is a created with links to all the files and images created
+    . 
+\end{enumerate}
+
+The results obtained are shown in chapter \ref{chap: ChromHMM results}.

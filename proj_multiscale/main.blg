@@ -1,0 +1,56 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+Reallocating 'name_of_file' (item size: 1) to 14 items.
+The style file: naturemag-doi.bst
+Reallocating 'name_of_file' (item size: 1) to 17 items.
+Database file #1: bibliography.bib
+Warning--I didn't find a database entry for "liauAdaptiveChromatinRemodeling2017a"
+Warning--I didn't find a database entry for "grosbergGiantMoleculesHere2011"
+Warning--I didn't find a database entry for "LAMMPSDocumentation"
+Warning--I didn't find a database entry for "gowersMDAnalysisPythonPackage2016"
+Warning--I didn't find a database entry for "tuckermanStatisticalMechanicsTheory2015"
+Warning--I didn't find a database entry for "robinsonIgvJsEmbeddable2020a"
+Warning--I didn't find a database entry for "robinsonIntroductionIntegrativeGenomics"
+You've used 17 entries,
+            2380 wiz_defined-function locations,
+            1136 strings with 14420 characters,
+and the built_in function-call counts, 6419 in all, are:
+= -- 441
+> -- 166
+< -- 0
++ -- 84
+- -- 41
+* -- 812
+:= -- 693
+add.period$ -- 48
+call.type$ -- 17
+change.case$ -- 19
+chr.to.int$ -- 0
+cite$ -- 17
+duplicate$ -- 549
+empty$ -- 611
+format.name$ -- 54
+if$ -- 1275
+int.to.chr$ -- 0
+int.to.str$ -- 17
+missing$ -- 130
+newline$ -- 92
+num.names$ -- 15
+pop$ -- 108
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 115
+stack$ -- 0
+substring$ -- 324
+swap$ -- 540
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 36
+width$ -- 19
+write$ -- 195
+(There were 7 warnings)
