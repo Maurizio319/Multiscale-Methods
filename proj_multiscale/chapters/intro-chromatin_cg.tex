@@ -1,7 +1,6 @@
 % !TeX root = ../main.tex
 
 \subsection{Chromatin Coarse-Graining, chromatin as a polymeric fluid}
-%#TODO maybe add something about the autocorrelation function
 
 The Young's modulus ($E$) of a chain is the extent to which a solid material (or a polymeric fluid, in this case) can be deformed
 As Robert Hook noticed, the following is valid 
@@ -35,17 +34,17 @@ The persistence length (\textit{PL}) of a polymer represents the degree of benda
     PL = lk_{CG} / b_{CG} / 2
 \end{equation}
 
-With the idea of following a "journey" on the polymer chain, the average angle that you obtain at a contour length $s$ is as in equation \ref{eq: contour length mean angle}.
+With the idea of following a "journey" on the polymer chain, the average angle that you obtain at a contour length $s$ is as in equation \ref{eq: contour length mean angle}. In general, the lower is the contour length analyzed with respect to the persistance length, the higher is the probability of having a low degree angle ($\cos{\theta} \sim 1$). On the contrary, by analyzing larger lengths, it is possible to obtain a wider range of angles.
+The concept of persistance length is used in the polymer model to compute the angle bending potentials, which is calculated as in equation \ref{eq: angle bending potential}.
 
 
 \begin{equation} \label{eq: contour length mean angle}
     \langle \cos{\theta(s)}\rangle = \exp{\left(-\frac{s}{l}\right)}
 \end{equation}
 
-%#TODO explanation assigning angle interactions in the methods
 \begin{figure}[H] 
     \centering 
     \includegraphics[width=75mm]{persistance_length.png} 
-    \caption{examplecaption} 
+    \caption{Image taken from Grosberg \textit{et al.} 2011\cite{grosbergGiantMoleculesHere2011}. Angle formed between the extremes of a contour length.} 
     \label{examplelabel} 
 \end{figure}

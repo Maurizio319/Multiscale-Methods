@@ -98,6 +98,15 @@
   \bibinfo{pages}{57--74}, \doiprefix\url{10.1038/nature11247}
   (\bibinfo{year}{2012}).
 
+\bibitem{robinsonIgvJsEmbeddable2020}
+\bibinfo{author}{Robinson, J.~T.}, \bibinfo{author}{Thorvaldsd{\'o}ttir, H.},
+  \bibinfo{author}{Turner, D.} \& \bibinfo{author}{Mesirov, J.~P.}
+\newblock \bibinfo{title}{Igv.js: An embeddable {{JavaScript}} implementation
+  of the {{Integrative Genomics Viewer}} ({{IGV}})}.
+\newblock \bibinfo{type}{Preprint}, \bibinfo{institution}{{Bioinformatics}}
+  (\bibinfo{year}{2020}).
+\newblock \doiprefix\url{10.1101/2020.05.03.075499}.
+
 \bibitem{UCSCGenomeBrowser}
 \bibinfo{title}{{{UCSC Genome Browser Home}}}.
 \newblock \bibinfo{howpublished}{https://genome.ucsc.edu/}.

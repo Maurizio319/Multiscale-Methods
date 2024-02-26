@@ -1,7 +1,7 @@
 % !TeX root = ../main.tex
 
 \subsection{The Model} \label{chap: the model description}
-The objective was to create a polymer model with a coarse-graining resolution of 5000 bp. The region of interest was ANPEP, it had a length of 2000000 bp and was considered in human genomes. 
+The objective was to create a polymer model with a coarse-graining resolution of 5000 bp.
 The model creation was done by using code written by Marco Di Stefano.
 The total Genome length was obtained from the UCSC genome browser
 \cite{UCSCGenomeBrowser}
@@ -11,41 +11,58 @@ All the simulations were performed making use of the \textit{run\_lammps} functi
 \cite{thompsonLAMMPSFlexibleSimulation2022}
 was the the \textit{fene} bond style whose potential is written in equation \ref{eq: FENE potential}. 
 
-The FENE potential is a finite extensible nonlinear elastic potential and is generally used for polymer models. The first term is attractive, the second Lennard-Jones (LJ) term is repulsive. The first term extends to $R_0$, the maximum extent of the bond. The second term is cutoff at $2^{\nicefrac{1}{6}} \sigma$, the minimum of the LJ potential
-\cite{thompsonLAMMPSFlexibleSimulation2022}
-. The K is an $\nicefrac{\text{energy}}{\text{distance}^2}$ measure
+Three types of potential energies were used to regulate the interactions between beads, those potentials are listed below:
 
-\begin{equation} \label{eq: FENE potential}
-    E = -0.5 K R_0^2 \ln{\left[1 - \left(\frac{r}{R_0}\right)^2\right]} + 4 \epsilon \left[\left(\frac{\sigma}{r}\right)^{12} - \left(\frac{\sigma}{r}\right)^6\right] + \epsilon
-\end{equation}
+\begin{itemize}
+    \item \textbf{FENE potential: }The FENE potential is a finite extensible nonlinear elastic potential and is generally used for polymer models. The first term is attractive, the second term is a Lennard-Jones (LJ) potential, and it's repulsive. The first term extends to $R_0$, the maximum extent of the bond. The second term has a cutoff set at $2^{\nicefrac{1}{6}} \sigma$, the minimum of the LJ potential.
+    \cite{thompsonLAMMPSFlexibleSimulation2022}
+    . The K is an $\frac{\text{energy}}{\text{distance}^2}$ measure
 
-The following specifications were made for the FENE interactions:
+    \begin{equation} \label{eq: FENE potential}
+        E = -0.5 K R_0^2 \ln{\left[1 - \left(\frac{r}{R_0}\right)^2\right]} + 4 \epsilon \left[\left(\frac{\sigma}{r}\right)^{12} - \left(\frac{\sigma}{r}\right)^6\right] + \epsilon
+    \end{equation}
 
-\begin{enumerate} %#TODO unit of measures
-    \item 30.0: Maximum force the bond can withstand. It represents the stiffness or strength of the bond.
-    \item 1.5: Maximum extension of the bond. This is the maximum distance at which the bond can be stretched.
-    \item 1.0: Equilibrium bond length. This is the ideal or equilibrium distance between the bonded particles.
-    \item 1.0: Bond force constant. It affects how quickly the potential energy increases as the bond length deviates from the equilibrium length.
-\end{enumerate}
+    The following specifications were made for the FENE interactions:
 
-To allow for the excluded-volume interactions, a simple Lennard-Jones potential was included, written as in equation
+    \begin{enumerate} %#TODO unit of measures
+        \item 30.0: Maximum force the bond can withstand. It represents the stiffness or strength of the bond.
+        \item 1.5: Maximum extension of the bond. This is the maximum distance at which the bond can be stretched.
+        \item 1.0: Equilibrium bond length. This is the ideal or equilibrium distance between the bonded particles.
+        \item 1.0: Bond force constant. It affects how quickly the potential energy increases as the bond length deviates from the equilibrium length.
+    \end{enumerate}
 
-\begin{align} \label{eq: lennard jones potential}
-    E_{LJ} &= 4 \epsilon \left[\left(\frac{r_0}{r}\right)^{12} - \left(\frac{r_0}{r}\right)^6\right]&& r < r_c \nonumber\\
-           &= 4 \epsilon \left[\left(\frac{2^{\nicefrac{1}{6}}\sigma}{r}\right)^{12} - \left(\frac{2^{\nicefrac{1}{6}}\sigma}{r}\right)^6\right]&& r < r_c 
-\end{align}
+    \item \textbf{Excluded-volume interactions: } To allow for the excluded-volume interactions, a simple Lennard-Jones potential was included, written as in equation %#TODO extend this part
+
+    \begin{align} \label{eq: lennard jones potential}
+        E_{LJ} &= 4 \epsilon \left[\left(\frac{r_0}{r}\right)^{12} - \left(\frac{r_0}{r}\right)^6\right]&& r < r_c \nonumber\\
+            &= 4 \epsilon \left[\left(\frac{2^{\nicefrac{1}{6}}\sigma}{r}\right)^{12} - \left(\frac{2^{\nicefrac{1}{6}}\sigma}{r}\right)^6\right]&& r < r_c 
+    \end{align}
 
 
-Three parameters are set:
+    Three parameters are set:
 
-\begin{enumerate} %#TODO units of measure
-    \item $\epsilon$ (energy unit): 1.0, Note that $\sigma$ is defined in the LJ formula as the zero-crossing distance for the potential, not as the energy minimum at $r_0 = 2^{\nicefrac{1}{6}} \sigma$ .
-    \item $\sigma$ (distance unit): 1.0
-    \item LJ cutoff (distance unit): 1.12246152962189
+    \begin{enumerate} %#TODO units of measure
+        \item $\epsilon$ (energy unit): 1.0, Note that $\sigma$ is defined in the LJ formula as the zero-crossing distance for the potential, not as the energy minimum at $r_0 = 2^{\nicefrac{1}{6}} \sigma$ .
+        \item $\sigma$ (distance unit): 1.0
+        \item LJ cutoff (distance unit): 1.12246152962189
+    \end{enumerate}
 
-\end{enumerate}
+    \item \textbf{Angle bending potentials: }The angle bending associated potentials are directly correlated with the persistence length (PL), which is calculated as in equation \ref{eq: persistence length}.
 
-The steps performed will be described through the following dot list:
+    \begin{equation} \label{eq: persistence length}
+        PL = lk_{CG} / b_{CG} / 2
+    \end{equation}
+
+    The angle potentials are given to LAMMPS and calculated setting the $K$ parameter in equation \ref{eq: angle bending potential}. The larger is the value of K, the larger is in general the potential associated to the angles.
+
+    \begin{equation} \label{eq: angle bending potential}
+        E = K[1 + \cos{(\theta)}]    
+    \end{equation}
+
+\end{itemize}
+
+
+The steps performed will be described in the following paragraphs:
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % FOLDER 00a_coarse_graining
@@ -53,7 +70,7 @@ The steps performed will be described through the following dot list:
 
 \paragraph{The computation of the parameters for Coarse Graining:}
 
-Both parameters for the CG model (table \ref{tab: parameters FS}) and the CG model were calculated. The number of bp wrapping around a bead in the FS method was considered to be 150, while instead the linker portion was considered to be of length 50 bp (table \ref{tab: parameters FS}). The thickness of a bead (of a nucleosome) was taken as equal to 10 nm, while instead the default Kuhn length was set to 50 nms. The genome densities ($\rho_{FS} = \rho_{CG} = 0.012\; \text{bp}/\text{nm}^3$) are imposed to be the same for the FS and the CG model.
+Both parameters for the fine-scale model (table \ref{tab: parameters FS}) and the CG model (table \ref{tab: parameters CG}) were calculated. The number of bp wrapping around a bead in the FS method was considered to be 150, while instead the linker portion was considered to be of length 50 bp (table \ref{tab: parameters FS}). The thickness of a bead (of a nucleosome) was taken as equal to 10 nm, while instead the default Kuhn length was set to 50 nms. The genome densities ($\rho_{FS} = \rho_{CG} = 0.012\; \text{bp}/\text{nm}^3$) are imposed to be the same for the FS and the CG model.
 
 %#TODO reference!
 .
@@ -164,13 +181,9 @@ Once the rosettes were made, a decompaction was performed starting from the comp
 Before attempting the decompression, the minimal energy structure was found by taking into consideration a stopping energy tolerance of $1*10^{-4}$, a stopping tolerance force of $1*10^{-6}$, a maximal number of iterations and evaluations of 100000 steps. %#TODO maybe chiarisci questo
 The process was long 1000 steps with a duration of \SI{0.001}{\pico\second}. %#TODO is it correct?
 and the final structure was taken as the decompressed one.
-persistence length (PL) regulates the potential produced by angle interaction.
 The optimal pressure was attested at 0.192 %#TODO what measure
 
 
-\begin{equation} \label{eq: persistence length}
-    PL = lk_{CG} / b_{CG} / 2
-\end{equation}
 
 %#TODO chiarisci faccenda angle style e angle value
 %#TODO put figures about pressure.

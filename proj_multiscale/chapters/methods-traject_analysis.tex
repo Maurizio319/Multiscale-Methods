@@ -14,62 +14,24 @@ Three types of analysis were performed (all the terms are explained in the Gloss
 
     Before performing this type of calculation, the structures were aligned to the first frame (each frame of each replicate was aligned to the first frame of their specific replicate). This type of alignment was done making use of the \textit{AlignTraj} function
     \cite{gowersMDAnalysisPythonPackage2016}
-    . In general, the smaller is the difference between two structures, the lower is the value of RMSD. The results are written in graph
+    . In general, the smaller is the difference between two structures, the lower is the value of RMSD. The results are written in graph \ref{fig:RMSD first replicate} and \ref{fig:RMSD collective replicates}.
     
-    \begin{figure}
-        \centering
-        
-        \begin{subfigure}{0.49\textwidth}
-          \includegraphics[width=\linewidth]{/home/maurizio/Documents/GitHub/3DCS/Maurizio/steps/5-extract_info_trajectories/images/rmsd_1_IMR90.png}
-          \caption{Graph representing the RMSD of the chains pertaining to the first replicate. As it is possible to see from the legend, the first, the second and the third chain are represented respectively in blue orange and green.}
-          \label{fig:RMSD first replicate}
-        \end{subfigure}
-        \hfill
-        \begin{subfigure}{0.49\textwidth}
-          \includegraphics[width=\linewidth]{/home/maurizio/Documents/GitHub/3DCS/Maurizio/steps/5-extract_info_trajectories/images/rmsd_50000_IMR90_modified.png}
-          \caption{Figure representing the collective behaviour of all the chains of all the 100 replicates. It is possible to observe a plateau at approximately $50*50000$ steps. The red dashed line represents the average value.}
-          \label{fig:RMSD collective replicates}
-        \end{subfigure}
-      
-        \caption{RMSD profiles}
-        \label{fig:RMSD figures}
-    \end{figure}
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
     \item \textbf{$R_g$}: The Radius of Gyration computed by \textit{MDanalysis} was calculated as written in equation \ref{eq: radius of gyration}. This quantity is a measure of how the mass of an object is spread out relative to a particular axis of rotation. In general, it tells "how spherical" is an object
     \cite{gowersMDAnalysisPythonPackage2016,tuckermanStatisticalMechanicsTheory2015}
-    .
+    . The results are written in graph \ref{fig:RG first replicate} and \ref{fig:RG collective replicates}.
     
 
     \begin{equation} \label{eq: radius of gyration}
         R_g = \sqrt{\frac{\sum_i{m_i \vec{r_i}^2}}{\sum_i{m_i}}}    
     \end{equation}
-    
-
-    \begin{figure}
-        \centering
-        
-        \begin{subfigure}{0.49\textwidth}
-          \includegraphics[width=\linewidth]{/home/maurizio/Documents/GitHub/3DCS/Maurizio/steps/5-extract_info_trajectories/images/radius_gyr_1_IMR90.png}
-          \caption{Graph representing the $R_g$ of the chains pertaining to the first replicate. As it is possible to see from the legend, the first, the second and the third chain are represented respectively in blue orange and green.}
-          \label{fig:RG first replicate}
-        \end{subfigure}
-        \hfill
-        \begin{subfigure}{0.49\textwidth}
-          \includegraphics[width=\linewidth]{/home/maurizio/Documents/GitHub/3DCS/Maurizio/steps/5-extract_info_trajectories/images/radius_gyr_50000_IMR90_modified.png}
-          \caption{Figure representing the collective behaviour of all the chains of all the 100 replicates. The red dashed line represents the average value.}
-          \label{fig:RG collective replicates}
-        \end{subfigure}
-      
-        \caption{$R_g$ profiles}
-        \label{fig:RG figures}
-    \end{figure}
 
 
     \item \textit{\textbf{Autocorrelation function:}} The autocorrelation function can be written as shown in equation \ref{eq: autocorrelation}
     \cite{sumaElectricFieldDrivenTrappingPolyelectrolytes2018}
-    . Results are shown in %#TODO aggiungi immagine
+    . The results are shown in graphs \ref{fig:autocorrelation function first replicate} and \ref{fig:autocorrelation function collective replicates}. 
     
     \begin{equation} \label{eq: autocorrelation}
       r_k = \frac{C_k}{C_0} = \frac{\frac{1}{M} \sum_{t = 1}^{M - k}{(A_t - \bar{A})(A_{t+k} - \bar{A})}}{\frac{1}{M} \sum_{t = 1}^{M - k}{(A_t - \bar{A})^2}}
@@ -77,5 +39,8 @@ Three types of analysis were performed (all the terms are explained in the Gloss
 
     Where $C_k = \frac{1}{M} \sum_{t = 1}^{M - k}{(A_t - \bar{A})(A_{t+k} - \bar{A})}$ is the autocovariance function at lag k and $C_0 = \frac{1}{M} \sum_{t = 1}^{M - k}{(A_t - \bar{A})^2}$ is the variance function.
     
-
 \end{enumerate}
+
+%#TODO PCA analysis
+% \subsubsection{PCA analysis}
+% A PCA analysis was performed for the trajectories with the aim of finding
