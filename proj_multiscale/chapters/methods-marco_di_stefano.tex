@@ -1,41 +1,55 @@
 % !TeX root = ../main.tex
 
 \subsection{The Model} \label{chap: the model description}
-The objective was to create a polymer model with a coarse-graining resolution of 5000 bp.
-The model creation was done by using code written by Marco Di Stefano.
-The total Genome length was obtained from the UCSC genome browser
-\cite{UCSCGenomeBrowser}
-. All the simulations were performed making use of periodic boundaries (chapter % \ref{})
+The model creation was done by using and modifying scripts and code written by Marco Di Stefano. The code included in the TADphys unpublished package.
+The objective of the modelling process was to create a polymer model with a coarse-graining resolution of 5000 bp. To start the analysis, some information about the IMR90 cell type had to be collected. For example, the total genome length had to be specified, and was obtained by consulting the UCSC genome browser
+\cite{UCSCGenomeBrowser}.
+Secondly, the dimension of the nucleus and the nucleolus of the IMR90 cell had to be specified. By consulting some accessible literature
+\cite{ehlerHumanFoetalLung1996,ingramHiCImplementationGenome2020,maiserSuperresolutionSituAnalysis2020},
+I came to the conclusion that they have respectively a dimension of \SI{520}{\micro\metre} and \SI{100}{\micro\metre}.\\
 
-All the simulations were performed making use of the \textit{run\_lammps} function inserted in the TADPHYS package. The \textit{bond\_style} that was set for LAMMPS
-\cite{thompsonLAMMPSFlexibleSimulation2022}
-was the the \textit{fene} bond style whose potential is written in equation \ref{eq: FENE potential}. 
+With the aim of being able to make statistics out of the generated data, it was decided to make simulations for 100 replicates. Additionally, three chains were simulated at the same time within each repetition. Everything was included inside a box with a volume written in table \ref{tab: parameters CG}.
 
-Three types of potential energies were used to regulate the interactions between beads, those potentials are listed below:
+%  
+% The \textit{bond\_style} that was set for the LAMMPS simulations, and that regulates the interactions generated among beads
+% \cite{thompsonLAMMPSFlexibleSimulation2022},
+% was the the \textit{fene} bond style, whose potential is written in equation \ref{eq: FENE potential}. 
+
+All the simulations were performed making use of the \textit{run\_lammps} function included in the TADphys package.
+Three types of potential energies were used to regulate the interactions between beads, and those are presented in the list below:
 
 \begin{itemize}
-    \item \textbf{FENE potential: }The FENE potential is a finite extensible nonlinear elastic potential and is generally used for polymer models. The first term is attractive, the second term is a Lennard-Jones (LJ) potential, and it's repulsive. The first term extends to $R_0$, the maximum extent of the bond. The second term has a cutoff set at $2^{\nicefrac{1}{6}} \sigma$, the minimum of the LJ potential.
-    \cite{thompsonLAMMPSFlexibleSimulation2022}
-    . The K is an $\frac{\text{energy}}{\text{distance}^2}$ measure
+    \item \textbf{FENE potential: }The FENE potential is a finite extensible nonlinear elastic potential energy and is generally used for polymer models
+    \cite{steveplimptonLAMMPS,thompsonLAMMPSFlexibleSimulation2022}. 
+    The first term in the equation is attractive, whilst the second term is repulsive and is a Lennard-Jones (LJ) potential. The first term extends until $R_0$, the maximum extent of the bond. The second term has a cutoff set at $2^{\nicefrac{1}{6}} \sigma$, were the value found is the minimum of the LJ potential
+    \cite{thompsonLAMMPSFlexibleSimulation2022}. 
+    Indeed, in that position, $V_{\text{LJ}} = -\epsilon$.
+    The K presented in the equation \ref{eq: FENE potential} is a $\frac{\text{energy}}{\text{distance}^2}$ measure.
 
     \begin{equation} \label{eq: FENE potential}
         E = -0.5 K R_0^2 \ln{\left[1 - \left(\frac{r}{R_0}\right)^2\right]} + 4 \epsilon \left[\left(\frac{\sigma}{r}\right)^{12} - \left(\frac{\sigma}{r}\right)^6\right] + \epsilon
     \end{equation}
 
-    The following specifications were made for the FENE interactions:
-
+    The following specifications were made to include the FENE interactions:
     \begin{enumerate} %#TODO unit of measures
-        \item 30.0: Maximum force the bond can withstand. It represents the stiffness or strength of the bond.
-        \item 1.5: Maximum extension of the bond. This is the maximum distance at which the bond can be stretched.
-        \item 1.0: Equilibrium bond length. This is the ideal or equilibrium distance between the bonded particles.
-        \item 1.0: Bond force constant. It affects how quickly the potential energy increases as the bond length deviates from the equilibrium length.
+        \item $K = 30.0$: It weights the contributions deriving from the attractive part of the equation. It represents the stiffness or strength of the bond.
+        \item $R_0 = 1.5$: Maximum extension of the bond. This is the maximum distance at which the bond can be stretched.
+        \item $\epsilon = 1.0$: This term scales the LJ potential contribution.
+        \item $\sigma = 1.0$: Equilibrium bond length for the LJ potential. This is the ideal or equilibrium distance between the bonded particles.
     \end{enumerate}
 
-    \item \textbf{Excluded-volume interactions: } To allow for the excluded-volume interactions, a simple Lennard-Jones potential was included, written as in equation %#TODO extend this part
+    % \begin{enumerate} %#TODO unit of measures
+    %     \item $30.0\; N$: Maximum force the bond can withstand. It represents the stiffness or strength of the bond.
+    %     \item $1.5$: Maximum extension of the bond. This is the maximum distance at which the bond can be stretched.
+    %     \item $1.0$: Equilibrium bond length. This is the ideal or equilibrium distance between the bonded particles.
+    %     \item $1.0$: Bond force constant. It affects how quickly the potential energy increases as the bond length deviates from the equilibrium length.
+    % \end{enumerate}
+
+    \item \textbf{Excluded-volume interactions: } To allow for the excluded-volume interactions, a simple Lennard-Jones potential was included, written as in equation \ref{eq: lennard jones potential} %#TODO extend this part
 
     \begin{align} \label{eq: lennard jones potential}
         E_{LJ} &= 4 \epsilon \left[\left(\frac{r_0}{r}\right)^{12} - \left(\frac{r_0}{r}\right)^6\right]&& r < r_c \nonumber\\
-            &= 4 \epsilon \left[\left(\frac{2^{\nicefrac{1}{6}}\sigma}{r}\right)^{12} - \left(\frac{2^{\nicefrac{1}{6}}\sigma}{r}\right)^6\right]&& r < r_c 
+            &= 4 \epsilon \left[\left(\frac{2^{\frac{1}{6}}\sigma}{r}\right)^{12} - \left(\frac{2^{\frac{1}{6}}\sigma}{r}\right)^6\right]&& r < r_c 
     \end{align}
 
 
@@ -61,6 +75,8 @@ Three types of potential energies were used to regulate the interactions between
 
 \end{itemize}
 
+
+. All the simulations were performed making use of periodic boundaries (chapter % \ref{})
 
 The steps performed will be described in the following paragraphs:
 

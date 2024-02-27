@@ -1,12 +1,11 @@
 \subsection{Finding enriched states in 5 kbs long beads}
 
-To find the enriched states, the procedure in process \ref{algo: enriched states} was followed. The fold change for a state in a bin was calculated by taking the ratio between the proportion in the bin and the proportion in the chromosome. Once done that, the state with the highest fold-change was assigned to the bin. Visual investigation was performed afterwards to check the quality of the evaluation procedure making use of the IGV visualization software
+To find the enriched states in 5 kb long bins, the procedure described in process \ref{algo: enriched states} was followed. The fold change of a state within a bin was determined by dividing the proportion in the bin by the corresponding proportion in the chromosome. Once done that, the state with the highest fold-change was assigned to the bin. A visual investigation was performed afterwards to check the quality of the "binarization" procedure making use of the IGV visualization software
 \cite{robinsonIgvJsEmbeddable2020}.
 
 \begin{algorithm}
     \caption{Finding enriched states in 5-kb long bins}\label{algo: enriched states}
     \KwResult{Enriched states}
-    $n = 0$\;
     \ForAll{chromosomes}{Find proportions of the states in the chromosome}
     \ForEach{bin}{
         Calculate bin proportions for each state\\

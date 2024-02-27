@@ -33,6 +33,15 @@
   \bibinfo{pages}{e166--e166}, \doiprefix\url{10.1038/emm.2015.33}
   (\bibinfo{year}{2015}).
 
+\bibitem{hsiehEnhancerPromoterInteractions2022}
+\bibinfo{author}{Hsieh, T.-H.~S.} \emph{et~al.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Enhancer--promoter interactions and
+  transcription are largely maintained upon acute loss of {{CTCF}}, cohesin,
+  {{WAPL}} or {{YY1}}}}.
+\newblock {\emph{\JournalTitle{Nat Genet}}} \textbf{\bibinfo{volume}{54}},
+  \bibinfo{pages}{1919--1932}, \doiprefix\url{10.1038/s41588-022-01223-8}
+  (\bibinfo{year}{2022}).
+
 \bibitem{buenrostroTranspositionNativeChromatin2013a}
 \bibinfo{author}{Buenrostro, J.~D.}, \bibinfo{author}{Giresi, P.~G.},
   \bibinfo{author}{Zaba, L.~C.}, \bibinfo{author}{Chang, H.~Y.} \&
@@ -61,6 +70,14 @@
   \bibinfo{pages}{R137}, \doiprefix\url{10.1186/gb-2008-9-9-r137}
   (\bibinfo{year}{2008}).
 
+\bibitem{shahChromatinImmunoprecipitationSequencing2009}
+\bibinfo{author}{Shah, A.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Chromatin immunoprecipitation
+  sequencing ({{ChIP-Seq}}) on the {{SOLiD}}™ system}}.
+\newblock {\emph{\JournalTitle{Nat Methods}}} \textbf{\bibinfo{volume}{6}},
+  \bibinfo{pages}{ii--iii}, \doiprefix\url{10.1038/nmeth.f.247}
+  (\bibinfo{year}{2009}).
+
 \bibitem{ernstChromatinstateDiscoveryGenome2017}
 \bibinfo{author}{Ernst, J.} \& \bibinfo{author}{Kellis, M.}
 \newblock \bibinfo{journal}{\bibinfo{title}{Chromatin-state discovery and
@@ -74,12 +91,16 @@
 \newblock \bibinfo{title}{Learning {{Chromatin States}} from {{ChIP-seq Data}}:
   {{ChromHMM}} - {{Luca Pinello}}} (\bibinfo{year}{2015}).
 
-\bibitem{steveplimptonLAMMPS}
-\bibinfo{author}{{Steve Plimpton}}, \bibinfo{author}{{Aidan Thompson}},
-  \bibinfo{author}{{Stan Moore}}, \bibinfo{author}{{Axel Kohlmeyer}} \&
-  \bibinfo{author}{{Richard Berger}}.
-\newblock \bibinfo{title}{{{LAMMPS}}}.
-\newblock \bibinfo{howpublished}{https://www.lammps.org/\#gsc.tab=0}.
+\bibitem{bucklePolymerSimulationsHeteromorphic2018}
+\bibinfo{author}{Buckle, A.}, \bibinfo{author}{Brackley, C.~A.},
+  \bibinfo{author}{Boyle, S.}, \bibinfo{author}{Marenduzzo, D.} \&
+  \bibinfo{author}{Gilbert, N.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Polymer {{Simulations}} of
+  {{Heteromorphic Chromatin Predict}} the {{3D Folding}} of {{Complex Genomic
+  Loci}}}}.
+\newblock {\emph{\JournalTitle{Molecular Cell}}} \textbf{\bibinfo{volume}{72}},
+  \bibinfo{pages}{786--797.e11}, \doiprefix\url{10.1016/j.molcel.2018.09.016}
+  (\bibinfo{year}{2018}).
 
 \bibitem{tanCelltypespecificPrediction3D2023}
 \bibinfo{author}{Tan, J.} \emph{et~al.}
@@ -90,6 +111,13 @@
   \bibinfo{pages}{1140--1150}, \doiprefix\url{10.1038/s41587-022-01612-8}
   (\bibinfo{year}{2023}).
 
+\bibitem{steveplimptonLAMMPS}
+\bibinfo{author}{{Steve Plimpton}}, \bibinfo{author}{{Aidan Thompson}},
+  \bibinfo{author}{{Stan Moore}}, \bibinfo{author}{{Axel Kohlmeyer}} \&
+  \bibinfo{author}{{Richard Berger}}.
+\newblock \bibinfo{title}{{{LAMMPS}}}.
+\newblock \bibinfo{howpublished}{https://www.lammps.org/\#gsc.tab=0}.
+
 \bibitem{encodeprojectconsortiumIntegratedEncyclopediaDNA2012}
 \bibinfo{author}{{ENCODE Project Consortium}}.
 \newblock \bibinfo{journal}{\bibinfo{title}{An integrated encyclopedia of
@@ -97,6 +125,31 @@
 \newblock {\emph{\JournalTitle{Nature}}} \textbf{\bibinfo{volume}{489}},
   \bibinfo{pages}{57--74}, \doiprefix\url{10.1038/nature11247}
   (\bibinfo{year}{2012}).
+
+\bibitem{ATACseqUnreplicatedENCODE}
+\bibinfo{title}{{{ATAC-seq}} (unreplicated) -- {{ENCODE}}}.
+\newblock
+  \bibinfo{howpublished}{https://www.encodeproject.org/pipelines/ENCPL344QWT/}.
+
+\bibitem{yanReadsInsightHitchhiker2020}
+\bibinfo{author}{Yan, F.}, \bibinfo{author}{Powell, D.~R.},
+  \bibinfo{author}{Curtis, D.~J.} \& \bibinfo{author}{Wong, N.~C.}
+\newblock \bibinfo{journal}{\bibinfo{title}{From reads to insight: A
+  hitchhiker's guide to {{ATAC-seq}} data analysis}}.
+\newblock {\emph{\JournalTitle{Genome Biology}}} \textbf{\bibinfo{volume}{21}},
+  \bibinfo{pages}{22}, \doiprefix\url{10.1186/s13059-020-1929-3}
+  (\bibinfo{year}{2020}).
+
+\bibitem{TranscriptionFactorChIPseq}
+\bibinfo{title}{Transcription {{Factor ChIP-seq Data Standards}} and
+  {{Processing Pipeline}} -- {{ENCODE}}}.
+\newblock
+  \bibinfo{howpublished}{https://www.encodeproject.org/chip-seq/transcription\_factor/}.
+
+\bibitem{HomoSapiensGenome}
+\bibinfo{title}{Homo sapiens genome assembly {{GRCh38}} - {{NCBI}} - {{NLM}}}.
+\newblock
+  \bibinfo{howpublished}{https://www.ncbi.nlm.nih.gov/datasets/genome/GCF\_000001405.26/}.
 
 \bibitem{robinsonIgvJsEmbeddable2020}
 \bibinfo{author}{Robinson, J.~T.}, \bibinfo{author}{Thorvaldsd{\'o}ttir, H.},
@@ -110,6 +163,32 @@
 \bibitem{UCSCGenomeBrowser}
 \bibinfo{title}{{{UCSC Genome Browser Home}}}.
 \newblock \bibinfo{howpublished}{https://genome.ucsc.edu/}.
+
+\bibitem{ehlerHumanFoetalLung1996}
+\bibinfo{author}{Ehler, E.}, \bibinfo{author}{Babiychuk, E.} \&
+  \bibinfo{author}{Draeger, A.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Human foetal lung ({{IMR-90}})
+  cells: {{Myofibroblasts}} with smooth muscle-like contractile properties}}.
+\newblock {\emph{\JournalTitle{Cell Motil.}}} \textbf{\bibinfo{volume}{34}},
+  \bibinfo{pages}{288--298},
+  \doiprefix\url{10.1002/(SICI)1097-0169(1996)34:4<288::AID-CM4>3.0.CO;2-4}
+  (\bibinfo{year}{1996}).
+
+\bibitem{ingramHiCImplementationGenome2020}
+\bibinfo{author}{Ingram, S.~P.} \emph{et~al.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Hi-{{C}} implementation of genome
+  structure for in silico models of radiation-induced {{DNA}} damage}}.
+\newblock {\emph{\JournalTitle{PLOS Computational Biology}}}
+  \textbf{\bibinfo{volume}{16}}, \bibinfo{pages}{e1008476},
+  \doiprefix\url{10.1371/journal.pcbi.1008476} (\bibinfo{year}{2020}).
+
+\bibitem{maiserSuperresolutionSituAnalysis2020}
+\bibinfo{author}{Maiser, A.} \emph{et~al.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Super-resolution in situ analysis
+  of active ribosomal {{DNA}} chromatin organization in the nucleolus}}.
+\newblock {\emph{\JournalTitle{Sci Rep}}} \textbf{\bibinfo{volume}{10}},
+  \bibinfo{pages}{7462}, \doiprefix\url{10.1038/s41598-020-64589-x}
+  (\bibinfo{year}{2020}).
 
 \bibitem{thompsonLAMMPSFlexibleSimulation2022}
 \bibinfo{author}{Thompson, A.~P.} \emph{et~al.}
@@ -146,10 +225,5 @@
 \newblock {\emph{\JournalTitle{Genome Res}}} \textbf{\bibinfo{volume}{27}},
   \bibinfo{pages}{1939--1949}, \doiprefix\url{10.1101/gr.220640.117}
   (\bibinfo{year}{2017}).
-
-\bibitem{HomoSapiensGenome}
-\bibinfo{title}{Homo sapiens genome assembly {{GRCh38}} - {{NCBI}} - {{NLM}}}.
-\newblock
-  \bibinfo{howpublished}{https://www.ncbi.nlm.nih.gov/datasets/genome/GCF\_000001405.26/}.
 
 \end{thebibliography}

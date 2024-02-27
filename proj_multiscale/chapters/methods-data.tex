@@ -1,7 +1,7 @@
 \subsection{Data used for the project} \label{methods: data used}
-The data of CTCF and ATAC for the IMR90 cell line included in the paper written by Jimin and colleagues in 2023
-\cite{tanCelltypespecificPrediction3D2023}
-were used for the project (see table \ref{tab:data}).
+The data of CTCF and ATAC for the IMR90 cell line, included in the paper written by Jimin and colleagues in 2023
+\cite{tanCelltypespecificPrediction3D2023},
+were used for the project (see table \ref{tab:data}). It was decided to use the same data of \textit{Origami} to allow a better comparison between its predictions and those produced by our modelling.
 
 \begin{table}[H]
     \centering
@@ -16,4 +16,19 @@ were used for the project (see table \ref{tab:data}).
     \label{tab:data}
 \end{table}
 
-The analyzed region included ANPEP, and it was taken from the $89,000,000^{\text{th}}$ base to the $91,000,000^{\text{th}}$ position. 
+The ATAC-sequencing data were produced by following the standard ENCODE procedure
+\cite{ATACseqUnreplicatedENCODE}. 
+In particular, the processes of read trimming, alignment, and filtering were performed making use of the \textit{Bowtie 2}, \textit{Samtools}, \textit{Sambamba}, \textit{Picard} and \textit{cutadapt} sofwares
+\cite{j.michaelcherryATACSeqPipeline}. 
+An explanation of the processes could be found in the work made by Feng Y. and colleagues in 2020
+\cite{yanReadsInsightHitchhiker2020}.
+
+When it comes to the ChIP-seq data, again, the standard procedure of ENCODE was used to produce the online available data. An overview can be found at the following \href{https://www.encodeproject.org/chip-seq/transcription_factor/}{link}
+\cite{TranscriptionFactorChIPseq}.
+To sum up, at first the reference genome was indexed with the \textit{BWA}, then, the alignments between the reads and the reference genome (hg38
+\cite{HomoSapiensGenome})
+were produced and filtered with the \textit{BWA}, \textit{Samtools}, \textit{Picard}, \textit{BEDTools}, \textit{Phantompeakqualtools} and \textit{SPP} softwares.
+
+%#TODO make a better description of the methods maybe
+
+In the case of our study, the analyzed region included ANPEP, and it was taken from the $89,000,000^{\text{th}}$ base to the $91,000,000^{\text{th}}$ position.
