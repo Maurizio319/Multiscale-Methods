@@ -2,7 +2,7 @@
 
 \input{prefix.tex}
 
-\title{Predicting Hi-C contact matrices making use of coarse-grained simulations of the chromatin} %#TODO change title
+\title{Predicting Hi-C contact matrices through coarse-grained simulations of the chromatin} %#TODO change title
 \date{}
 
 \author[]{Maurizio Gilioli}
@@ -13,6 +13,7 @@
 
 \begin{document}
 
+\pagenumbering{roman}
 \maketitle
 % \begin{tikzpicture}[remember picture,overlay]
 %     \node[anchor=north west,yshift=-1.5pt,xshift=1pt]%
@@ -20,20 +21,26 @@
 %         {\includegraphics[height=15mm]{Images/logoUnitn}};
 % \end{tikzpicture}
 
+
 \tableofcontents
 
 \graphicspath{images/}
 
+\pagenumbering{arabic}
 \input{chapters/00-abstract}
-
+ 
+\newpage
 \input{chapters/01-introduction.tex}
 
+\newpage
 \input{chapters/02-methods.tex}
 
+\newpage
 \input{chapters/03-results.tex}
 
 % \input{chapters/04-discussion.tex}
 
+\newpage
 \input{chapters/05-conclusions.tex}
 
 \input{chapters/06-Glossary.tex}

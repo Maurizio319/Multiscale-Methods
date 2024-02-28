@@ -4,9 +4,9 @@
 
 As stated in the methods section \ref{chap: the model description} about the simulations, the attraction potentials are sequentially added to the model in order to improve the predictions. The SCC metric was used to compute the difference between the control contact matrix and the CG derived one (chapter \ref{chap: SCC method}).
 
-Two methods were then considered to add the variables, which are expressed in algorithm \ref{algo: greedy comparison} and \ref{algo: comparison}. Since the states are differentially populated, as stated in chapter \ref{chap: ChromHMM results}, it is possible to argue that the largest contribution to the result would be given, in a hierarchical manner, by the most populated states. As a consequence of this consideration, I could fix the values related to the most prevalent states, before considering those that are less present. This type of mechanism is described in the greedy process of algorithm \ref{algo: greedy comparison}. If that assumption is not accepted, then either you test all the possible configurations, either you find a better way to test the generated models. The algorithm \ref{algo: comparison} is a stepwise solution which allows to solve partially the problem at the cost of more simulations to perform. 
+Two methods were then considered to add the variables, which are expressed in algorithm \ref{algo: greedy comparison} and \ref{algo: comparison}. Since the states are differentially populated, as stated in chapter \ref{chap: ChromHMM results}, it is possible to argue that the largest contribution to the result would be given, in a hierarchical manner, by the most populated states. As a consequence of this consideration, I could fix the values related to the most prevalent states, before considering those that are less present. This type of mechanism is described in the greedy process of algorithm \ref{algo: greedy comparison}. If that assumption is not accepted, then either you test all the possible configurations, either you find a better way to test the generated models. The algorithm \ref{algo: comparison} is a stepwise solution which allows to solve partially the problem at the cost of more simulations to perform. \\
 
-\begin{algorithm}
+\begin{algorithm}[H]
     \caption{Greedy matrix comparison}\label{algo: greedy comparison}
     \KwResult{Best performing greedy model}
     \ForAll{attraction parameter}{
@@ -19,7 +19,9 @@ Two methods were then considered to add the variables, which are expressed in al
     % \tcc{The states are taken from the most populated to the least populated}
 \end{algorithm}
 
-\begin{algorithm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{algorithm}[H]
     \caption{Step-wise process for matrix comparison}\label{algo: comparison}
     \KwResult{Best model}
     $n = 0$\;
@@ -48,8 +50,5 @@ Two methods were then considered to add the variables, which are expressed in al
         \Return{Best model}\;
     \tcc{$n$ is the step number}
 \end{algorithm}
-
-Another possible way to compare the matrices would be to compute the Spearman correlation coefficient. Ideally, it would be interesting to see if there are cases where the two metrics produce different results, and to understand which of them is better in what cases %#TODO maybe conclusions.
-
-
 \paragraph{}
+Another possible way to compare the matrices would be to compute the Spearman correlation coefficient. Ideally, it would be interesting to see if there are cases where the two metrics produce different results, and to understand which of them is better in what cases %#TODO maybe conclusions.

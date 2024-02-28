@@ -8,12 +8,8 @@ Secondly, the dimension of the nucleus and the nucleolus of the IMR90 cell had t
 \cite{ehlerHumanFoetalLung1996,ingramHiCImplementationGenome2020,maiserSuperresolutionSituAnalysis2020},
 I came to the conclusion that they have respectively a dimension of \SI{520}{\micro\metre} and \SI{100}{\micro\metre}.\\
 
-With the aim of being able to make statistics out of the generated data, it was decided to make simulations for 100 replicates. Additionally, three chains were simulated at the same time within each repetition. Everything was included inside a box with a volume written in table \ref{tab: parameters CG}.
-
-%  
-% The \textit{bond\_style} that was set for the LAMMPS simulations, and that regulates the interactions generated among beads
-% \cite{thompsonLAMMPSFlexibleSimulation2022},
-% was the the \textit{fene} bond style, whose potential is written in equation \ref{eq: FENE potential}. 
+With the aim of being able to make statistics out of the generated data, it was decided to make simulations for 100 replicates. Additionally, three chains were simulated at the same time within each repetition. Everything was included inside a box with a volume written in table \ref{tab: parameters CG}. 
+It is important to specify that all the simulations were performed making use of periodic boundaries %#TODO make a chapter about the periodic boundary conditions
 
 All the simulations were performed making use of the \textit{run\_lammps} function included in the TADphys package.
 Three types of potential energies were used to regulate the interactions between beads, and those are presented in the list below:
@@ -21,7 +17,7 @@ Three types of potential energies were used to regulate the interactions between
 \begin{itemize}
     \item \textbf{FENE potential: }The FENE potential is a finite extensible nonlinear elastic potential energy and is generally used for polymer models
     \cite{steveplimptonLAMMPS,thompsonLAMMPSFlexibleSimulation2022}. 
-    The first term in the equation is attractive, whilst the second term is repulsive and is a Lennard-Jones (LJ) potential. The first term extends until $R_0$, the maximum extent of the bond. The second term has a cutoff set at $2^{\nicefrac{1}{6}} \sigma$, were the value found is the minimum of the LJ potential
+    The first term in the equation is attractive, whilst the second term is repulsive and is a Lennard-Jones (LJ) potential. The first term extends until $R_0$, the maximum extent of the bond. The second term has a cutoff set at $2^{\frac{1}{6}} \sigma$, were the value found is the minimum of the LJ potential
     \cite{thompsonLAMMPSFlexibleSimulation2022}. 
     Indeed, in that position, $V_{\text{LJ}} = -\epsilon$.
     The K presented in the equation \ref{eq: FENE potential} is a $\frac{\text{energy}}{\text{distance}^2}$ measure.
@@ -33,50 +29,42 @@ Three types of potential energies were used to regulate the interactions between
     The following specifications were made to include the FENE interactions:
     \begin{enumerate} %#TODO unit of measures
         \item $K = 30.0$: It weights the contributions deriving from the attractive part of the equation. It represents the stiffness or strength of the bond.
-        \item $R_0 = 1.5$: Maximum extension of the bond. This is the maximum distance at which the bond can be stretched.
-        \item $\epsilon = 1.0$: This term scales the LJ potential contribution.
-        \item $\sigma = 1.0$: Equilibrium bond length for the LJ potential. This is the ideal or equilibrium distance between the bonded particles.
+        \item $R_0 (\text{distance unit}) = 1.5$: Maximum extension of the bond. This is the maximum distance at which the bond can be stretched.
+        \item $\epsilon (\text{energy unit}) = 1.0$: This term scales the LJ potential contribution.
+        \item $\sigma (\text{distance unit}) = 1.0$: Equilibrium bond length for the LJ potential. This is the ideal or equilibrium distance between the bonded particles.
     \end{enumerate}
 
-    % \begin{enumerate} %#TODO unit of measures
-    %     \item $30.0\; N$: Maximum force the bond can withstand. It represents the stiffness or strength of the bond.
-    %     \item $1.5$: Maximum extension of the bond. This is the maximum distance at which the bond can be stretched.
-    %     \item $1.0$: Equilibrium bond length. This is the ideal or equilibrium distance between the bonded particles.
-    %     \item $1.0$: Bond force constant. It affects how quickly the potential energy increases as the bond length deviates from the equilibrium length.
-    % \end{enumerate}
-
-    \item \textbf{Excluded-volume interactions: } To allow for the excluded-volume interactions, a simple Lennard-Jones potential was included, written as in equation \ref{eq: lennard jones potential} %#TODO extend this part
+    \item \textbf{Excluded-volume interactions: } To allow for the excluded-volume interactions, a simple Lennard-Jones potential was included, written as in equation \ref{eq: lennard jones potential}. %#TODO extend this part
 
     \begin{align} \label{eq: lennard jones potential}
-        E_{LJ} &= 4 \epsilon \left[\left(\frac{r_0}{r}\right)^{12} - \left(\frac{r_0}{r}\right)^6\right]&& r < r_c \nonumber\\
-            &= 4 \epsilon \left[\left(\frac{2^{\frac{1}{6}}\sigma}{r}\right)^{12} - \left(\frac{2^{\frac{1}{6}}\sigma}{r}\right)^6\right]&& r < r_c 
+        E_{LJ} &= 4 \epsilon \left[\left(\frac{\sigma}{r}\right)^{12} - \left(\frac{\sigma}{r}\right)^6\right]&& r < r_c
     \end{align}
-
 
     Three parameters are set:
 
     \begin{enumerate} %#TODO units of measure
-        \item $\epsilon$ (energy unit): 1.0, Note that $\sigma$ is defined in the LJ formula as the zero-crossing distance for the potential, not as the energy minimum at $r_0 = 2^{\nicefrac{1}{6}} \sigma$ .
-        \item $\sigma$ (distance unit): 1.0
-        \item LJ cutoff (distance unit): 1.12246152962189
+        \item $\epsilon$ $(\text{energy unit}) = 1.0$
+        \item $\sigma$ $(\text{distance unit}) = 1.0$
+        \item LJ cutoff $r_0$ $(\text{distance unit}) = \sigma * 2^{\frac{1}{6}} = 1.12246152962189$
     \end{enumerate}
 
-    \item \textbf{Angle bending potentials: }The angle bending associated potentials are directly correlated with the persistence length (PL), which is calculated as in equation \ref{eq: persistence length}.
+    \item \textbf{Angle bending potentials: }The angle bending associated potentials are directly correlated with the persistence length (\textit{PL}), which is calculated as in equation \ref{eq: persistence length}. All the quantities are presented in the table \ref{tab: parameters CG}. 
+    The angle related style and values were set with the $angle\_style$ and $angle\_value$ of LAMMPS
+    \cite{thompsonLAMMPSFlexibleSimulation2022}.
+
+    %#TODO chiarisci faccenda angle style e angle value
 
     \begin{equation} \label{eq: persistence length}
         PL = lk_{CG} / b_{CG} / 2
     \end{equation}
 
-    The angle potentials are given to LAMMPS and calculated setting the $K$ parameter in equation \ref{eq: angle bending potential}. The larger is the value of K, the larger is in general the potential associated to the angles.
+    The angle potentials are given to LAMMPS and calculated by setting the $K$ parameter in equation \ref{eq: angle bending potential}. The larger is the value of K, the larger is the potential generated after the bending of the chain with a specific angle $\theta$.
 
     \begin{equation} \label{eq: angle bending potential}
         E = K[1 + \cos{(\theta)}]    
     \end{equation}
 
 \end{itemize}
-
-
-. All the simulations were performed making use of periodic boundaries (chapter % \ref{})
 
 The steps performed will be described in the following paragraphs:
 
@@ -86,97 +74,10 @@ The steps performed will be described in the following paragraphs:
 
 \paragraph{The computation of the parameters for Coarse Graining:}
 
-Both parameters for the fine-scale model (table \ref{tab: parameters FS}) and the CG model (table \ref{tab: parameters CG}) were calculated. The number of bp wrapping around a bead in the FS method was considered to be 150, while instead the linker portion was considered to be of length 50 bp (table \ref{tab: parameters FS}). The thickness of a bead (of a nucleosome) was taken as equal to 10 nm, while instead the default Kuhn length was set to 50 nms. The genome densities ($\rho_{FS} = \rho_{CG} = 0.012\; \text{bp}/\text{nm}^3$) are imposed to be the same for the FS and the CG model.
-
-%#TODO reference!
-.
-The beads and bonds have all the same length, consequently, the contour length is exactly the product between the number of beads and the size of the beads in the FS and in the CG model. The DNA content was 2000000 bp. To find the parameters for the CG model, the DNA content of the Kuhn segments ($Dlk_{CG}$) were tuned to match the desired value of DNA content in CG beads ($\nu_{CG}$).
-
+Both parameters for the fine-scale model (table \ref{tab: parameters FS}) and the CG model (table \ref{tab: parameters CG}) were calculated. The number of bp wrapping around a bead in the FS method was considered to be $150$, while instead the linker portion was considered to be of length $50$ bp (table \ref{tab: parameters FS}). The thickness of a bead, which corresponds to a nucleosome was taken as equal to $10$ nm, while instead the default Kuhn length was set to $50$ nm. The genome densities ($\rho_{FS} = \rho_{CG} = 0.012\; \text{bp}/\text{nm}^3$) are imposed to be the same for both the FS and the CG model; this value has been found experimentally and represents the density of bp inside human nuclei
+\cite{golkaramRoleChromatinDensity2017}.
+The beads and bonds have all the same length in the FS and the CG models, consequently, the contour length (which represents the maximal length of the polymer chain) is exactly the product between the number of beads and their size, in the FS and in the CG models. The DNA content of the analyzed region was set to be equal to $2,000,000$ bp. Before computing the parameters for the coarse-grained model, the DNA content of the Kuhn segments in the CG system ($Dlk_{CG}$) was tuned to match the desired value of DNA content in CG beads ($\nu_{CG}$).
 %#TODO what is c?
-
-\begin{table}[H]
-
-\begin{tabular}{|l|l|c|}
-\hline
-\textbf{Property} & \textbf{Formula} & \textbf{Value}\\
-\hline
-\textbf{$c$} & \textit{const.} & 19\\
-\hline
-\textbf{$\nu_{FS}$} (DNA content of a monomer in b.) & \textit{const.} & 150+50 bp = 200 bp\\
-\hline
-\textbf{$b_{FS}$} (Diameter of a bead in nm) & \textit{const.} & 10 nm\\
-\hline
-\textbf{$lk_{FS}$} (Kuhn length of the chain  in FS) & \textit{const.} & 50 nm \\
-\hline
-\textbf{$\rho_{FS}$} (Genome density) &\textit{const.} & $0.012\; \text{bp}/\text{nm}^3$ \\ %#TODO da dove?
-\hline
-\textbf{$N_{FS}$} (Number of monomers to represent the chromosome) & $\frac{\text{DNAcontent}}{\nu_{FS}} * \text{ncopies}$ & 30000 mon.\\
-\hline
-\textbf{$N^k_{FS}$} (Number of Kuhn lengths of the chain) & $\frac{N_{FS} * b_{FS}}{lk_{FS}}$ & 6000 k. l.\\
-\hline
-\textbf{$\rho^k_{FS}$} (Genome density in Kuhn lengths) & $\frac{\rho_{FS} \cdot b_{FS}}{\nu_{FS} \cdot \text{lk}_{FS}}$& $1.2e-05$ 1/nm³\\
-\hline
-\textbf{$L_{FS}$} (Polymer contour length) & $N_{FS} * b_{FS}$ & 300000 nm\\
-\hline
-\textbf{$Le_{FS}$} (Entanglement length of the chain in nm) & $lk_{FS} * \left(\frac{c}{\rho^k_{FS} * lk_{FS}^3}\right)^2$ & 8022.22 nm\\
-\hline
-Number of monomers in a Kuhn length FS & $lk_{FS}/b_{FS}$ & 5 mon.\\
-\hline
-$Blk_{FS}$ (Bead content of a Kuhn length FS) & $(lk_{FS} \cdot b_{FS})/\nu_{FS}$ & 2.5 $\text{nm}^2$/bp  \\
-\hline
-$Dlk_{FS}$ (DNA content of a Kuhn length FS) & $(lk_{FS} \cdot \nu_{FS})/b_{FS}$ & 1000 $\text{bp}$\\
-\hline
-\end{tabular}
-\label{tab: parameters FS}
-\caption{Parameters calculated for the Fine Scale (FS) model}
-\end{table}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{table}[H]
-    \begin{tabular}{|l|c|c|}
-        \hline
-        \textbf{Property} & \textbf{Formula} & \textbf{Value}\\
-\hline
-\textbf{$c$} & \textit{const.} & 19\\
-\hline
-$\nu_{CG}$ (DNA content of a monomer in b.) & \textit{const.} & 5000 bp\\
-\hline
-$Dlk_{CG}$ (DNA content of a Kuhn length CG) & \textit{tuned const.} & 33791 bp\\
-\hline
-$\phi_{CG}$ (Volumetric density of the chain in the CG model for IMR90 cell-type) & \textit{const.} & $0.1$ \\ %#TODO che MEASURE ha?
-\hline
-\textbf{$\rho_{CG}$} (Genome density in bp/nm³) & \textit{const.} & $0.012\; \text{bp}/\text{nm}^3$\\
-\hline
-$b_{CG}$ (Diameter of a bead in nm) & $\sqrt{\left(\sqrt{\frac{{Dlk_{CG}}}{{Blk_{FS}}}}\right) / \rho_{CG} \cdot \frac{6}{\pi} \cdot \phi_{CG}}
-$ & 43.0155 nm\\
-\hline
-\textbf{$lk_{CG}$} (Kuhn length of the chain  in CG) & $\sqrt{Dlk_{CG} * Blk_{FS}}$ & 290.65 nm \\
-\hline
-Number of monomers in a Kuhn length CG & $lk_{CG}/b_{CG}$ & 6.75687 mon.\\
-\hline
-\textbf{$N_{CG}$} (Number of monomers to represent the chromosome) & $\frac{\text{DNAcontent}}{\nu_{CG}} * \text{ncopies}$& 1200 mon.\\
-\hline
-$\text{side}_{CG}$ (size of the cubic simulation box) & $\frac{{(N_{CG} \cdot \nu_{CG} / \rho_{CG})^{1/3}}}{{b_{CG}}}
-$ & 18.4515 nm\\
-\hline
-\textbf{$N^k_{CG}$} (Number of Kuhn lengths of the chain) & $(N_{CG} * b_{CG})/{lk_{CG}}$ & 177.597 k. l.\\
-\hline
-\textbf{$\rho^k_{CG}$} (Genome density in Kuhn lengths bp/nm) & $\frac{\rho_{CG} \cdot b_{CG}}{\nu_{CG} \cdot \text{lk}_{CG}}$ & $3.55194$e-07 \nicefrac{bp}{nm} \\
-\hline
-
-\textbf{$L_{CG}$} (Polymer contour length) & $N_{CG} * b_{CG}$& 51618 nm\\
-\hline
-\textbf{$Le_{CG}$} (Entanglement length of the chain in nm) & $lk_{CG} * \left(\frac{c}{\rho^k_{CG} * lk_{CG}^3}\right)^2$ & 1379.51 nm\\
-\hline
-\end{tabular}
-\label{tab: parameters CG}
-\caption{Parameters calculated for the coarse-grained (CG) model}
-\end{table}
-
-%#TODO how do you find the side?
-%#TODO inserire chromatin_volumetric_density.sh?
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % CARTELLA 00_generate_initial_conformation_rosette
@@ -184,24 +85,20 @@ $ & 18.4515 nm\\
 
 \paragraph{Generation of the initial conformation rosettes:}
 
-Once found the coarse graining parameters, rosettes for 100 replicates were built, with a radius of 12.0 nm inside a cubic box of 300 nm. The particle radius was set to 0.5 nm. In each replicate, three equal chains were built, by setting a different random seed each time. The total number of particles in each chain was of 400 beads.
+Once found the coarse graining parameters, rosettes for all the replicates were built, with a radius of 12.0 nm inside a cubic box whose edge length is equal to 300 nm. The particle radius of the CG model was set to 0.5 nm. In each replicate, three equal chains were built, by setting a different random seed each time. The total number of particles in each chain was of 400 beads. Indeed, if you make the calcualation $2,000,000/5,000 = 400$.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % CARTELLA 01_compression_to_desired_phi_rosette
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\paragraph{Finding the optimal pressure:}
+\paragraph{Finding the optimal pressure:} \label{parag: optimal pressure}
 
-Once the rosettes were made, a decompaction was performed starting from the compacted rosettes. A range of values of pressure was tested from 0.1 to 1 with steps every 0.1. For each replicate, a new random seed was generated and stored.
+When the rosettes were successfully made, a decompaction was performed taking as inputs the compacted configurations. A range of values of pressure was tested from 0.1 to 1 with steps every 0.1. The precision of the estimation for the pressure was improved by taking more decimals and restricting the length of the range of tested values. For each replicate, a new random seed was generated and stored.
 Before attempting the decompression, the minimal energy structure was found by taking into consideration a stopping energy tolerance of $1*10^{-4}$, a stopping tolerance force of $1*10^{-6}$, a maximal number of iterations and evaluations of 100000 steps. %#TODO maybe chiarisci questo
-The process was long 1000 steps with a duration of \SI{0.001}{\pico\second}. %#TODO is it correct?
-and the final structure was taken as the decompressed one.
-The optimal pressure was attested at 0.192 %#TODO what measure
+The process for finding the optimal pressure parameter was long 1000 steps with a duration of \SI{0.001}{\pico\second}.
+The optimal pressure was attested at 0.192. %#TODO what measure
 
-
-
-%#TODO chiarisci faccenda angle style e angle value
 %#TODO put figures about pressure.
 
 % \begin{figure}[H]
@@ -219,7 +116,7 @@ The optimal pressure was attested at 0.192 %#TODO what measure
 \paragraph{Decompaction and relaxation:}
 
 Once the optimal value for the pressure was found (0.192) %#TODO unit of measure
-for each replicate, other two simulations respectively $5,000,000$ and $25,000,000$ steps long were performed (not after a minimization phase). This time, the step was set to have a temporal length of \SI{0.0012}{\pico\second} In both the cases MSD values were collected every 100 steps. A frame was dumped every 5000 steps. At the end, the trajectories were collected and analyzed by computing the \textit{RMSD}, \textit{Rg} and the autocorrelation function as described in chapter \ref{chap: trajectory analysis}. For the sake of simplicity, the collection was accomplished by capturing one frame for every 50,000 steps.
+, other two simulations respectively $5,000,000$ and $25,000,000$ steps long were performed for each replicate (not after a minimization phase). This time, the step was set to have a temporal length of \SI{0.0012}{\pico\second} In both the cases MSD values were collected every 100 steps. A frame was dumped (saved) every 5000 steps. At the end, the trajectories were collected and analyzed by computing the \textit{RMSD}, \textit{Rg} and the autocorrelation function as described in chapter \ref{chap: trajectory analysis}. For the sake of simplicity, saving memory and computational cost, the collection was accomplished by capturing one frame every 50,000 of them.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % CARTELLA 03_estimate_time_conversion_rosette
@@ -227,31 +124,16 @@ for each replicate, other two simulations respectively $5,000,000$ and $25,000,0
 
 \paragraph{Computing matrices of contact:}
 
-Once defined the step at which the simulations were considered to be at the equilibrium, some dictionaries produced with \textit{ChromHMM}
+Once defined the step at which the simulations were considered to be at the equilibrium (which, in our cases, seemed to be reached at the $50 * 50000 = 2,500,000$ step, as reported in chapter \ref{chap: trajectory analysis results}), some dictionaries produced through the output of \textit{ChromHMM} 
 \cite{chilledhousevibesLearningChromatinStates2015,ernstChromatinstateDiscoveryGenome2017}
-, by using CTCF and ATAC-seq data, were used to define the identity of the beads. During the next steps, we will try to select the best attraction parameters; the stepwise algorithm \ref{algo: comparison} is being currently tested. All the beads were considered to have a radius of 0.5 %#TODO unit of measure
-long. To quantify attraction potentials, a new Lennard-Jones potential was added (as defined in equation \ref{eq: lennard jones potential}). In particular, the cutoff distance $r_0$ was set to be equal to:
+, whose input were CTCF and ATAC-seq datasets (chapter \ref{methods: data used}), were used to define the identity of the beads. Then, the best attraction parameters were selected in the iterative manner described by the \ref{algo: comparison} algorithm. To add the attraction potentials between the beads, new Lennard-Jones potentials were added (in the form expressed in equation \ref{eq: lennard jones potential}). In particular, the cutoff distance of the potential $r_0$ was set to be equal to: $r_0 = r_{\text{cutoff}} = \sigma * 2.5$, where $\sigma$ corresponds to the sum of the \textit{radii} of the interacting particles (set in all the cases to $0.5$ nm). The trial value of the attraction parameter associated to the interaction was assigned to the $\epsilon$ variable, present in the LJ potential.
 
-$$
-r_0 = r_{\text{cutoff}} = \sigma * 2.5
-$$
 
 % repulsion interactions
 % $$
-% r_0 = r_{\text{cutoff}} = 3 * 2^{\nicefrac{1}{6}}
+% r_0 = r_{\text{cutoff}} = 3 * 2^{\frac{1}{6}}
 % $$
 
-Once the interaction parameters are set, other 1 second long simulations are performed with the intention of generating contact maps. Only the interactions occurring intra-chain were considered. 
-%#TODO how and when there is a contact?
+Once the interaction parameters were set, other 1 second long simulations were performed with the intention of generating contact maps. Those simulations were firsly preceded by an energy minimization process, very similar to the one already explained in the "\textit{Finding the optimal pressure}" paragraph. After the small simulation time, the contact matrices were generated, by taking into account just the interactions occurring in the same chain (intra-chain). A contact is established whenever two coarse-grained particles are found at a distance lower then 100 nm.
 
-
-% #TODO non so se aggiungere questo discorso. come vengono assegnate ai bin le biglie?
-% #TODO Since the real map and the CG map had different resolutions (5,000 and 10,000 respectively), the beads from the coarse gra 
-
-
-
-% #TODO PUT A COMMENT TO SUMMARIZE EVERYTHING
-% \begin{important}
-%     ciao
-% \end{important}
 

@@ -13,45 +13,45 @@ Warning--I didn't find a database entry for "gowersMDAnalysisPythonPackage2016"
 Warning--I didn't find a database entry for "tuckermanStatisticalMechanicsTheory2015"
 Warning--I didn't find a database entry for "robinsonIgvJsEmbeddable2020a"
 Warning--I didn't find a database entry for "robinsonIntroductionIntegrativeGenomics"
-You've used 27 entries,
+You've used 31 entries,
             2380 wiz_defined-function locations,
-            1210 strings with 17341 characters,
-and the built_in function-call counts, 9995 in all, are:
-= -- 679
-> -- 260
+            1239 strings with 18810 characters,
+and the built_in function-call counts, 11749 in all, are:
+= -- 796
+> -- 320
 < -- 0
-+ -- 132
-- -- 64
-* -- 1268
-:= -- 1075
-add.period$ -- 77
-call.type$ -- 27
-change.case$ -- 30
++ -- 162
+- -- 79
+* -- 1514
+:= -- 1266
+add.period$ -- 89
+call.type$ -- 31
+change.case$ -- 34
 chr.to.int$ -- 0
-cite$ -- 27
-duplicate$ -- 870
-empty$ -- 947
-format.name$ -- 84
-if$ -- 1987
+cite$ -- 31
+duplicate$ -- 1021
+empty$ -- 1093
+format.name$ -- 103
+if$ -- 2326
 int.to.chr$ -- 0
-int.to.str$ -- 27
-missing$ -- 207
-newline$ -- 141
-num.names$ -- 23
-pop$ -- 169
+int.to.str$ -- 31
+missing$ -- 246
+newline$ -- 161
+num.names$ -- 27
+pop$ -- 191
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 182
+skip$ -- 209
 stack$ -- 0
-substring$ -- 473
-swap$ -- 857
+substring$ -- 547
+swap$ -- 1021
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 53
-width$ -- 29
-write$ -- 306
+while$ -- 63
+width$ -- 33
+write$ -- 354
 (There were 8 warnings)

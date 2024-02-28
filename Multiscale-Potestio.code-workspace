@@ -3,5 +3,8 @@
         {
             "path": "proj_multiscale"
         }
-    ]
+    ],
+    "settings": {
+        "todo-tree.tree.showBadges": false
+    }
 }

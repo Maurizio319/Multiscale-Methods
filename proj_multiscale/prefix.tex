@@ -5,7 +5,7 @@
 \usepackage{xcolor,mdframed}
 \usepackage{hyperref}
 \usepackage{siunitx} %to add picoseconds
-
+  
 \usepackage[export]{adjustbox}
 \usepackage[ruled,vlined]{algorithm2e} %algorithm
 
@@ -36,12 +36,6 @@
  left=15mm,
  rmargin = 2 cm
  }
- 
-%  add marginal notes
-\usepackage{marginnote}
-\renewcommand\marginfont{%
-    \normalfont\scriptsize\itshape
-}
 
 % to wrap figures and text
 \usepackage{graphicx}
@@ -54,19 +48,21 @@
 % \usepackage{lmodern}  % To allow bold font inside a code block
 % \setminted{bgcolor=bgcode} 
 %\setminted{bgcolor=bgcode, formatcom=\color{white}} 
+
+\usepackage{lastpage}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
+\fancyhead[R]{\nouppercase{\rightmark}} % Section name on the right
+\rfoot{\thepage \hspace{1pt} of \pageref{LastPage}}
+
+\renewcommand{\sectionmark}[1]{\markright{#1}} % Set the \rightmark to the section name
+
+% Adjustments for header rule (uncomment if needed)
 \renewcommand{\headrulewidth}{1pt} % Line under header
 
-% \usepackage{nameref}
-% \makeatletter
-% \newcommand*{\currentname}{\@currentlabelname}
-% \makeatother
 
-% \fancyhead[R]{\nouppercas Section \thesection\ \rightmark}} % Section number and name on the right
-
-
+% important and info environments
 \newenvironment{important}[1][]{%
    \begin{mdframed}[%
       backgroundcolor={red!15}, hidealllines=true,
@@ -98,8 +94,6 @@
       }%
    }%
 }{\end{mdframed}}
-
-
 
 
 \DeclareUnicodeCharacter{2212}{-}

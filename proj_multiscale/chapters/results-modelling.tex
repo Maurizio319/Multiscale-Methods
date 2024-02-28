@@ -1,0 +1,111 @@
+% !TeX root = ../main.tex
+\subsection{Results obtained while defining the models}
+The results in this section will be inserted by following the paragraph order written in section \ref{chap: the model description}.
+\begin{itemize}
+    \item \textbf{The computation of the parameters for Coarse Graining}: Tha values in table \ref{tab: parameters FS} and \ref{tab: parameters CG} were obtained.
+
+\begin{table}[H]
+
+    \begin{tabular}{|l|l|c|}
+    \hline
+    \textbf{Property} & \textbf{Formula} & \textbf{Value}\\
+    \hline
+    \textbf{$c$} & \textit{const.} & 19\\
+    \hline
+    \textbf{$\nu_{FS}$} (DNA content of a monomer in b.) & \textit{const.} & 150+50 bp = 200 bp\\
+    \hline
+    \textbf{$b_{FS}$} (Diameter of a bead in nm) & \textit{const.} & 10 nm\\
+    \hline
+    \textbf{$lk_{FS}$} (Kuhn length of the chain  in FS) & \textit{const.} & 50 nm \\
+    \hline
+    \textbf{$\rho_{FS}$} (Genome density) &\textit{const.} & $0.012\; \text{bp}/\text{nm}^3$\cite{golkaramRoleChromatinDensity2017} \\ 
+    \hline
+    \textbf{$N_{FS}$} (Number of monomers to represent the chromosome) & $\frac{\text{DNAcontent}}{\nu_{FS}} * \text{ncopies}$ & 30000 mon.\\
+    \hline
+    \textbf{$N^k_{FS}$} (Number of Kuhn lengths of the chain) & $\frac{N_{FS} * b_{FS}}{lk_{FS}}$ & 6000 k. l.\\
+    \hline
+    \textbf{$\rho^k_{FS}$} (Genome density in Kuhn lengths) & $\frac{\rho_{FS} \cdot b_{FS}}{\nu_{FS} \cdot \text{lk}_{FS}}$& $1.2e-05$ 1/nm³\\
+    \hline
+    \textbf{$L_{FS}$} (Polymer contour length) & $N_{FS} * b_{FS}$ & 300000 nm\\
+    \hline
+    \textbf{$Le_{FS}$} (Entanglement length of the chain in nm) & $lk_{FS} * \left(\frac{c}{\rho^k_{FS} * lk_{FS}^3}\right)^2$ & 8022.22 nm\\
+    \hline
+    Number of monomers in a Kuhn length FS & $lk_{FS}/b_{FS}$ & 5 mon.\\
+    \hline
+    $Blk_{FS}$ (Bead content of a Kuhn length FS) & $(lk_{FS} \cdot b_{FS})/\nu_{FS}$ & 2.5 $\text{nm}^2$/bp  \\
+    \hline
+    $Dlk_{FS}$ (DNA content of a Kuhn length FS) & $(lk_{FS} \cdot \nu_{FS})/b_{FS}$ & 1000 $\text{bp}$\\
+    \hline
+    \end{tabular}
+    \label{tab: parameters FS}
+    \caption{Parameters calculated for the Fine Scale (FS) model}
+    \end{table}
+    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    
+    \begin{table}[H]
+        \begin{tabular}{|l|c|c|}
+            \hline
+            \textbf{Property} & \textbf{Formula} & \textbf{Value}\\
+    \hline
+    \textbf{$c$} & \textit{const.} & 19\\
+    \hline
+    $\nu_{CG}$ (DNA content of a monomer in b.) & \textit{const.} & 5000 bp\\
+    \hline
+    $Dlk_{CG}$ (DNA content of a Kuhn length CG) & \textit{tuned const.} & 33791 bp\\
+    \hline
+    $\phi_{CG}$ (Volumetric density of the chain in the CG model for IMR90 cell-type) & \textit{const.} & $0.1$ \\ %#TODO che MEASURE ha?
+    \hline
+    \textbf{$\rho_{CG}$} (Genome density in bp/nm³) & \textit{const.} & $0.012\; \text{bp}/\text{nm}^3$\\
+    \hline
+    $b_{CG}$ (Diameter of a bead in nm) & $\sqrt{\left(\sqrt{\frac{{Dlk_{CG}}}{{Blk_{FS}}}}\right) / \rho_{CG} \cdot \frac{6}{\pi} \cdot \phi_{CG}}
+    $ & 43.0155 nm\\
+    \hline
+    \textbf{$lk_{CG}$} (Kuhn length of the chain  in CG) & $\sqrt{Dlk_{CG} * Blk_{FS}}$ & 290.65 nm \\
+    \hline
+    Number of monomers in a Kuhn length CG & $lk_{CG}/b_{CG}$ & 6.75687 mon.\\
+    \hline
+    \textbf{$N_{CG}$} (Number of monomers to represent the chromosome) & $\frac{\text{DNAcontent}}{\nu_{CG}} * \text{ncopies}$& 1200 mon.\\
+    \hline
+    $\text{side}_{CG}$ (size of the cubic simulation box) & $\frac{{(N_{CG} \cdot \nu_{CG} / \rho_{CG})^{1/3}}}{{b_{CG}}}
+    $ & 18.4515 nm\\
+    \hline
+    \textbf{$N^k_{CG}$} (Number of Kuhn lengths of the chain) & $(N_{CG} * b_{CG})/{lk_{CG}}$ & 177.597 k. l.\\
+    \hline
+    \textbf{$\rho^k_{CG}$} (Genome density in Kuhn lengths bp/nm) & $\frac{\rho_{CG} \cdot b_{CG}}{\nu_{CG} \cdot \text{lk}_{CG}}$ & $3.55194$e-07 bp/nm \\
+    \hline
+    
+    \textbf{$L_{CG}$} (Polymer contour length) & $N_{CG} * b_{CG}$& 51618 nm\\
+    \hline
+    \textbf{$Le_{CG}$} (Entanglement length of the chain in nm) & $lk_{CG} * \left(\frac{c}{\rho^k_{CG} * lk_{CG}^3}\right)^2$ & 1379.51 nm\\
+    \hline
+    \end{tabular}
+    \label{tab: parameters CG}
+    \caption{Parameters calculated for the coarse-grained (CG) model}
+    \end{table}
+    
+    
+    \item \textbf{Finding the optimal pressure}: The values of pressure and the respective sizes are plotted in figure \ref{fig: pressure}. To perform this step, just 5 replicates of the 100 total replicates were used for simplicity.
+    
+    \begin{figure}[H]
+        \centering
+        
+        \begin{subfigure}{0.40\textwidth}
+          \includegraphics[width=\linewidth]{/home/maurizio/Documents/GitHub/3DCS/Maurizio/steps/3-code_DiStefano/pressure_folder/image_pressure/graph_pressure_0.1_1.png}
+          \caption{}
+          \label{fig: pressure 0.1 0.9}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}{0.40\textwidth}
+          \includegraphics[width=\linewidth]{/home/maurizio/Documents/GitHub/3DCS/Maurizio/steps/3-code_DiStefano/pressure_folder/image_pressure/graph_pressure_0.19_0.2.png}
+          \caption{}
+          \label{fig: pressure 0.19 0.2}
+        \end{subfigure}
+      
+        \caption{The side estimates obtained for different pressure values are represented in the two graphs. As said in the Methods chapter, the range of trial values for the pressure was shortened by adding more decimals to the quantity. For example, at first the values between 0.1 and 0.9, with a difference of 0.1, were tested (\ref{sub@fig: pressure 0.1 0.9}), after, only the region between 0.19 and 0.2 was investigated (\ref{sub@fig: pressure 0.19 0.2}).}
+        \label{fig: pressure}
+    \end{figure}
+
+
+\end{itemize}
+

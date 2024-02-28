@@ -1,25 +1,27 @@
 % !TeX root = ../main.tex
 \subsection{Trajectories analysis} \label{chap: trajectory analysis}
 
-Three types of analysis were performed (all the terms are explained in the Glossary): %#TODO don't know if it's necessary to specify this
+The analysis of the trajectories was done by taking together and considering as independent the results obtained with each single chain of each replicate. For this reason, it was decided to put together all the results and produce the collective plots represented in figures \ref{fig:RMSD collective replicates}, \ref{fig:RG collective replicates} and \ref{fig:autocorrelation function collective replicates}.
+
+Three types of analysis were performed (all the following terms are explained in the Glossary): 
 
 \begin{enumerate}
-    \item \textbf{\textit{RMSD}}: The Root Mean Square Deviation is calculated by using the \textit{MDanalysis} package
-    \cite{gowersMDAnalysisPythonPackage2016}
+    \item \textbf{\textit{RMSD}}: The Root Mean Square Deviation (RMSD) is calculated by using the \textit{MDanalysis} package
+    \cite{gowersMDAnalysisPythonPackage2016} (\textit{rmsd} in \textit{MDAnalysis.analysis.rms})
     and is calculated as follows:
 
     \begin{equation} \label{eq: RMSD}
         RMSD = \rho(t) = \sqrt{\frac{1}{N} \sum_{i=1}^N{w_i \left(\vec{x_i}(t) - \vec{x_i}^{REF}\right)^2}}
     \end{equation}
 
-    Before performing this type of calculation, the structures were aligned to the first frame (each frame of each replicate was aligned to the first frame of their specific replicate). This type of alignment was done making use of the \textit{AlignTraj} function
+    Before performing this type of calculation, the structures were aligned to the first frame (each frame of each replicate was aligned to the first frame of the replicate). This type of alignment was done making use of the \textit{AlignTraj} function
     \cite{gowersMDAnalysisPythonPackage2016}
-    . In general, the smaller is the difference between two structures, the lower is the value of RMSD. The results are written in graph \ref{fig:RMSD first replicate} and \ref{fig:RMSD collective replicates}.
+    . When interpreting the results obtained from RMSD calculation, it is generally considerable true the concept that the smaller is the difference between two structures, the lower is the value of RMSD. The results are written in graph \ref{fig:RMSD first replicate} and \ref{fig:RMSD collective replicates}.
     
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-    \item \textbf{$R_g$}: The Radius of Gyration computed by \textit{MDanalysis} was calculated as written in equation \ref{eq: radius of gyration}. This quantity is a measure of how the mass of an object is spread out relative to a particular axis of rotation. In general, it tells "how spherical" is an object
+    \item \textbf{$R_g$}: The Radius of Gyration was calculated as written in equation \ref{eq: radius of gyration} through the \textit{MDanalysis} package (\textit{radius\_of\_gyration} function). This quantity is a measure of how the mass of an object is spread out relative to a particular axis of rotation. In general, it tells "how spherical" is an object
     \cite{gowersMDAnalysisPythonPackage2016,tuckermanStatisticalMechanicsTheory2015}
     . The results are written in graph \ref{fig:RG first replicate} and \ref{fig:RG collective replicates}.
     
@@ -30,8 +32,7 @@ Three types of analysis were performed (all the terms are explained in the Gloss
 
 
     \item \textit{\textbf{Autocorrelation function:}} The autocorrelation function can be written as shown in equation \ref{eq: autocorrelation}
-    \cite{sumaElectricFieldDrivenTrappingPolyelectrolytes2018}
-    . The results are shown in graphs \ref{fig:autocorrelation function first replicate} and \ref{fig:autocorrelation function collective replicates}. 
+    \cite{sumaElectricFieldDrivenTrappingPolyelectrolytes2018}. The results are shown in graphs \ref{fig:autocorrelation function first replicate} and \ref{fig:autocorrelation function collective replicates}. 
     
     \begin{equation} \label{eq: autocorrelation}
       r_k = \frac{C_k}{C_0} = \frac{\frac{1}{M} \sum_{t = 1}^{M - k}{(A_t - \bar{A})(A_{t+k} - \bar{A})}}{\frac{1}{M} \sum_{t = 1}^{M - k}{(A_t - \bar{A})^2}}

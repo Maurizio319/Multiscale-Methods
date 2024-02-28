@@ -78,6 +78,34 @@
   \bibinfo{pages}{ii--iii}, \doiprefix\url{10.1038/nmeth.f.247}
   (\bibinfo{year}{2009}).
 
+\bibitem{lajoieHitchhikerGuideHiC2015}
+\bibinfo{author}{Lajoie, B.~R.}, \bibinfo{author}{Dekker, J.} \&
+  \bibinfo{author}{Kaplan, N.}
+\newblock \bibinfo{journal}{\bibinfo{title}{The {{Hitchhiker}}'s {{Guide}} to
+  {{Hi-C Analysis}}: {{Practical}} guidelines}}.
+\newblock {\emph{\JournalTitle{Methods}}} \textbf{\bibinfo{volume}{72}},
+  \bibinfo{pages}{65--75}, \doiprefix\url{10.1016/j.ymeth.2014.10.031}
+  (\bibinfo{year}{2015}).
+
+\bibitem{lieberman-aidenComprehensiveMappingLong2009}
+\bibinfo{author}{{Lieberman-Aiden}, E.} \emph{et~al.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Comprehensive mapping of long range
+  interactions reveals folding principles of the human genome}}.
+\newblock {\emph{\JournalTitle{Science}}} \textbf{\bibinfo{volume}{326}},
+  \bibinfo{pages}{289--293}, \doiprefix\url{10.1126/science.1181369}
+  (\bibinfo{year}{2009}).
+
+\bibitem{distefanoHiCconstrainedPhysicalModels2016}
+\bibinfo{author}{Di~Stefano, M.}, \bibinfo{author}{Paulsen, J.},
+  \bibinfo{author}{Lien, T.~G.}, \bibinfo{author}{Hovig, E.} \&
+  \bibinfo{author}{Micheletti, C.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Hi-{{C-constrained}} physical
+  models of human chromosomes recover functionally-related properties of genome
+  organization}}.
+\newblock {\emph{\JournalTitle{Sci Rep}}} \textbf{\bibinfo{volume}{6}},
+  \bibinfo{pages}{35985}, \doiprefix\url{10.1038/srep35985}
+  (\bibinfo{year}{2016}).
+
 \bibitem{ernstChromatinstateDiscoveryGenome2017}
 \bibinfo{author}{Ernst, J.} \& \bibinfo{author}{Kellis, M.}
 \newblock \bibinfo{journal}{\bibinfo{title}{Chromatin-state discovery and
@@ -198,6 +226,17 @@
 \newblock {\emph{\JournalTitle{Computer Physics Communications}}}
   \textbf{\bibinfo{volume}{271}}, \bibinfo{pages}{108171},
   \doiprefix\url{10.1016/j.cpc.2021.108171} (\bibinfo{year}{2022}).
+
+\bibitem{golkaramRoleChromatinDensity2017}
+\bibinfo{author}{Golkaram, M.}, \bibinfo{author}{Jang, J.},
+  \bibinfo{author}{Hellander, S.}, \bibinfo{author}{Kosik, K.~S.} \&
+  \bibinfo{author}{Petzold, L.~R.}
+\newblock \bibinfo{journal}{\bibinfo{title}{The {{Role}} of {{Chromatin
+  Density}} in {{Cell Population Heterogeneity}} during {{Stem Cell
+  Differentiation}}}}.
+\newblock {\emph{\JournalTitle{Sci Rep}}} \textbf{\bibinfo{volume}{7}},
+  \bibinfo{pages}{13307}, \doiprefix\url{10.1038/s41598-017-13731-3}
+  (\bibinfo{year}{2017}).
 
 \bibitem{sumaElectricFieldDrivenTrappingPolyelectrolytes2018}
 \bibinfo{author}{Suma, A.}, \bibinfo{author}{Di~Stefano, M.} \&
