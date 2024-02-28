@@ -5,53 +5,44 @@ Reallocating 'name_of_file' (item size: 1) to 14 items.
 The style file: naturemag-doi.bst
 Reallocating 'name_of_file' (item size: 1) to 17 items.
 Database file #1: bibliography.bib
-Warning--I didn't find a database entry for "liauAdaptiveChromatinRemodeling2017a"
-Warning--I didn't find a database entry for "grosbergGiantMoleculesHere2011"
-Warning--I didn't find a database entry for "LAMMPSDocumentation"
-Warning--I didn't find a database entry for "j.michaelcherryATACSeqPipeline"
-Warning--I didn't find a database entry for "gowersMDAnalysisPythonPackage2016"
-Warning--I didn't find a database entry for "tuckermanStatisticalMechanicsTheory2015"
-Warning--I didn't find a database entry for "robinsonIgvJsEmbeddable2020a"
-Warning--I didn't find a database entry for "robinsonIntroductionIntegrativeGenomics"
-You've used 31 entries,
+You've used 38 entries,
             2380 wiz_defined-function locations,
-            1239 strings with 18810 characters,
-and the built_in function-call counts, 11749 in all, are:
-= -- 796
-> -- 320
+            1276 strings with 20432 characters,
+and the built_in function-call counts, 14321 in all, are:
+= -- 965
+> -- 384
 < -- 0
-+ -- 162
-- -- 79
-* -- 1514
-:= -- 1266
-add.period$ -- 89
-call.type$ -- 31
-change.case$ -- 34
++ -- 194
+- -- 95
+* -- 1837
+:= -- 1533
+add.period$ -- 109
+call.type$ -- 38
+change.case$ -- 43
 chr.to.int$ -- 0
-cite$ -- 31
-duplicate$ -- 1021
-empty$ -- 1093
-format.name$ -- 103
-if$ -- 2326
+cite$ -- 38
+duplicate$ -- 1248
+empty$ -- 1351
+format.name$ -- 124
+if$ -- 2858
 int.to.chr$ -- 0
-int.to.str$ -- 31
-missing$ -- 246
-newline$ -- 161
-num.names$ -- 27
-pop$ -- 191
+int.to.str$ -- 38
+missing$ -- 304
+newline$ -- 195
+num.names$ -- 34
+pop$ -- 245
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 209
+skip$ -- 261
 stack$ -- 0
-substring$ -- 547
-swap$ -- 1021
+substring$ -- 632
+swap$ -- 1247
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 63
-width$ -- 33
-write$ -- 354
-(There were 8 warnings)
+while$ -- 77
+width$ -- 40
+write$ -- 430

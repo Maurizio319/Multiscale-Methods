@@ -8,7 +8,7 @@ Secondly, the dimension of the nucleus and the nucleolus of the IMR90 cell had t
 \cite{ehlerHumanFoetalLung1996,ingramHiCImplementationGenome2020,maiserSuperresolutionSituAnalysis2020},
 I came to the conclusion that they have respectively a dimension of \SI{520}{\micro\metre} and \SI{100}{\micro\metre}.\\
 
-With the aim of being able to make statistics out of the generated data, it was decided to make simulations for 100 replicates. Additionally, three chains were simulated at the same time within each repetition. Everything was included inside a box with a volume written in table \ref{tab: parameters CG}. 
+With the aim of being able to make statistics out of the generated data, it was decided to make simulations for 100 replicates. Additionally, three chains were simulated at the same time within each repetition. Everything was included inside a box with a volume written in table \ref{table: parameters CG}. 
 It is important to specify that all the simulations were performed making use of periodic boundaries %#TODO make a chapter about the periodic boundary conditions
 
 All the simulations were performed making use of the \textit{run\_lammps} function included in the TADphys package.
@@ -48,7 +48,7 @@ Three types of potential energies were used to regulate the interactions between
         \item LJ cutoff $r_0$ $(\text{distance unit}) = \sigma * 2^{\frac{1}{6}} = 1.12246152962189$
     \end{enumerate}
 
-    \item \textbf{Angle bending potentials: }The angle bending associated potentials are directly correlated with the persistence length (\textit{PL}), which is calculated as in equation \ref{eq: persistence length}. All the quantities are presented in the table \ref{tab: parameters CG}. 
+    \item \textbf{Angle bending potentials: }The angle bending associated potentials are directly correlated with the persistence length (\textit{PL}), which is calculated as in equation \ref{eq: persistence length}. All the quantities are presented in the table \ref{table: parameters CG}. 
     The angle related style and values were set with the $angle\_style$ and $angle\_value$ of LAMMPS
     \cite{thompsonLAMMPSFlexibleSimulation2022}.
 
@@ -74,7 +74,7 @@ The steps performed will be described in the following paragraphs:
 
 \paragraph{The computation of the parameters for Coarse Graining:}
 
-Both parameters for the fine-scale model (table \ref{tab: parameters FS}) and the CG model (table \ref{tab: parameters CG}) were calculated. The number of bp wrapping around a bead in the FS method was considered to be $150$, while instead the linker portion was considered to be of length $50$ bp (table \ref{tab: parameters FS}). The thickness of a bead, which corresponds to a nucleosome was taken as equal to $10$ nm, while instead the default Kuhn length was set to $50$ nm. The genome densities ($\rho_{FS} = \rho_{CG} = 0.012\; \text{bp}/\text{nm}^3$) are imposed to be the same for both the FS and the CG model; this value has been found experimentally and represents the density of bp inside human nuclei
+Both parameters for the fine-scale model (table \ref{table: parameters FS}) and the CG model (table \ref{table: parameters CG}) were calculated. The number of bp wrapping around a bead in the FS method was considered to be $150$, while instead the linker portion was considered to be of length $50$ bp (table \ref{table: parameters FS}). The thickness of a bead, which corresponds to a nucleosome was taken as equal to $10$ nm, while instead the default Kuhn length was set to $50$ nm. The genome densities ($\rho_{FS} = \rho_{CG} = 0.012\; \text{bp}/\text{nm}^3$) are imposed to be the same for both the FS and the CG model; this value has been found experimentally and represents the density of bp inside human nuclei
 \cite{golkaramRoleChromatinDensity2017}.
 The beads and bonds have all the same length in the FS and the CG models, consequently, the contour length (which represents the maximal length of the polymer chain) is exactly the product between the number of beads and their size, in the FS and in the CG models. The DNA content of the analyzed region was set to be equal to $2,000,000$ bp. Before computing the parameters for the coarse-grained model, the DNA content of the Kuhn segments in the CG system ($Dlk_{CG}$) was tuned to match the desired value of DNA content in CG beads ($\nu_{CG}$).
 %#TODO what is c?
@@ -85,7 +85,7 @@ The beads and bonds have all the same length in the FS and the CG models, conseq
 
 \paragraph{Generation of the initial conformation rosettes:}
 
-Once found the coarse graining parameters, rosettes for all the replicates were built, with a radius of 12.0 nm inside a cubic box whose edge length is equal to 300 nm. The particle radius of the CG model was set to 0.5 nm. In each replicate, three equal chains were built, by setting a different random seed each time. The total number of particles in each chain was of 400 beads. Indeed, if you make the calcualation $2,000,000/5,000 = 400$.
+Once found the coarse graining parameters, rosettes for all the replicates were built, with a radius of 12.0 nm inside a cubic box whose edge length is equal to 300 nm. The particle radius of the CG model was set to 0.5 nm. In each replicate, three equal chains were built, by setting a different random seed each time. The total number of particles in each chain was of 400 beads. Indeed, if you make the calculation $2,000,000/5,000 = 400$.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -104,7 +104,7 @@ The optimal pressure was attested at 0.192. %#TODO what measure
 % \begin{figure}[H]
 %     \centering
 %     % \includegraphics{images}
-%     \caption{Pressure values associated to the corresponding resulting box sides for the first 10 replicates are depicted. The target value for the side of the box is indicated by the red dashed line and is equal to 18.4515 nm (table \ref{tab: parameters CG}). The corresponding pressure was taken for the next steps. The optimal pressure was attested at 0.192} %#TODO add unit of measure
+%     \caption{Pressure values associated to the corresponding resulting box sides for the first 10 replicates are depicted. The target value for the side of the box is indicated by the red dashed line and is equal to 18.4515 nm (table \ref{table: parameters CG}). The corresponding pressure was taken for the next steps. The optimal pressure was attested at 0.192} %#TODO add unit of measure
 %     \label{fig:enter-label}
 % \end{figure}
 
@@ -134,6 +134,6 @@ Once defined the step at which the simulations were considered to be at the equi
 % r_0 = r_{\text{cutoff}} = 3 * 2^{\frac{1}{6}}
 % $$
 
-Once the interaction parameters were set, other 1 second long simulations were performed with the intention of generating contact maps. Those simulations were firsly preceded by an energy minimization process, very similar to the one already explained in the "\textit{Finding the optimal pressure}" paragraph. After the small simulation time, the contact matrices were generated, by taking into account just the interactions occurring in the same chain (intra-chain). A contact is established whenever two coarse-grained particles are found at a distance lower then 100 nm.
+Once the interaction parameters were set, other 1 second long simulations were performed with the intention of generating contact maps. Those simulations were firstly preceded by an energy minimization process, very similar to the one already explained in the "\textit{Finding the optimal pressure}" paragraph. After the small simulation time, the contact matrices were generated, by taking into account just the interactions occurring in the same chain (intra-chain). A contact is established whenever two coarse-grained particles are found at a distance lower then 100 nm.
 
 

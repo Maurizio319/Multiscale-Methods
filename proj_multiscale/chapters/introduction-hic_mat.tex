@@ -7,12 +7,26 @@ The experimental procedure is described in figure \ref{fig: HiC sequencing}. Eac
 represent the number of contacts between the position $i^{\text{th}}$ and $j^{\text{th}}$. The resolution of an Hi-C map will be dependent on the sequencing process, and have to be decided on the base of the type of information that we want to recover from the data
 \cite{lajoieHitchhikerGuideHiC2015}.
 
+
 \begin{figure}[H]
-    \includegraphics[width=0.75\linewidth]{./images/HiC-seq.png}
-    \caption{Image taken from the following \href{https://data.4dnucleome.org/experiment-types/dilution-hi-c/}{link}
-    \cite{lieberman-aidenComprehensiveMappingLong2009}, 
-    representing the Hi-C sequencing technique in a schematized way.}
-    \label{fig: HiC sequencing}
+    \centering
+    \begin{subfigure}{0.70\textwidth}
+        \includegraphics[width=\linewidth]{./images/HiC-seq.png}
+        \caption{Image taken from the following \href{https://data.4dnucleome.org/experiment-types/dilution-hi-c/}{link}
+        \cite{lieberman-aidenComprehensiveMappingLong2009}, 
+        representing the Hi-C sequencing technique in a schematized way.}
+        \label{fig: HiC sequencing}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.57\textwidth}
+      \includegraphics[width=\linewidth]{./images/HiC-contacts.png}
+      \caption{Figure representing the contact typologies described in this chapter. The image was taken from the work of Razin and colleagues
+      \cite{razin3DGenomics2019}.}
+      \label{fig:RMSD collective replicates}
+    \end{subfigure}
+  
+    \caption{}
+    % \label{fig:RMSD figures}
 \end{figure}
 
 The following list of patterns can be found by inspecting an Hi-C matrix

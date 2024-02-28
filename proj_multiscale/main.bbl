@@ -15,6 +15,14 @@
   [{{Internet}}]}}, \doiprefix\url{10.1007/978-3-030-68670-3_1}
   (\bibinfo{publisher}{{Springer}}, \bibinfo{year}{2021}).
 
+\bibitem{liauAdaptiveChromatinRemodeling2017}
+\bibinfo{author}{Liau, B.~B.} \emph{et~al.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Adaptive {{Chromatin Remodeling
+  Drives Glioblastoma Stem Cell Plasticity}} and {{Drug Tolerance}}}}.
+\newblock {\emph{\JournalTitle{Cell Stem Cell}}} \textbf{\bibinfo{volume}{20}},
+  \bibinfo{pages}{233--246.e7}, \doiprefix\url{10.1016/j.stem.2016.11.003}
+  (\bibinfo{year}{2017}).
+
 \bibitem{shareefExtendedrepresentationBisulfiteSequencing2021}
 \bibinfo{author}{Shareef, S.~J.} \emph{et~al.}
 \newblock \bibinfo{journal}{\bibinfo{title}{Extended-representation bisulfite
@@ -95,6 +103,14 @@
   \bibinfo{pages}{289--293}, \doiprefix\url{10.1126/science.1181369}
   (\bibinfo{year}{2009}).
 
+\bibitem{razin3DGenomics2019}
+\bibinfo{author}{Razin, S.}, \bibinfo{author}{Ulianov, S.} \&
+  \bibinfo{author}{Gavrilov, A.}
+\newblock \bibinfo{journal}{\bibinfo{title}{{{3D Genomics}}}}.
+\newblock {\emph{\JournalTitle{Molecular Biology}}}
+  \textbf{\bibinfo{volume}{53}}, \bibinfo{pages}{802--812},
+  \doiprefix\url{10.1134/S0026893319060153} (\bibinfo{year}{2019}).
+
 \bibitem{distefanoHiCconstrainedPhysicalModels2016}
 \bibinfo{author}{Di~Stefano, M.}, \bibinfo{author}{Paulsen, J.},
   \bibinfo{author}{Lien, T.~G.}, \bibinfo{author}{Hovig, E.} \&
@@ -105,6 +121,13 @@
 \newblock {\emph{\JournalTitle{Sci Rep}}} \textbf{\bibinfo{volume}{6}},
   \bibinfo{pages}{35985}, \doiprefix\url{10.1038/srep35985}
   (\bibinfo{year}{2016}).
+
+\bibitem{grosbergGiantMoleculesHere2011}
+\bibinfo{author}{Grosberg, A.~J.}, \bibinfo{author}{Chochlov, A.~R.} \&
+  \bibinfo{author}{de~Gennes, P.-G.}
+\newblock \emph{\bibinfo{title}{Giant Molecules: Here, There, and Everywhere}}
+  (\bibinfo{publisher}{{World Scientific}}, \bibinfo{address}{{New Jersey}},
+  \bibinfo{year}{2011}), \bibinfo{edition}{2. ed} edn.
 
 \bibitem{ernstChromatinstateDiscoveryGenome2017}
 \bibinfo{author}{Ernst, J.} \& \bibinfo{author}{Kellis, M.}
@@ -146,6 +169,15 @@
 \newblock \bibinfo{title}{{{LAMMPS}}}.
 \newblock \bibinfo{howpublished}{https://www.lammps.org/\#gsc.tab=0}.
 
+\bibitem{thompsonLAMMPSFlexibleSimulation2022}
+\bibinfo{author}{Thompson, A.~P.} \emph{et~al.}
+\newblock \bibinfo{journal}{\bibinfo{title}{{{LAMMPS}} - a flexible simulation
+  tool for particle-based materials modeling at the atomic, meso, and continuum
+  scales}}.
+\newblock {\emph{\JournalTitle{Computer Physics Communications}}}
+  \textbf{\bibinfo{volume}{271}}, \bibinfo{pages}{108171},
+  \doiprefix\url{10.1016/j.cpc.2021.108171} (\bibinfo{year}{2022}).
+
 \bibitem{encodeprojectconsortiumIntegratedEncyclopediaDNA2012}
 \bibinfo{author}{{ENCODE Project Consortium}}.
 \newblock \bibinfo{journal}{\bibinfo{title}{An integrated encyclopedia of
@@ -158,6 +190,13 @@
 \bibinfo{title}{{{ATAC-seq}} (unreplicated) -- {{ENCODE}}}.
 \newblock
   \bibinfo{howpublished}{https://www.encodeproject.org/pipelines/ENCPL344QWT/}.
+
+\bibitem{michaelcherryATACSeqPipeline}
+\bibinfo{author}{{Michael Cherry}}, \bibinfo{author}{{Jason Buenrostro}},
+  \bibinfo{author}{{Alicia Schep}} \& \bibinfo{author}{{Will Greenleaf}}.
+\newblock \bibinfo{title}{{ATACSeq Pipeline}}.
+\newblock
+  \bibinfo{howpublished}{https://docs.google.com/document/d/1f0Cm4vRyDQDu0bMehHD7P7KOMxTOP-HiNoIvL1VcBt8/edit?usp=sharing\&usp=embed\_facebook}.
 
 \bibitem{yanReadsInsightHitchhiker2020}
 \bibinfo{author}{Yan, F.}, \bibinfo{author}{Powell, D.~R.},
@@ -218,15 +257,6 @@
   \bibinfo{pages}{7462}, \doiprefix\url{10.1038/s41598-020-64589-x}
   (\bibinfo{year}{2020}).
 
-\bibitem{thompsonLAMMPSFlexibleSimulation2022}
-\bibinfo{author}{Thompson, A.~P.} \emph{et~al.}
-\newblock \bibinfo{journal}{\bibinfo{title}{{{LAMMPS}} - a flexible simulation
-  tool for particle-based materials modeling at the atomic, meso, and continuum
-  scales}}.
-\newblock {\emph{\JournalTitle{Computer Physics Communications}}}
-  \textbf{\bibinfo{volume}{271}}, \bibinfo{pages}{108171},
-  \doiprefix\url{10.1016/j.cpc.2021.108171} (\bibinfo{year}{2022}).
-
 \bibitem{golkaramRoleChromatinDensity2017}
 \bibinfo{author}{Golkaram, M.}, \bibinfo{author}{Jang, J.},
   \bibinfo{author}{Hellander, S.}, \bibinfo{author}{Kosik, K.~S.} \&
@@ -237,6 +267,22 @@
 \newblock {\emph{\JournalTitle{Sci Rep}}} \textbf{\bibinfo{volume}{7}},
   \bibinfo{pages}{13307}, \doiprefix\url{10.1038/s41598-017-13731-3}
   (\bibinfo{year}{2017}).
+
+\bibitem{gowersMDAnalysisPythonPackage2016}
+\bibinfo{author}{Gowers, R.} \emph{et~al.}
+\newblock \bibinfo{title}{{{MDAnalysis}}: {{A Python Package}} for the {{Rapid
+  Analysis}} of {{Molecular Dynamics Simulations}}}.
+\newblock In \emph{\bibinfo{booktitle}{Python in {{Science Conference}}}},
+  \bibinfo{pages}{98--105}, \doiprefix\url{10.25080/Majora-629e541a-00e}
+  (\bibinfo{address}{{Austin, Texas}}, \bibinfo{year}{2016}).
+
+\bibitem{tuckermanStatisticalMechanicsTheory2015}
+\bibinfo{author}{Tuckerman, M.~E.}
+\newblock \emph{\bibinfo{title}{Statistical Mechanics: Theory and Molecular
+  Simulation}}.
+\newblock Oxford Graduate Texts (\bibinfo{publisher}{{Oxford Univ. Press}},
+  \bibinfo{address}{{Oxford}}, \bibinfo{year}{2015}),
+  \bibinfo{edition}{reprinted (with corr.)} edn.
 
 \bibitem{sumaElectricFieldDrivenTrappingPolyelectrolytes2018}
 \bibinfo{author}{Suma, A.}, \bibinfo{author}{Di~Stefano, M.} \&
@@ -264,5 +310,11 @@
 \newblock {\emph{\JournalTitle{Genome Res}}} \textbf{\bibinfo{volume}{27}},
   \bibinfo{pages}{1939--1949}, \doiprefix\url{10.1101/gr.220640.117}
   (\bibinfo{year}{2017}).
+
+\bibitem{robinsonIntegrativeGenomicsViewer2011c}
+\bibinfo{author}{Robinson, J.~T.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Integrative genomics viewer}}.
+\newblock {\emph{\JournalTitle{C O Rresp O N N Ce}}}
+  \textbf{\bibinfo{volume}{29}}, \bibinfo{pages}{3} (\bibinfo{year}{2011}).
 
 \end{thebibliography}
