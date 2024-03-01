@@ -1,7 +1,61 @@
 % !TeX root = ../main.tex
-\subsection{Results from model selection} \label{chap: results model selection}
+\subsection{Results from model selection} \label{chap:results_model_selection}
+
+The steps described in algorithm \ref{algo:comparison} were partially followed. A number of configurations for the model were tested, one after the other (loops). To assess each time the best version of a loop, the steps, obtained by varying the value associated to the same variable, were confronted in terms of the produced SCC quantities. In table \ref{tab:results_model_sloopselection}, the performed loops are listed, and only the steps giving the best results are shown. 
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|c|c|}
+        \hline
+        \textbf{Loop} & \textbf{Model} & \textbf{SCC} \\
+        \hline
+        Loop 1 & $E_{33} = 0.7$ & 0.5549067 \\
+        \hline
+        Loop 2 & $E_{33} = 0.7$, $E_{22} = 0.8$ & 0.5352417 \\
+        \hline
+        Loop 3 & $E_{33} = 0.7$, $E_{22} = 0.8$, $E_{44} = 0.6$ & \textbf{0.6068071} \\
+        \hline      
+        Loop 4 (removal) & $E_{22} = 0.8$, $E_{44} = 0.6$ & 0.5324294 \\
+        \hline
+        Loop 5 & $E_{33} = 0.7$, $E_{22} = 0.8$, $E_{44} = 0.6$, $E_{11} = 0.6$ & 0.5822261 \\
+        \hline    
+    \end{tabular}
+    \caption{Results from the first tested loops. Interactions between beads of the same type are written in the form "$E_{nn} = value$}
+    \label{tab:results_model_selection}
+\end{table}
+
+In constrast with the initial guesses, state 1 does not appear in the best model found until now. This meant that the "brute force" approach, described in \ref{methods: confront matrices}, should be discarded, and more combinations should be considered in order to find the best combination of parameters. The data in the table could also be visualized in figure \ref{fig: loop results}.
+
+\begin{figure}
+    \includegraphics[width=0.60\linewidth]{/home/maurizio/Documents/GitHub/3DCS/Maurizio/steps/7-bettermatrices/images/top_scc_1to5_plot.png}
+    \caption{The results obtained from the best steps of the loops. The information reported are also in table \ref{tab:results_model_selection}.}
+    \label{fig: loop results}
+\end{figure}
+
+Although this process has not been finished yet, I decided to produce the contact map of the best model tested ($E_{33} = 0.7$, $E_{22} = 0.8$, $E_{44} = 0.6$), to make the first considerations that would aid in the next future (figure \ref{fig: matrices}). Despite the evident difference existing among the two matrices, it is possible to see larger densities of points where the original matrix signals the presence of TADs, and, in general on the boundaries of the squared shapes. The value obtained of SCC, which is a Pearson Correlation coefficient weighted with factors that depend on the numerosity of the distance bends, is quite high, and indicate a moderate correlation.
+Expectedly, the contacts measured by the simulated model were very lower with respect to those of the original one.
+
+
+\begin{figure}[H]
+    \centering
+    
+    \begin{subfigure}{0.40\textwidth}
+      \includegraphics[width=\linewidth]{/home/maurizio/Documents/GitHub/3DCS/Maurizio/steps/7-bettermatrices/see_maps/res/original_map.png}
+      \caption{Original matrix}
+      \label{fig: original matrix}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.40\textwidth}
+      \includegraphics[width=\linewidth]{/home/maurizio/Documents/GitHub/3DCS/Maurizio/steps/7-bettermatrices/see_maps/res/simulated_map.png}
+      \caption{Simulated matrix}
+      \label{fig: simulated matrix}
+    \end{subfigure}
+  
+    \caption{Representation of the real and the simulated matrices.}
+    \label{fig: matrices}
+\end{figure}
 
 
 %#TODO add graph
-%#TODO add confronto con brute force
+%#TODO add confrontation with brute force
 %#TODO add considerations

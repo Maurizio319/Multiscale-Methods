@@ -1,19 +1,20 @@
 % !TeX root = ../main.tex
-\subsection{Algorithms used for comparison}
+\subsection{Algorithms used for comparison} \label{methods: confront matrices}
 
+As stated in the methods section \ref{chap: the model description} about the simulations, the attraction potentials are sequentially added to the model in order to improve the predictions. The SCC metric (equation \ref{eq: SCC}) was used to compute the difference between the control contact matrix and the CG derived one (chapter \ref{chap: SCC method}).
 
-As stated in the methods section \ref{chap: the model description} about the simulations, the attraction potentials are sequentially added to the model in order to improve the predictions. The SCC metric was used to compute the difference between the control contact matrix and the CG derived one (chapter \ref{chap: SCC method}).
+Two methods were then considered to add the variables, which are expressed in algorithm \ref{algo: greedy comparison} and \ref{algo: comparison}. Since the states are differentially populated, as stated in chapter \ref{chap: ChromHMM results}, it is possible to argue that the largest contribution to the result would be given, in a hierarchical manner, by the most populated states. As a consequence of this consideration, it should be possible to fix the values related to the most prevalent states, before considering those that are less present. This type of mechanism is described in the greedy process of algorithm \ref{algo: greedy comparison}. If that assumption is not accepted, then either all the possible configurations have to be considered, either a better way to test the generated models should be thought.\\
 
-Two methods were then considered to add the variables, which are expressed in algorithm \ref{algo: greedy comparison} and \ref{algo: comparison}. Since the states are differentially populated, as stated in chapter \ref{chap: ChromHMM results}, it is possible to argue that the largest contribution to the result would be given, in a hierarchical manner, by the most populated states. As a consequence of this consideration, I could fix the values related to the most prevalent states, before considering those that are less present. This type of mechanism is described in the greedy process of algorithm \ref{algo: greedy comparison}. If that assumption is not accepted, then either you test all the possible configurations, either you find a better way to test the generated models. The algorithm \ref{algo: comparison} is a stepwise solution which allows to solve partially the problem at the cost of more simulations to perform. \\
+Because of the fact that beads of different states could act coordinately in defining the quality of the results, the algorithm \ref{algo: comparison} was devised. It represents a stepwise solution which allows to solve partially the problem at the cost of more simulations to perform. In fact, any choices of parameters are deleted and rethought during the process, in a manner that tries to avoid local \textit{optima}.\\
 
 \begin{algorithm}[H]
     \caption{Greedy matrix comparison}\label{algo: greedy comparison}
     \KwResult{Best performing greedy model}
     \ForAll{attraction parameter}{
-        Construct models by adding the most present attraction parameter to the $(n-1)^{\text{th}}$ step configuration \;
+        Construct models by adding the most present attraction parameter to the previous step configuration \;
         Compute SCC of the model with respect to the reference ranging among a list of possible values\;
         Select the value of the parameter which gives the best results\;
-        Add that attraction with that coefficient\;
+        Add that parameter (attraction) with that value to the model\;
     }
     \Return{Best greedy model}\;
     % \tcc{The states are taken from the most populated to the least populated}
@@ -31,14 +32,15 @@ Two methods were then considered to add the variables, which are expressed in al
         Construct models by adding the most present attraction parameter to the $(n-1)^{\text{th}}$ step configuration \;
         Compute SCC of the model with respect to the reference ranging among a list of possible values\;
         Select the value of the parameter which gives the best results\;
+        Step = 0
         \If{addition gives better results}{
-            Add that attraction with that coefficient\;
+            Add that parameter (attraction) with that value to the model\;
             Continue = True
             }
         \ForAll{state in model}{
             Remove that state from the model\;
             Vary the value associated to the state with the highest frequency among those remaining\;
-        Compute SCC of each model with respec to the reference ranging among a list of possible values\
+        Compute SCC of each model with respect to the reference ranging among a list of possible values\
         }
         Select the reduced model which gives the best results\;
         \If{removal gives better results}{
@@ -50,5 +52,4 @@ Two methods were then considered to add the variables, which are expressed in al
         \Return{Best model}\;
     \tcc{$n$ is the step number}
 \end{algorithm}
-\paragraph{}
-Another possible way to compare the matrices would be to compute the Spearman correlation coefficient. Ideally, it would be interesting to see if there are cases where the two metrics produce different results, and to understand which of them is better in what cases %#TODO maybe conclusions.
+

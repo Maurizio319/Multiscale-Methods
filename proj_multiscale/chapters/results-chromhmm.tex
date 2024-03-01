@@ -1,20 +1,20 @@
 % !TeX root = ../main.tex
 \subsection{\textit{ChromHMM} results} \label{chap: ChromHMM results} %#TODO change title
 
-In total, 4 states were considered to be present. Two functions in particular were used: BinarizeBam and LearnModel. The data shown in \ref{methods: data used} were aligned to \textit{hg38} reference genome
+In total, 4 states were considered to be present. Two functions in particular were used: \textit{BinarizeBam} and \textit{LearnModel}. The data shown in \ref{methods: data used} were aligned to \textit{hg38} reference genome
 \cite{HomoSapiensGenome}
 . Results are shown in image \ref{fig:ChromHMM results}; by taking a look to its subfigures, the following considerations could be done:
 
 \begin{enumerate}
-  \item Clear absence or presence of ATAC and CTCF signals could be detected in figure \ref{fig:State emission parameters}. for this reason, the following states are defined:
+  \item Clear absence or presence of ATAC and/or CTCF signals could be detected in figure \ref{fig:State emission parameters}. for this reason, the following states are defined:
   \begin{itemize}
-    \item \textbf{State 1}: State without the presence of ATAC and CTCF signal
-    \item \textbf{State 2}: State with ATAC but not CTCF peaks
-    \item \textbf{State 3}: State with the presence of both ATAC and CTCF signal
-    \item \textbf{State 4}: State with CTCF but not ATAC peaks
+    \item \textbf{State 1}: State without the presence of ATAC and CTCF signal.
+    \item \textbf{State 2}: State with ATAC but not CTCF peaks.
+    \item \textbf{State 3}: State with the presence of both ATAC and CTCF signal.
+    \item \textbf{State 4}: State with CTCF but not ATAC peaks.
   \end{itemize}
-  \item The states 1 and 2 in particular tend to perform transitions towards themselves instead of different states (figure \ref{fig:State transition parameters})
-  \item State 2 (with ATAC) and 3 (with ATAC and CTCF) tend to localize in CpG islands, exons and Transcriptional Starting Sites (figures \ref{fig:State enrichment in genome}, \ref{fig:TSS state population}, \ref{fig:TES state population})
+  \item The states 1 and 2, in particular, tend to perform transitions towards themselves instead of different states (figure \ref{fig:State transition parameters})
+  \item State 2 (with ATAC) and 3 (with ATAC and CTCF) tend to localize in CpG islands, exons and Transcriptional Starting Sites (figures \ref{fig:State enrichment in genome}, \ref{fig:TSS state population}, \ref{fig:TES state population}) as well as, although to a lesser extent, in Transcriptional Ending Sites (TES).
 \end{enumerate}
 
 \begin{figure}[H]
@@ -51,7 +51,7 @@ In total, 4 states were considered to be present. Two functions in particular we
 \end{figure}
 
 
-The proportions represented in image \ref{fig: proportions in bins} were obtained. In general, the proportions calculated taking into consideration the segments are much lower with respect to those calculated with the bins. The reason is that the first state is in general much more present than the other three. The ratios are larger with 5 kbp bins as in fact whenever there are a few occurrences of the rarely present states, those are assigned with a great probability and convert a great number of segments which are not anymore assigned to state 1.
+The proportions represented in image \ref{fig: proportions in bins} were obtained for the 5 kbp long bins. In general, the quantities calculated taking into consideration the 200 bp segments were much lower with respect to those calculated with the 5kb bins. The reason is that the first state is in general much more present than the other three, and whenever there are a few occurrences of the rarely present states, the long bins are assigned with a great probability to those states, and as a consequence the proportions tend to smooth out their differences.
 
 \begin{figure}[H]
   \centering
@@ -62,7 +62,7 @@ The proportions represented in image \ref{fig: proportions in bins} were obtaine
   \end{subfigure}
   \begin{subfigure}[t]{0.40\textwidth}
       \includegraphics[width=\linewidth]{/home/maurizio/Documents/GitHub/3DCS/Maurizio/steps/2-state_5kb/images/5000_bins_IMR90.png}
-      \caption{Proportion of states in 5000 bps long bins. Each dot represents the proportion relative to a chromosome.}
+      \caption{Proportion of states in 5000 bps long bins, obtained through the method described in process \ref{algo: enriched states}. Each dot represents the proportion relative to a chromosome.}
       \label{fig: proportions in bins}
   \end{subfigure}
   \caption{Proportions found in 200 bp segments and in 5000 bins.}
@@ -70,14 +70,14 @@ The proportions represented in image \ref{fig: proportions in bins} were obtaine
 \end{figure}
 
 
-The following image \ref{fig: ANPEP igv} was created by using IGV, a visualization tool
-\cite{robinsonIgvJsEmbeddable2020, robinsonIntegrativeGenomicsViewer2011c}
-. After a visual inspection of the results, it was decided to trust the assignment performed. However, some defects become evident while viewing the results: whenever the \textit{ChromHMM} signals the presence of the $4^{\text{th}}$ state, the relative bin is assigned to it. What happens is that, when the fourth state is found, if the $3^{\text{th}}$ (with both ATAC and CTCF) is not signaled enough, the information about the presence of ATAC peaks is lost. Problems about the precision of the state assignment process couldn't be easily solved and are a direct consequence of the coarse-graining process.
-%#TODO maybe you find a solution
+The following image (\ref{fig: ANPEP igv}) was created by using IGV, a visualization tool
+\cite{robinsonIgvJsEmbeddable2020, robinsonIntegrativeGenomicsViewer2011c}. 
+After a visual inspection of the results, it was decided to trust the assignment performed. However, some defects become evident while viewing the results: whenever the \textit{ChromHMM} signaled the presence of the $4^{\text{th}}$ state, the relative bin was assigned to it. What happened was that, when the fourth state was found, if the $3^{\text{th}}$ (with both ATAC and CTCF) was not signaled enough, the information about the presence of ATAC peaks was lost. Problems about the precision of the state assignment process couldn't be easily solved and are a direct consequence of the coarse-graining process.
+Indeed, it's impossible to retain the same amount of information before and after the bin simplification.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=\linewidth]{/home/maurizio/Documents/GitHub/3DCS/Maurizio/steps/2-state_5kb/images/igv_ANPEP.png}
-  \caption{IGV snapshot of a portion of the ANPEP region analyzed. The first track reports the alignment results obtained from the ATAC data, the second the CTCF data}
+  \caption{IGV snapshot of a portion of the ANPEP region analyzed. The first track reports the alignment results obtained from the ATAC data, the second the CTCF data. The straight traces in the bottom represent the state of the bins in that genomic region. An orange trace represents the state 1 (no ATAC and not CTCF), while instead the purple highlighting signals the third state (with ATAC and CTCF)}
   \label{fig: ANPEP igv}
 \end{figure}

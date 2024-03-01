@@ -50,6 +50,24 @@
   \bibinfo{pages}{1919--1932}, \doiprefix\url{10.1038/s41588-022-01223-8}
   (\bibinfo{year}{2022}).
 
+\bibitem{ouChromEMTVisualizing3D2017a}
+\bibinfo{author}{Ou, H.~D.} \emph{et~al.}
+\newblock \bibinfo{journal}{\bibinfo{title}{{{ChromEMT}}: {{Visualizing 3D}}
+  chromatin structure and compaction in interphase and mitotic cells}}.
+\newblock {\emph{\JournalTitle{Science}}} \textbf{\bibinfo{volume}{357}},
+  \bibinfo{pages}{eaag0025}, \doiprefix\url{10.1126/science.aag0025}
+  (\bibinfo{year}{2017}).
+
+\bibitem{robinsonEMMeasurementsDefine2006}
+\bibinfo{author}{Robinson, P. J.~J.}, \bibinfo{author}{Fairall, L.},
+  \bibinfo{author}{Huynh, V. A.~T.} \& \bibinfo{author}{Rhodes, D.}
+\newblock \bibinfo{journal}{\bibinfo{title}{{{EM}} measurements define the
+  dimensions of the ``30-nm'' chromatin fiber: {{Evidence}} for a compact,
+  interdigitated structure}}.
+\newblock {\emph{\JournalTitle{Proc. Natl. Acad. Sci.}}}
+  \textbf{\bibinfo{volume}{103}}, \bibinfo{pages}{6506--6511},
+  \doiprefix\url{10.1073/pnas.0601212103} (\bibinfo{year}{2006}).
+
 \bibitem{buenrostroTranspositionNativeChromatin2013a}
 \bibinfo{author}{Buenrostro, J.~D.}, \bibinfo{author}{Giresi, P.~G.},
   \bibinfo{author}{Zaba, L.~C.}, \bibinfo{author}{Chang, H.~Y.} \&
@@ -86,6 +104,33 @@
   \bibinfo{pages}{ii--iii}, \doiprefix\url{10.1038/nmeth.f.247}
   (\bibinfo{year}{2009}).
 
+\bibitem{encodeprojectconsortiumIntegratedEncyclopediaDNA2012}
+\bibinfo{author}{{ENCODE Project Consortium}}.
+\newblock \bibinfo{journal}{\bibinfo{title}{An integrated encyclopedia of
+  {{DNA}} elements in the human genome}}.
+\newblock {\emph{\JournalTitle{Nature}}} \textbf{\bibinfo{volume}{489}},
+  \bibinfo{pages}{57--74}, \doiprefix\url{10.1038/nature11247}
+  (\bibinfo{year}{2012}).
+
+\bibitem{ATACSeqServicesEndtoEnd}
+\bibinfo{title}{{{ATAC-Seq Services}} - {{End-to-End Open Chromatin Analysis
+  Service}}}.
+\newblock
+  \bibinfo{howpublished}{https://www.activemotif.com/catalog/1233/atac-seq-service}.
+
+\bibitem{ernstChromatinstateDiscoveryGenome2017}
+\bibinfo{author}{Ernst, J.} \& \bibinfo{author}{Kellis, M.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Chromatin-state discovery and
+  genome annotation with {{ChromHMM}}}}.
+\newblock {\emph{\JournalTitle{Nat Protoc}}} \textbf{\bibinfo{volume}{12}},
+  \bibinfo{pages}{2478--2492}, \doiprefix\url{10.1038/nprot.2017.124}
+  (\bibinfo{year}{2017}).
+
+\bibitem{chilledhousevibesLearningChromatinStates2015}
+\bibinfo{author}{{Chilled House Vibes}}.
+\newblock \bibinfo{title}{Learning {{Chromatin States}} from {{ChIP-seq Data}}:
+  {{ChromHMM}} - {{Luca Pinello}}} (\bibinfo{year}{2015}).
+
 \bibitem{lajoieHitchhikerGuideHiC2015}
 \bibinfo{author}{Lajoie, B.~R.}, \bibinfo{author}{Dekker, J.} \&
   \bibinfo{author}{Kaplan, N.}
@@ -94,6 +139,26 @@
 \newblock {\emph{\JournalTitle{Methods}}} \textbf{\bibinfo{volume}{72}},
   \bibinfo{pages}{65--75}, \doiprefix\url{10.1016/j.ymeth.2014.10.031}
   (\bibinfo{year}{2015}).
+
+\bibitem{distefanoHiCconstrainedPhysicalModels2016}
+\bibinfo{author}{Di~Stefano, M.}, \bibinfo{author}{Paulsen, J.},
+  \bibinfo{author}{Lien, T.~G.}, \bibinfo{author}{Hovig, E.} \&
+  \bibinfo{author}{Micheletti, C.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Hi-{{C-constrained}} physical
+  models of human chromosomes recover functionally-related properties of genome
+  organization}}.
+\newblock {\emph{\JournalTitle{Sci Rep}}} \textbf{\bibinfo{volume}{6}},
+  \bibinfo{pages}{35985}, \doiprefix\url{10.1038/srep35985}
+  (\bibinfo{year}{2016}).
+
+\bibitem{halversonMeltRingsChromosome2014}
+\bibinfo{author}{Halverson, J.~D.}, \bibinfo{author}{Smrek, J.},
+  \bibinfo{author}{Kremer, K.} \& \bibinfo{author}{Grosberg, A.~Y.}
+\newblock \bibinfo{journal}{\bibinfo{title}{From a melt of rings to chromosome
+  territories: The role of topological constraints in genome folding}}.
+\newblock {\emph{\JournalTitle{Rep Prog Phys}}} \textbf{\bibinfo{volume}{77}},
+  \bibinfo{pages}{022601}, \doiprefix\url{10.1088/0034-4885/77/2/022601}
+  (\bibinfo{year}{2014}).
 
 \bibitem{lieberman-aidenComprehensiveMappingLong2009}
 \bibinfo{author}{{Lieberman-Aiden}, E.} \emph{et~al.}
@@ -111,16 +176,13 @@
   \textbf{\bibinfo{volume}{53}}, \bibinfo{pages}{802--812},
   \doiprefix\url{10.1134/S0026893319060153} (\bibinfo{year}{2019}).
 
-\bibitem{distefanoHiCconstrainedPhysicalModels2016}
-\bibinfo{author}{Di~Stefano, M.}, \bibinfo{author}{Paulsen, J.},
-  \bibinfo{author}{Lien, T.~G.}, \bibinfo{author}{Hovig, E.} \&
-  \bibinfo{author}{Micheletti, C.}
-\newblock \bibinfo{journal}{\bibinfo{title}{Hi-{{C-constrained}} physical
-  models of human chromosomes recover functionally-related properties of genome
-  organization}}.
-\newblock {\emph{\JournalTitle{Sci Rep}}} \textbf{\bibinfo{volume}{6}},
-  \bibinfo{pages}{35985}, \doiprefix\url{10.1038/srep35985}
-  (\bibinfo{year}{2016}).
+\bibitem{kremerDynamicsEntangledLinear1990a}
+\bibinfo{author}{Kremer, K.} \& \bibinfo{author}{Grest, G.~S.}
+\newblock \bibinfo{journal}{\bibinfo{title}{Dynamics of entangled linear
+  polymer melts: {{A}} molecular-dynamics simulation}}.
+\newblock {\emph{\JournalTitle{J. Chem. Phys.}}} \textbf{\bibinfo{volume}{92}},
+  \bibinfo{pages}{5057--5086}, \doiprefix\url{10.1063/1.458541}
+  (\bibinfo{year}{1990}).
 
 \bibitem{grosbergGiantMoleculesHere2011}
 \bibinfo{author}{Grosberg, A.~J.}, \bibinfo{author}{Chochlov, A.~R.} \&
@@ -128,19 +190,6 @@
 \newblock \emph{\bibinfo{title}{Giant Molecules: Here, There, and Everywhere}}
   (\bibinfo{publisher}{{World Scientific}}, \bibinfo{address}{{New Jersey}},
   \bibinfo{year}{2011}), \bibinfo{edition}{2. ed} edn.
-
-\bibitem{ernstChromatinstateDiscoveryGenome2017}
-\bibinfo{author}{Ernst, J.} \& \bibinfo{author}{Kellis, M.}
-\newblock \bibinfo{journal}{\bibinfo{title}{Chromatin-state discovery and
-  genome annotation with {{ChromHMM}}}}.
-\newblock {\emph{\JournalTitle{Nat Protoc}}} \textbf{\bibinfo{volume}{12}},
-  \bibinfo{pages}{2478--2492}, \doiprefix\url{10.1038/nprot.2017.124}
-  (\bibinfo{year}{2017}).
-
-\bibitem{chilledhousevibesLearningChromatinStates2015}
-\bibinfo{author}{{Chilled House Vibes}}.
-\newblock \bibinfo{title}{Learning {{Chromatin States}} from {{ChIP-seq Data}}:
-  {{ChromHMM}} - {{Luca Pinello}}} (\bibinfo{year}{2015}).
 
 \bibitem{bucklePolymerSimulationsHeteromorphic2018}
 \bibinfo{author}{Buckle, A.}, \bibinfo{author}{Brackley, C.~A.},
@@ -178,14 +227,6 @@
   \textbf{\bibinfo{volume}{271}}, \bibinfo{pages}{108171},
   \doiprefix\url{10.1016/j.cpc.2021.108171} (\bibinfo{year}{2022}).
 
-\bibitem{encodeprojectconsortiumIntegratedEncyclopediaDNA2012}
-\bibinfo{author}{{ENCODE Project Consortium}}.
-\newblock \bibinfo{journal}{\bibinfo{title}{An integrated encyclopedia of
-  {{DNA}} elements in the human genome}}.
-\newblock {\emph{\JournalTitle{Nature}}} \textbf{\bibinfo{volume}{489}},
-  \bibinfo{pages}{57--74}, \doiprefix\url{10.1038/nature11247}
-  (\bibinfo{year}{2012}).
-
 \bibitem{ATACseqUnreplicatedENCODE}
 \bibinfo{title}{{{ATAC-seq}} (unreplicated) -- {{ENCODE}}}.
 \newblock
@@ -217,15 +258,6 @@
 \bibinfo{title}{Homo sapiens genome assembly {{GRCh38}} - {{NCBI}} - {{NLM}}}.
 \newblock
   \bibinfo{howpublished}{https://www.ncbi.nlm.nih.gov/datasets/genome/GCF\_000001405.26/}.
-
-\bibitem{robinsonIgvJsEmbeddable2020}
-\bibinfo{author}{Robinson, J.~T.}, \bibinfo{author}{Thorvaldsd{\'o}ttir, H.},
-  \bibinfo{author}{Turner, D.} \& \bibinfo{author}{Mesirov, J.~P.}
-\newblock \bibinfo{title}{Igv.js: An embeddable {{JavaScript}} implementation
-  of the {{Integrative Genomics Viewer}} ({{IGV}})}.
-\newblock \bibinfo{type}{Preprint}, \bibinfo{institution}{{Bioinformatics}}
-  (\bibinfo{year}{2020}).
-\newblock \doiprefix\url{10.1101/2020.05.03.075499}.
 
 \bibitem{UCSCGenomeBrowser}
 \bibinfo{title}{{{UCSC Genome Browser Home}}}.
@@ -267,6 +299,15 @@
 \newblock {\emph{\JournalTitle{Sci Rep}}} \textbf{\bibinfo{volume}{7}},
   \bibinfo{pages}{13307}, \doiprefix\url{10.1038/s41598-017-13731-3}
   (\bibinfo{year}{2017}).
+
+\bibitem{robinsonIgvJsEmbeddable2020}
+\bibinfo{author}{Robinson, J.~T.}, \bibinfo{author}{Thorvaldsd{\'o}ttir, H.},
+  \bibinfo{author}{Turner, D.} \& \bibinfo{author}{Mesirov, J.~P.}
+\newblock \bibinfo{title}{Igv.js: An embeddable {{JavaScript}} implementation
+  of the {{Integrative Genomics Viewer}} ({{IGV}})}.
+\newblock \bibinfo{type}{Preprint}, \bibinfo{institution}{{Bioinformatics}}
+  (\bibinfo{year}{2020}).
+\newblock \doiprefix\url{10.1101/2020.05.03.075499}.
 
 \bibitem{gowersMDAnalysisPythonPackage2016}
 \bibinfo{author}{Gowers, R.} \emph{et~al.}

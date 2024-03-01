@@ -1,12 +1,12 @@
 % !TeX root = ../main.tex
 \subsection{Trajectories analysis} \label{chap: trajectory analysis}
 
-The analysis of the trajectories was done by taking together and considering as independent the results obtained with each single chain of each replicate. For this reason, it was decided to put together all the results and produce the collective plots represented in figures \ref{fig:RMSD collective replicates}, \ref{fig:RG collective replicates} and \ref{fig:autocorrelation function collective replicates}.
+The analysis of the trajectories was done by taking together and considering as independent the results obtained from each single chain of each replicate. For this reason, it was also decided to put together all the outputs and produce the collective plots represented in figures \ref{fig:RMSD collective replicates}, \ref{fig:RG collective replicates} and \ref{fig:autocorrelation function collective replicates}.
 
-Three types of analysis were performed (all the following terms are explained in the Glossary): 
+Three types of analysis were performed: 
 
 \begin{enumerate}
-    \item \textbf{\textit{RMSD}}: The Root Mean Square Deviation (RMSD) is calculated by using the \textit{MDanalysis} package
+    \item \textbf{\textit{Root Mean Square Deviation (RMSD)}}: The RMSD is evaluated by using the \textit{MDanalysis} package
     \cite{gowersMDAnalysisPythonPackage2016} (\textit{rmsd} in \textit{MDAnalysis.analysis.rms})
     and is calculated as follows:
 
@@ -23,7 +23,7 @@ Three types of analysis were performed (all the following terms are explained in
 
     \item \textbf{$R_g$}: The Radius of Gyration was calculated as written in equation \ref{eq: radius of gyration} through the \textit{MDanalysis} package (\textit{radius\_of\_gyration} function). This quantity is a measure of how the mass of an object is spread out relative to a particular axis of rotation. In general, it tells "how spherical" is an object
     \cite{gowersMDAnalysisPythonPackage2016,tuckermanStatisticalMechanicsTheory2015}
-    . The results are written in graph \ref{fig:RG first replicate} and \ref{fig:RG collective replicates}.
+    ; the higher is the value of the radius of gyration, the lower is the sphericity of the substance. The results are written in graph \ref{fig:RG first replicate} and \ref{fig:RG collective replicates}.
     
 
     \begin{equation} \label{eq: radius of gyration}
@@ -31,8 +31,8 @@ Three types of analysis were performed (all the following terms are explained in
     \end{equation}
 
 
-    \item \textit{\textbf{Autocorrelation function:}} The autocorrelation function can be written as shown in equation \ref{eq: autocorrelation}
-    \cite{sumaElectricFieldDrivenTrappingPolyelectrolytes2018}. The results are shown in graphs \ref{fig:autocorrelation function first replicate} and \ref{fig:autocorrelation function collective replicates}. 
+    \item \textit{\textbf{Autocorrelation function:}} The autocorrelation function represents the degree of similarity between a given time series and a lagged version of itself over successive time intervals. It can be written as shown in equation \ref{eq: autocorrelation}
+    \cite{sumaElectricFieldDrivenTrappingPolyelectrolytes2018}. The results are depicted in graphs \ref{fig:autocorrelation function first replicate} and \ref{fig:autocorrelation function collective replicates}. 
     
     \begin{equation} \label{eq: autocorrelation}
       r_k = \frac{C_k}{C_0} = \frac{\frac{1}{M} \sum_{t = 1}^{M - k}{(A_t - \bar{A})(A_{t+k} - \bar{A})}}{\frac{1}{M} \sum_{t = 1}^{M - k}{(A_t - \bar{A})^2}}
