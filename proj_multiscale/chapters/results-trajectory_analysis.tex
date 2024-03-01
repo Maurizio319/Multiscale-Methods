@@ -1,19 +1,19 @@
 \subsection{Trajectory analysis results} \label{chap: trajectory analysis results}
 
-Results from the RMSD analysis are reported in figure \ref{fig:RMSD first replicate} and \ref{fig:RMSD collective replicates}. The $R_g$ results are instead plotted in images \ref{fig:RG first replicate} and \ref{fig:RG collective replicates}. Finally the autocorrelation function graphs are reported in \ref{fig:autocorrelation function first replicate} and \ref{fig:autocorrelation function collective replicates}. Although the RMSD seems to be less variable and the $R_g$ profile, in reality the interval is approximately large the same. By looking to the RMSD profile, it can be argued that the final distension is obtained at the $50^{\text{th}}$ frame, which corresponds to the $50 * 50000 = 2,500,000$ step. I insist in saying that, right now, there are no interactions between the beads of the polymer. As a consequence, the equilibrium that we think we obtained is due to the reaching of the maximal and most stable extension of the chain. 
+Results from the RMSD analysis are reported in figure \ref{fig:RMSD first replicate} and \ref{fig:RMSD collective replicates}. The $R_g$ results are instead plotted in images \ref{fig:RG first replicate} and \ref{fig:RG collective replicates}. Finally the autocorrelation function graphs are reported in \ref{fig:autocorrelation function first replicate} and \ref{fig:autocorrelation function collective replicates}. Although the RMSD seems to be less variable then the $R_g$ profile, in reality the interval is approximately large the same. By looking to the RMSD profile, it can be argued that the final distension is obtained at the $50^{\text{th}}$ frame, which corresponds to the $50 * 50000 = 2,500,000$ step. As stated in \ref{chap: the model description}, these evaluations were done in absence of specific interactions between the beads of the polymer. As a consequence, the equilibrium that was thought to be obtained was due to the reaching of the maximal and most stable extension of the chain. 
 
 %#TODO PCA results, valuta se mettere
 
 \begin{figure}[H]
     \centering
     
-    \begin{subfigure}{0.49\textwidth}
+    \begin{subfigure}{0.70\textwidth}
       \includegraphics[width=\linewidth]{/home/maurizio/Documents/GitHub/3DCS/Maurizio/steps/5-extract_info_trajectories/images/rmsd_1_IMR90.png}
       \caption{Graph representing the \textbf{RMSD} of the chains pertaining to the first replicate. As it is possible to see from the legend, the first, the second and the third chain are represented respectively in blue orange and green.}
       \label{fig:RMSD first replicate}
     \end{subfigure}
     \hfill
-    \begin{subfigure}{0.49\textwidth}
+    \begin{subfigure}{0.70\textwidth}
       \includegraphics[width=\linewidth]{/home/maurizio/Documents/GitHub/3DCS/Maurizio/steps/5-extract_info_trajectories/images/rmsd_50000_IMR90_modified.png}
       \caption{Figure representing the collective behaviour of all the chains of all the 100 replicates. It is possible to observe a plateau at approximately $50*50000$ steps. The red dashed line represents the average value.}
       \label{fig:RMSD collective replicates}
@@ -27,13 +27,13 @@ Results from the RMSD analysis are reported in figure \ref{fig:RMSD first replic
 \begin{figure}[H]
     \centering
     
-    \begin{subfigure}{0.49\textwidth}
+    \begin{subfigure}{0.70\textwidth}
       \includegraphics[width=\linewidth]{/home/maurizio/Documents/GitHub/3DCS/Maurizio/steps/5-extract_info_trajectories/images/radius_gyr_1_IMR90.png}
       \caption{Graph representing the $R_g$ of the chains pertaining to the first replicate. As it is possible to see from the legend, the first, the second and the third chain are represented respectively in blue orange and green.}
       \label{fig:RG first replicate}
     \end{subfigure}
     \hfill
-    \begin{subfigure}{0.49\textwidth}
+    \begin{subfigure}{0.70\textwidth}
       \includegraphics[width=\linewidth]{/home/maurizio/Documents/GitHub/3DCS/Maurizio/steps/5-extract_info_trajectories/images/radius_gyr_50000_IMR90_modified.png}
       \caption{Figure representing the collective behavior of all the chains of all the 100 replicates. The red dashed line represents the average value.}
       \label{fig:RG collective replicates}

@@ -2,7 +2,7 @@
 
 \subsection{The Model} \label{chap: the model description}
 The model creation was done by using and modifying scripts and code written by Marco Di Stefano. The code is included in the \textit{TADphys} unpublished package.
-The objective of the modelling process was to create a coarse-grained polymer model with a resolution of 5000 bp. To start the analysis, some information about the IMR90 cell type had to be collected. For example, the total genome length had to be determined, and was obtained by consulting the UCSC genome browser
+The objective of the modelling process was to create a CG polymer model with a resolution of 5000 bp. To start the analysis, some information about the IMR90 cell type had to be collected. For example, the total genome length had to be determined, and was obtained by consulting the UCSC genome browser
 \cite{UCSCGenomeBrowser}.
 Secondly, the dimensions of the nucleus and the nucleolus of the IMR90 cell had to be specified. By consulting some accessible literature
 \cite{ehlerHumanFoetalLung1996,ingramHiCImplementationGenome2020,maiserSuperresolutionSituAnalysis2020},
@@ -10,7 +10,7 @@ the volumes of the two structures were respectively equated to \SI{520}{\micro\m
 
 With the aim of being able to make statistics out of the generated data, and have more chains to analyze, it was decided to produce simulations for 100 replicates. Additionally, three chains were simulated at the same time within each repetition. Everything was included inside a box with a volume written in table \ref{table: parameters CG}. 
 It is important to specify that all the simulations were performed making use of periodic boundaries, and were run with the \textit{run\_lammps} function included in the \textit{TADphys} package.
-Three types of potential energies were set and always present in all the simulations that will be presented in this chapter. Those are descibed in the list below:
+Three types of potential energies were set and always present in all the simulations that will be presented in this chapter. Those are described in the list below:
 %#TODO make a chapter about the periodic boundary conditions
 
 \begin{itemize}
@@ -89,7 +89,7 @@ Once the coarse graining parameters were calculated, rosettes for all the replic
 \paragraph{Finding the optimal pressure:} \label{parag: optimal pressure}
 
 When the rosettes were successfully made, a decompaction was performed taking as inputs the compacted configurations. A range of values of pressure was tested from 0.1 to 1 with steps every 0.1. The obtained sizes were compared to the target calculated size (table \ref{table: parameters CG}). The precision of the estimation for the pressure was improved by taking more decimals and restricting the length of the range of tested values. For each replicate, a new random seed was generated and stored, again. The simulations done in order to find the optimal pressure parameter were long 1000 steps with a duration of \SI{0.001}{\pico\second}.
-Before attempting the decompression, the minimal energy structure was found by taking into consideration a stopping energy tolerance of $1*10^{-4}$, a stopping tolerance force of $1*10^{-6}$, and a maximal number of iterations and evaluations of 100000 steps. %#TODO maybe chiarisci questo
+Before attempting the decompression, the minimal energy structure was found by taking into consideration a stopping energy tolerance of $1*10^{-4}$, a stopping tolerance force of $1*10^{-6}$, and a maximal number of iterations and evaluations of 100,000 steps. %#TODO maybe chiarisci questo
 At the end, the optimal pressure was attested to be at 0.192. %#TODO what measure
 
 %#TODO put figures about pressure.

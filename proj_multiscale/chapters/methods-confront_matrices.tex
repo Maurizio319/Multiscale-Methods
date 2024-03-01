@@ -25,18 +25,19 @@ Because of the fact that beads of different states could act coordinately in def
 \begin{algorithm}[H]
     \caption{Step-wise process for matrix comparison}\label{algo: comparison}
     \KwResult{Best model}
-    $n = 0$\;
+    $loop = 0$\;
     Continue = False\;
     \While{Continue == True}{
+        $loop$ = $loop$ + 1\;
         Continue = False\;
-        Construct models by adding the most present attraction parameter to the $(n-1)^{\text{th}}$ step configuration \;
+        Construct models by adding the most present attraction parameter to the $(loop-1)^{\text{th}}$ step configuration \;
         Compute SCC of the model with respect to the reference ranging among a list of possible values\;
         Select the value of the parameter which gives the best results\;
-        Step = 0
         \If{addition gives better results}{
             Add that parameter (attraction) with that value to the model\;
             Continue = True
             }
+        $loop$ = $loop$ + 1\;
         \ForAll{state in model}{
             Remove that state from the model\;
             Vary the value associated to the state with the highest frequency among those remaining\;
@@ -47,9 +48,7 @@ Because of the fact that beads of different states could act coordinately in def
             Perform the reduction\;
         Continue = True
         }
-        $n = n+1$
         }
-        \Return{Best model}\;
-    \tcc{$n$ is the step number}
+        \Return{Best model}
 \end{algorithm}
 
