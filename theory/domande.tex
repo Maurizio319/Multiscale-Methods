@@ -24,83 +24,81 @@ Lessons questions
         \item Will have the force to be specific?
         \item What is the approximation that  allow to simplify quantum mechanical problems with classical mechanics?
         \item How are thermal systems driven?
-        \item What is the Helmothz free energy? Which system is described? How is it obtained? (Tuckerman)
+        \item What is the Helmothz free energy? Which system is described? How is it obtained? (Tuckerman): The Helmholtz free energy, often denoted by A, is a thermodynamic potential that describes the amount of energy available to do useful work in a system at constant temperature and volume. It is obtained with the formula F = U - TS, where U is the potential energy, T is the temperature and S is the entropy.
         \item What is the critical point? (See tuckerman) What happens?
         \item What is the Ising model? How can you describe with it the critical point?
-        \item What is necessary to make Multiscale methods relevant? (hierarchy)
+        \item What is necessary to make Multiscale methods relevant? (hierarchy) The use of a mapping function
         \item What procedure allows the coarse-graining?
     \end{enumerate}
     \item Lesson 2
     \begin{enumerate}
-    \item Where are defined experimental observations?
+    	\item Where are defined experimental observations? In a Universe
         \item What is the Newton principle of determinacy
         \item What elements are defined in your experimental space?
         \item What is Galilean invariance? In which conditions it is maintained?
-        \item What is a model? and what allows to build?
+        \item What is a model? and what allows to build? A definition of a system
         \item Is invariance maintained in case of isolated systems? and in the case of systems with several bodies?
-        \item When are forces conservative?
+        \item When are forces conservative? In physics, a force is considered conservative if the work done by the force on an object is independent of the path taken by the object. In other words, the total mechanical energy of the system (kinetic energy plus potential energy) remains constant as the object moves within the force field.
         \item What is the action integral? What does it tell? What does satisfy a path called stationary? (demonstrate) (tuckerman)
         \item What does the action integral concept suggest? (tuckerman)
+        \item Write Euler lagrange equation
         \item What is the formula of the Lagrangian?
         \item What is the Legendre transformation (tuckerman)
         \item What is the Hamiltonian? how is it obtained? (tuckerman)
         \item Which are the Hamilton equations?
         \item What happens to the Hamiltonian when the Lagrangian is conserved?
-        \item What is an ensamble?
+        \item What is an ensamble? In classical statistical mechanics, the ensemble is a probability distribution over phase points (as opposed to a single phase point in ordinary mechanics), usually represented as a distribution in a phase space with canonical coordinate axes.
         \item How is the value of a macroscopic observable normally obtained? (through a time average ...)
         \item To what a time average can be converted? what is a phase space average?
-        \item When is a stochastic process is called ergodic?
-        \item How do we obtain a microcanonical ensamble?
+        \item When is a stochastic process is called ergodic? relating to or denoting systems or processes with the property that, given sufficient time, they include or impinge on all points in a given space and can be represented statistically by a reasonably large selection of points
+        \item How do we obtain a microcanonical ensamble? N, V, E #TODO
         \item What are Poisson brackets? When is a quantity conserved? (tuckerman)
-        \item What does the Liouville theorem say?
+        \item What does the Liouville theorem say? It says that as the systems contained in a tiny region of phase space evolve according to classical mechanics, the volume they occupy remains constant. #TODO explain why
         \item When is the average of a quantity constant in time?
-        \item How can you write the average of that quantity?
-        \item What is a partition function? what type of coefficient it has?
+        \item How can you write the average of that quantity in a microcanonical ensemble?
+        \item What is a partition function? what type of coefficient it has? (case of microcanonical ensemble) #TODO
         \item Formula for entropy in the microcanonical ensamble
     \end{enumerate}
     \item Lesson 3
     \begin{enumerate}
-        \item Describe the canonical partition function, what is the related coefficient?
-        \item What is a Boltzmann weight?
-        \item Write the Hamiltonian formualtion for a quantum problem
-        \item What type of ansatz you assume to simplify your work? What is the adiabatic approximation
-        \item Describe the Born-Oppenheimer approximation
+        \item Describe the canonical partition function, what is the related coefficient? #TODO
+        \item What is a Boltzmann weight? it is the probability of a certain configuration, the lower is the energy associated to the configuration, the higher is the Boltzmann weight and viceversa
+        \item What type of ansatz you assume to simplify your work? What is the adiabatic approximation #TODO
+        \item Describe the Born-Oppenheimer approximation #TODO
         \item What is meant by separability when talking about the potential energy? and additivity?
         \item What is a multi-body potential? What type of truncation you can perform?
+        \item What are the differences between VdW and Coulomb interactions?
         \item What is the difference between bonded and non-bonded interactions?
     \end{enumerate}    
-    \item Lesson 4
+    \item Lesson 4: calculation of interactions
     \begin{enumerate}
         \item How can be non bounded interactions truncated?
-        \item How can you write the formula for the energy? combination of potentials
-        \item What is a periodic boundary condition?
+        \item What is a periodic boundary condition? A periodic boundary is an important technique in a molecular dynamics simulation. It is a clever trick to make a simulation that consists of only a few hundred atoms behave as if it was infinite in size.
         \item Why should you use periodic boundary conditions 
         \item How do you write the energy due to cut-off short distance interactions, what's the tail correction?
         \item In which case you can't absolutely ignore the epsilon tail energy?
         \item What is the typical length for the cut-off distance?
-        \item What is the correction for LJ?
+        \item what is the difference between LJ and VdW?
         \item How do you compute the Coulombic and LJ interactions?
         \item How are interactions classified as short and long?
         \item Write formula for short potential and long range potential (consider PBC)
-        \item How do you select a cut-off for the short range interactions?
         \item What is the minimum image convention?
         \item What is the Verlet list algorithm
-        \item How do you avoid bumps in short potential?
+        \item How do you avoid bumps in short potential? You add a correction switching function to be multiplied to the short range potentials.
         \item How do you calculate long range potential? %TODO
-        \item Which is the fundamental concept around statistical mechanics?
         \item What is an integrator? How does it use time?
         \item Write Euler integrator
         \item What is the problem with the Euler integrator?
         \item What is the Euler-Cromer integrator?
         \item What is the mathematical difference between the two previous integrators?
         \item What is the meaning of symplectic?
-        \item What is a unitary matrix
+        \item What is a unitary matrix what is the case for the Euler-Cromer integrator?
     \end{enumerate}
     \item Lesson 5
     \begin{enumerate}
         \item How do you express the average of a quantity in equilibrium? Introduce the Liouville operator
         \item How can you decompose the Liouville operator? What changes do the parts produce?
-        \item What problem do you face by doing that separation? what expansion comes into play?
+        \item What problem do you face by doing that separation? what expansion comes into play? The trotter expansion
         \item Write the Velocity Verlet algorithm, do the evolutions remind you of something?
         \item What is conserved by applying the Velocity Verlet algo?
         \item How is different the shadow H with respect to the real Hamiltonian?
@@ -114,7 +112,7 @@ Lessons questions
         \item How can you improve this stochastic sampling?
         \item What's the limit of stochastic sampling? What is the Bulk problem? (topic included also in the next lecture)
     \end{enumerate}
-    \item Lesson 6
+    \item Lesson 6: Markov chains
     \begin{enumerate}
         \item What happens when you sample with more and more dimensions?
         \item What is the objective of Markov chains?
@@ -124,6 +122,7 @@ Lessons questions
         \item What does the Frobenius theorem say?
         \item What is the behavior of the eigenvectors of a transition matrix over time? What is the detailed balance?
         \item How are computed the elements in the transition matrix?
+        \item Write general formulation of the Metropolis
         \item Write the Metropolis algorithm using the Boltzmann equation for the distribution
         \item What can you calculate at the end
         \item What if a transition is rejected? 
@@ -131,55 +130,59 @@ Lessons questions
         \item When do you prefer to use Markov chains? instead of Molecular Dynamics?
         \item What is the difference between Markov chains and Molecular Dynamics?
     \end{enumerate}
-    \item Lesson 7
+    \item Lesson 7: Brownian motion
     \begin{enumerate}
+    	\item What is the Brownian motion? What does it represents?
         \item In which relation are the short atomistic time scales, the relaxation times of the colloids and the diffusion time?
-        \item To what depends the diffusion time?
-        \item What steps would you alike to follow to proceed with the coarse graining?
-        \item what does the Markov property say?
+	\item What steps would you alike to follow to proceed with the coarse graining?
+	\item what is the markov property? and how do you use it in this context?
         \item What is hte Smoluchovski equation?
-        \item How do you write the infinitesimal change of f in time?
+        \item How do you write the infinitesimal change of f in time? What equation does it reminds?
         \item Find the probability of finding a particle at position r after time t (Fokker Plank equation )
         \item How are newtonian systems positions related to the time of simulation
         \item How Diffusion dynamics is different? What is the general solution?
         \item Make an example of solving equation of dynamics for diffusion
     \end{enumerate}
-    \item Lesson 8A
+    \item Lesson 8A: the Fluctuation-Dissipation theorem
     \begin{enumerate}
         \item What case we considered up to now?
-        \item What is the fine grained effective description of a system?
-        \item Is a normal system (like a biological solution) Hamiltonian?
+        \item Is a normal system (like a biological solution) Hamiltonian? No, because of he friction energy that is dissipated
         \item Describe the forces in that system, average? correlation?
         \item What is $\tau$?
         \item Find the diffusion formula?
-        \item How do you find the amplitude of correlation?
-        \item What does the Fluctuation-Dissipation theorem say? What are the important points?
-        \item What is a Langevin thermostat?
+        \item What is the Focker equation?
+        \item What is the equipartition theorem?
+        \item How do you find the amplitude of correlation g?
+        \item What does the Fluctuation-Dissipation theorem say? What are the important points? What thermostat uses it? (langevin)
+        \item What is a Langevin thermostat? A Langevin thermostat is a mathematical and computational tool used in molecular dynamics simulations to mimic the effects of a thermal reservoir on a simulated system. It is commonly employed to maintain a desired temperature in the simulation by introducing a stochastic (random) force that mimics the collisions of the particles with the surrounding solvent or thermal bath.
     \end{enumerate}
-    \item Lesson 8B
+    \item Lesson 8B: The radial distribution function
     \begin{enumerate}
         \item What is a partition function
+        \item Write in two different forms the one for the canonical ensemble
         \item How can you simplify the calculation of the average of a quantity a (<A>)?
-        \item How do you obtain the correlation function? %TODO non sicuro che sia quello
+        \item How do you obtain the correlation function?
         \item How do you obtain the partition function?
-        \item How is the radial function for a non-interacting system (ideal gas)
+        \item How is the radial function for a non-interacting system (ideal gas)?
         \item How is the radial function taking into consideration just a single particle
         \item How is the radial function taking into consideration just two particle, what assumptions do you make?
-        \item What is the radial distribution function?
+        \item How are the partition function and the density function related?
+        \item What is the radial distribution function final formula?
         \item How is hte graph of that distribution? why are there bumps?
-        \item How can you calculate energy, pressure and compatibility on the base of that?
-        \item What theorem could you apply to gain information about the fluctuations of a system? on the base of the radial distribution function?
+        \item What type of reduction did you obtain by introducing the radial distribution function?	
+        \item How can you calculate energy, pressure on the base of that?
     \end{enumerate}
     \item Lesson 9: Free Energy calculation
     \begin{enumerate}
         \item which is the partition function of the canonical ensamble
         \item How is it calculated in case of ideal gas?
-        \item How do you write a difference in free energy? Write it taking also as reference the system 1
-        \item With what type of integral you can rewrite the difference formula. Write consequently the Kirkwood Thermodynamical Integration theorem
-        \item What does the Kirkwood Thermodynamical Integration theorem allows you to do?
-        \item Obtain $P_0(v)$, which shape does it have?
-        \item Supposing the Gaussian shape, what's the problem that you have with the curve that you generated?
-        \item What does the calculation of the free energy difference allows you to do?
+        \item write the Helmohotz free energy formula
+        \item With what type of integral you can rewrite the difference formula. How can you write it if you assume that just the potential can change in value?
+        \item Write consequently the Kirkwood Thermodynamical Integration theorem
+        \item What does the Kirkwood Thermodynamical Integration theorem allows you to do? To calculate differences in free energies
+        \item Obtain $P_0(v)$, which is the probability associated to a certain value of energy, which shape does it have?
+        \item Supposing the Gaussian shape, what's the inequality that you obtain?? What is the gibbs Bogoliubov inequality?
+        \item What does the calculation of the free energy difference allows you to do
         \item How can you simplify the calculation? make the example regarding the solvated ion
         \item What is a reaction coordinate
         \item Make the example taking the distance as collective coordinate
@@ -218,9 +221,9 @@ Lessons questions
         \item Is mapping invertible?
         \item What is the consistency condition?
         \item Obtain the potential energy that you get coarse-graining the system
-        \item When is your CG system ok?
-        \item What is transferability?
-        \item What is the multibody potential mean energy? write the process to obtain the related force
+        \item what is the multibody potential of mean force?
+        \item When is your CG system ok? talking about the measured potential energy
+        \item What is transferability? In the context of coarse-graining in molecular simulations or modeling, "transferability" refers to the ability of a coarse-grained model or representation to accurately capture and reproduce relevant properties of the system being studied. Transferability implies that the parameters and interactions used in the coarse-grained model, which are often derived from a more detailed or atomistic representation, are applicable and meaningful across different conditions or environments. This happens when the coarse grained potential is similar to the multibody potential of mean force?
         \item How do you allow the consistency condition for the momenta?
     \end{enumerate}
     \item Lesson 12: How is it possible to equate our potential to the multibody potential?
@@ -375,5 +378,6 @@ Lessons questions
         \item how can you study hydrodynamics?
         \item what can you observe?
         \item what is Dissipative particle dynamics?
+    end{enumerate}
+\end{enumerate}
 \end{itemize}
-}

@@ -289,6 +289,10 @@
   \bibinfo{pages}{7462}, \doiprefix\url{10.1038/s41598-020-64589-x}
   (\bibinfo{year}{2020}).
 
+\bibitem{ConadCorsoLodi}
+\bibinfo{title}{{Conad Corso Lodi 130, 20139 Milano (MI) {\textbar} Conad}}.
+\newblock \bibinfo{howpublished}{https://www.conad.it/ricerca-negozi}.
+
 \bibitem{golkaramRoleChromatinDensity2017}
 \bibinfo{author}{Golkaram, M.}, \bibinfo{author}{Jang, J.},
   \bibinfo{author}{Hellander, S.}, \bibinfo{author}{Kosik, K.~S.} \&

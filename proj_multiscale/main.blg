@@ -5,44 +5,44 @@ Reallocating 'name_of_file' (item size: 1) to 14 items.
 The style file: naturemag-doi.bst
 Reallocating 'name_of_file' (item size: 1) to 17 items.
 Database file #1: bibliography.bib
-You've used 43 entries,
+You've used 44 entries,
             2380 wiz_defined-function locations,
-            1316 strings with 21830 characters,
-and the built_in function-call counts, 16226 in all, are:
-= -- 1097
-> -- 433
+            1320 strings with 21951 characters,
+and the built_in function-call counts, 16389 in all, are:
+= -- 1105
+> -- 434
 < -- 0
-+ -- 219
++ -- 220
 - -- 107
-* -- 2084
-:= -- 1735
-add.period$ -- 123
-call.type$ -- 43
-change.case$ -- 48
+* -- 2093
+:= -- 1745
+add.period$ -- 125
+call.type$ -- 44
+change.case$ -- 49
 chr.to.int$ -- 0
-cite$ -- 43
-duplicate$ -- 1411
-empty$ -- 1530
+cite$ -- 44
+duplicate$ -- 1429
+empty$ -- 1556
 format.name$ -- 140
-if$ -- 3237
+if$ -- 3275
 int.to.chr$ -- 0
-int.to.str$ -- 43
-missing$ -- 343
-newline$ -- 219
+int.to.str$ -- 44
+missing$ -- 346
+newline$ -- 223
 num.names$ -- 38
-pop$ -- 274
+pop$ -- 284
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 295
+skip$ -- 305
 stack$ -- 0
 substring$ -- 736
-swap$ -- 1410
+swap$ -- 1421
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
 while$ -- 87
-width$ -- 45
-write$ -- 485
+width$ -- 46
+write$ -- 492
