@@ -13,7 +13,7 @@
 \newblock \bibinfo{title}{Biology of {{Chromatin}}}.
 \newblock In \emph{\bibinfo{booktitle}{Introduction to {{Epigenetics}}
   [{{Internet}}]}}, \doiprefix\url{10.1007/978-3-030-68670-3_1}
-  (\bibinfo{publisher}{{Springer}}, \bibinfo{year}{2021}).
+  (\bibinfo{publisher}{Springer}, \bibinfo{year}{2021}).
 
 \bibitem{liauAdaptiveChromatinRemodeling2017}
 \bibinfo{author}{Liau, B.~B.} \emph{et~al.}
@@ -188,7 +188,7 @@
 \bibinfo{author}{Grosberg, A.~J.}, \bibinfo{author}{Chochlov, A.~R.} \&
   \bibinfo{author}{de~Gennes, P.-G.}
 \newblock \emph{\bibinfo{title}{Giant Molecules: Here, There, and Everywhere}}
-  (\bibinfo{publisher}{{World Scientific}}, \bibinfo{address}{{New Jersey}},
+  (\bibinfo{publisher}{World Scientific}, \bibinfo{address}{New Jersey},
   \bibinfo{year}{2011}), \bibinfo{edition}{2. ed} edn.
 
 \bibitem{bucklePolymerSimulationsHeteromorphic2018}
@@ -309,7 +309,7 @@
   \bibinfo{author}{Turner, D.} \& \bibinfo{author}{Mesirov, J.~P.}
 \newblock \bibinfo{title}{Igv.js: An embeddable {{JavaScript}} implementation
   of the {{Integrative Genomics Viewer}} ({{IGV}})}.
-\newblock \bibinfo{type}{Preprint}, \bibinfo{institution}{{Bioinformatics}}
+\newblock \bibinfo{type}{Preprint}, \bibinfo{institution}{Bioinformatics}
   (\bibinfo{year}{2020}).
 \newblock \doiprefix\url{10.1101/2020.05.03.075499}.
 
@@ -319,15 +319,15 @@
   Analysis}} of {{Molecular Dynamics Simulations}}}.
 \newblock In \emph{\bibinfo{booktitle}{Python in {{Science Conference}}}},
   \bibinfo{pages}{98--105}, \doiprefix\url{10.25080/Majora-629e541a-00e}
-  (\bibinfo{address}{{Austin, Texas}}, \bibinfo{year}{2016}).
+  (\bibinfo{address}{Austin, Texas}, \bibinfo{year}{2016}).
 
 \bibitem{tuckermanStatisticalMechanicsTheory2015}
 \bibinfo{author}{Tuckerman, M.~E.}
 \newblock \emph{\bibinfo{title}{Statistical Mechanics: Theory and Molecular
   Simulation}}.
-\newblock Oxford Graduate Texts (\bibinfo{publisher}{{Oxford Univ. Press}},
-  \bibinfo{address}{{Oxford}}, \bibinfo{year}{2015}),
-  \bibinfo{edition}{reprinted (with corr.)} edn.
+\newblock Oxford Graduate Texts (\bibinfo{publisher}{Oxford Univ. Press},
+  \bibinfo{address}{Oxford}, \bibinfo{year}{2015}), \bibinfo{edition}{reprinted
+  (with corr.)} edn.
 
 \bibitem{sumaElectricFieldDrivenTrappingPolyelectrolytes2018}
 \bibinfo{author}{Suma, A.}, \bibinfo{author}{Di~Stefano, M.} \&
