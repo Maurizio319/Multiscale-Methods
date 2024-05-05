@@ -28,35 +28,47 @@
 \newblock \bibinfo{journal}{\bibinfo{title}{Extended-representation bisulfite
   sequencing of gene regulatory elements in multiplexed samples and single
   cells}}.
-\newblock {\emph{\JournalTitle{Nat Biotechnol}}} \textbf{\bibinfo{volume}{39}},
-  \bibinfo{pages}{1086--1094}, \doiprefix\url{10.1038/s41587-021-00910-x}
-  (\bibinfo{year}{2021}).
+\newblock {\emph{\JournalTitle{Nature Biotechnology}}}
+  \textbf{\bibinfo{volume}{39}}, \bibinfo{pages}{1086--1094},
+  \doiprefix\url{10.1038/s41587-021-00910-x} (\bibinfo{year}{2021}).
 
 \bibitem{kimCTCFMultifunctionalProtein2015a}
 \bibinfo{author}{Kim, S.}, \bibinfo{author}{Yu, N.-K.} \&
   \bibinfo{author}{Kaang, B.-K.}
 \newblock \bibinfo{journal}{\bibinfo{title}{{{CTCF}} as a multifunctional
   protein in genome regulation and gene expression}}.
-\newblock {\emph{\JournalTitle{Exp Mol Med}}} \textbf{\bibinfo{volume}{47}},
-  \bibinfo{pages}{e166--e166}, \doiprefix\url{10.1038/emm.2015.33}
-  (\bibinfo{year}{2015}).
+\newblock {\emph{\JournalTitle{Experimental \& Molecular Medicine}}}
+  \textbf{\bibinfo{volume}{47}}, \bibinfo{pages}{e166--e166},
+  \doiprefix\url{10.1038/emm.2015.33} (\bibinfo{year}{2015}).
+\newblock \bibinfo{note}{CTCF \par conserved in eukariotes, ubiquitous in
+  mammalians. 55000 65000 sites present in mamm. \par zinc finger to bind to
+  DNA \par ``{\textasciitilde} 50\% are intergenic, whereas 35\% are intragenic
+  and the rest are promoter proximal'' (Kim et al., 2015, p. 1) because of this
+  we suppose that it is able to remodel chromatine \par when to insulator, no
+  enh prom comunication \par --{$>$} no spurious signals and inappropriate
+  singlas \par generates topological domains, binds to nuclei to stabilie the
+  chromatine \par binding in regions of housekeeping genes --{$>$} maintainance
+  of stable architectures \par cooperates with cohesin \par generates a
+  functional complex \par methylation generates lower binding capability
+  --{$>$} loosened efficiency in binding. Not all the zinc fingers behaves in
+  the same way}.
 
 \bibitem{hsiehEnhancerPromoterInteractions2022}
 \bibinfo{author}{Hsieh, T.-H.~S.} \emph{et~al.}
 \newblock \bibinfo{journal}{\bibinfo{title}{Enhancer--promoter interactions and
   transcription are largely maintained upon acute loss of {{CTCF}}, cohesin,
   {{WAPL}} or {{YY1}}}}.
-\newblock {\emph{\JournalTitle{Nat Genet}}} \textbf{\bibinfo{volume}{54}},
-  \bibinfo{pages}{1919--1932}, \doiprefix\url{10.1038/s41588-022-01223-8}
-  (\bibinfo{year}{2022}).
+\newblock {\emph{\JournalTitle{Nature Genetics}}}
+  \textbf{\bibinfo{volume}{54}}, \bibinfo{pages}{1919--1932},
+  \doiprefix\url{10.1038/s41588-022-01223-8} (\bibinfo{year}{2022}).
 
 \bibitem{ouChromEMTVisualizing3D2017a}
 \bibinfo{author}{Ou, H.~D.} \emph{et~al.}
 \newblock \bibinfo{journal}{\bibinfo{title}{{{ChromEMT}}: {{Visualizing 3D}}
   chromatin structure and compaction in interphase and mitotic cells}}.
-\newblock {\emph{\JournalTitle{Science}}} \textbf{\bibinfo{volume}{357}},
-  \bibinfo{pages}{eaag0025}, \doiprefix\url{10.1126/science.aag0025}
-  (\bibinfo{year}{2017}).
+\newblock {\emph{\JournalTitle{Science (New York, N.Y.)}}}
+  \textbf{\bibinfo{volume}{357}}, \bibinfo{pages}{eaag0025},
+  \doiprefix\url{10.1126/science.aag0025} (\bibinfo{year}{2017}).
 
 \bibitem{robinsonEMMeasurementsDefine2006}
 \bibinfo{author}{Robinson, P. J.~J.}, \bibinfo{author}{Fairall, L.},
@@ -64,8 +76,8 @@
 \newblock \bibinfo{journal}{\bibinfo{title}{{{EM}} measurements define the
   dimensions of the ``30-nm'' chromatin fiber: {{Evidence}} for a compact,
   interdigitated structure}}.
-\newblock {\emph{\JournalTitle{Proc. Natl. Acad. Sci.}}}
-  \textbf{\bibinfo{volume}{103}}, \bibinfo{pages}{6506--6511},
+\newblock {\emph{\JournalTitle{Proceedings of the National Academy of
+  Sciences}}} \textbf{\bibinfo{volume}{103}}, \bibinfo{pages}{6506--6511},
   \doiprefix\url{10.1073/pnas.0601212103} (\bibinfo{year}{2006}).
 
 \bibitem{buenrostroTranspositionNativeChromatin2013a}
@@ -75,7 +87,7 @@
 \newblock \bibinfo{journal}{\bibinfo{title}{Transposition of native chromatin
   for fast and sensitive epigenomic profiling of open chromatin,
   {{DNA-binding}} proteins and nucleosome position}}.
-\newblock {\emph{\JournalTitle{Nat Methods}}} \textbf{\bibinfo{volume}{10}},
+\newblock {\emph{\JournalTitle{Nature Methods}}} \textbf{\bibinfo{volume}{10}},
   \bibinfo{pages}{1213--1218}, \doiprefix\url{10.1038/nmeth.2688}
   (\bibinfo{year}{2013}).
 
@@ -84,9 +96,11 @@
   \bibinfo{author}{Kampman, L.} \& \bibinfo{author}{Corces, M.~R.}
 \newblock \bibinfo{journal}{\bibinfo{title}{Chromatin accessibility profiling
   by {{ATAC-seq}}}}.
-\newblock {\emph{\JournalTitle{Nat Protoc}}} \textbf{\bibinfo{volume}{17}},
-  \bibinfo{pages}{1518--1552}, \doiprefix\url{10.1038/s41596-022-00692-9}
-  (\bibinfo{year}{2022}).
+\newblock {\emph{\JournalTitle{Nature Protocols}}}
+  \textbf{\bibinfo{volume}{17}}, \bibinfo{pages}{1518--1552},
+  \doiprefix\url{10.1038/s41596-022-00692-9} (\bibinfo{year}{2022}).
+\newblock \bibinfo{note}{Atac \par --{$>$} position histones \par --{$>$} TF
+  binding motifs \par --{$>$} enhancers}.
 
 \bibitem{zhangModelbasedAnalysisChIPSeq2008a}
 \bibinfo{author}{Zhang, Y.} \emph{et~al.}
@@ -100,7 +114,7 @@
 \bibinfo{author}{Shah, A.}
 \newblock \bibinfo{journal}{\bibinfo{title}{Chromatin immunoprecipitation
   sequencing ({{ChIP-Seq}}) on the {{SOLiD}}™ system}}.
-\newblock {\emph{\JournalTitle{Nat Methods}}} \textbf{\bibinfo{volume}{6}},
+\newblock {\emph{\JournalTitle{Nature Methods}}} \textbf{\bibinfo{volume}{6}},
   \bibinfo{pages}{ii--iii}, \doiprefix\url{10.1038/nmeth.f.247}
   (\bibinfo{year}{2009}).
 
@@ -122,23 +136,161 @@
 \bibinfo{author}{Ernst, J.} \& \bibinfo{author}{Kellis, M.}
 \newblock \bibinfo{journal}{\bibinfo{title}{Chromatin-state discovery and
   genome annotation with {{ChromHMM}}}}.
-\newblock {\emph{\JournalTitle{Nat Protoc}}} \textbf{\bibinfo{volume}{12}},
-  \bibinfo{pages}{2478--2492}, \doiprefix\url{10.1038/nprot.2017.124}
-  (\bibinfo{year}{2017}).
+\newblock {\emph{\JournalTitle{Nature Protocols}}}
+  \textbf{\bibinfo{volume}{12}}, \bibinfo{pages}{2478--2492},
+  \doiprefix\url{10.1038/nprot.2017.124} (\bibinfo{year}{2017}).
+\newblock \bibinfo{note}{Epigenetic marks --{$>$} annotation of genomes --{$>$}
+  different cell types \par spatial organization --{$>$} chromatine states \par
+  --{$>$} capture known classes of genomic elements \par Multivariate HMM for
+  combinatorial presence absence of multiple marks \par mark emission
+  probabilities are assumed to be independent. \par ``The model parameters are
+  learned from the data de novo on the basis of an unsupervised
+  machine-learning procedure that iteratively attempts to maximize the model
+  fit to the data'' (Ernst and Kellis, 2017, p. 2478) \par partitions the
+  genome at 200 nucleotide intervalds which roughly correspond to the
+  resolution fo a nucleosome \par determines the presence or absence of each
+  mark}.
 
 \bibitem{chilledhousevibesLearningChromatinStates2015}
 \bibinfo{author}{{Chilled House Vibes}}.
 \newblock \bibinfo{title}{Learning {{Chromatin States}} from {{ChIP-seq Data}}:
   {{ChromHMM}} - {{Luca Pinello}}} (\bibinfo{year}{2015}).
+\newblock \bibinfo{note}{CHROMHMM \par tracks \par chromatin states
+  correspnding to combination of chromatin states \par Workflow \par 1- get
+  CHIP sq raw reads for different histone mod \par 2- align reads to a
+  reference genome \par from the fastq file of an illumina machien (Bowtie or
+  BWA) \par 3- Convert aligned reads to bed format \par for each bam file you
+  convert in bed file \par bedtools bamtobed -i cell1\_mark1.bam {$>$} (same
+  folder)/file.bed \par 4- Create binned and binarized tracks \par decide the
+  resolution, default 200 bps \par when bin with strong signal --{$>$} 1, 0
+  otherwise \par es: \par java -mx1200M (allocate memory) -jar ChrommHMM.jar
+  BinarizeBed -b 200 CHROMSIZES/{\dots} (sizes of the chromosomes)
+  cellmarkfiletable.txt (one row for each bed file) SAMPLEDATA (output folder)
+  \par 5- train the model \par LearnModel \par --{$>$} Model + Segmentation
+  \par n of chromatin states and genome of reference \par to be decided, you
+  have to play with it \par 6- infer the state \par html page \par 1- Model
+  learned \par emission parameters \par transition parameters: go from state 1
+  to 2 exc. \par 2- Enriched functional categories \par 3- bed files to see the
+  segmentation \par upload on IGV \par 7- interpretation}.
 
 \bibitem{lajoieHitchhikerGuideHiC2015}
 \bibinfo{author}{Lajoie, B.~R.}, \bibinfo{author}{Dekker, J.} \&
   \bibinfo{author}{Kaplan, N.}
 \newblock \bibinfo{journal}{\bibinfo{title}{The {{Hitchhiker}}'s {{Guide}} to
   {{Hi-C Analysis}}: {{Practical}} guidelines}}.
-\newblock {\emph{\JournalTitle{Methods}}} \textbf{\bibinfo{volume}{72}},
-  \bibinfo{pages}{65--75}, \doiprefix\url{10.1016/j.ymeth.2014.10.031}
-  (\bibinfo{year}{2015}).
+\newblock {\emph{\JournalTitle{Methods (San Diego, Calif.)}}}
+  \textbf{\bibinfo{volume}{72}}, \bibinfo{pages}{65--75},
+  \doiprefix\url{10.1016/j.ymeth.2014.10.031} (\bibinfo{year}{2015}).
+\newblock \bibinfo{note}{HI-C \par should be present in chromosomal domains
+  \par ``Chromosomal domains, i.e., regions displaying preferential contacts
+  within themselves rather than with their flanking regions, have been called
+  with different names (topologically associating domains or TADs, chromosome
+  interacting domains, micro-domains, etc.)'' (Matthey-Doret et al., 2022, p.
+  2) \par significance yet to be understood \par chimeras are formed, which are
+  composed of fragment of DNA ligated together \par all genome wide
+  characterization of interactions \par (Wikipedia) \par --{$>$} messages \par
+  1- ``Interactions of loci located in different nuclei are less frequent than
+  those in the same nucleus'' (Lajoie et al., 2015, p. 15) \par 2-
+  ``Interactions of loci located on different chromosomes are less frequent
+  than those in the same chromosome.'' (Lajoie et al., 2015, p. 15) \par 3-
+  ``Interactions of loci located far from each other along a chromosome are
+  less frequent than loci that are near each other'' (Lajoie et al., 2015, p.
+  15) \par DATA RESOLUTION \par 6 bp cutting enzyme --{$>$}
+  10{\textasciicircum}6 fragments \par Normally the fragments have a length of
+  200-500 bps \par aggregate in bins \par specific for the task \par important
+  info: coverage (related to library complexity) --{$>$} m aximum of quality
+  (saturation curve) \par quality measured through unique chimeric moelcules
+  \par READ MAPPING \par standard aligner, not the paired-end mode. ``One
+  straightforward solution is to map each side of the paired end read
+  separately/independently using a standard alignment procedure'' (Lajoie et
+  al., 2015, p. 4) \par there are iterative strategies \par FRAGMENT ASSIGNMENT
+  \par ``The mapped read is assigned to a single restriction fragment according
+  to its 5' mapped position.'' (Lajoie et al., 2015, p. 5) \par ``Mapped read
+  positions should fall close to a restriction site, and no further than the
+  maximal molecule length away.'' (Lajoie et al., 2015, p. 5) \par FRAGMENT
+  LEVEL FILTERING \par ``If the read pair maps to the same restriction
+  fragment, it can represent either an un-ligated fragment (``dangling end'')
+  or a ligated, circularized fragment (``self-circle'').'' (Lajoie et al.,
+  2015, p. 5) \par --{$>$} remove, non informative \par Remove PCR duplicates
+  \par identify 5' exact same alignment, same paired end sequencing \par Filter
+  undigested restriction sites (reads mapped to same strand, small distance
+  between positions) \par BINNING \par various interval sizes --{$>$} smooth
+  noise \par bins assigned through midpoint coordinates of fragments \par
+  typically 40K to 1MB length \par BIN-LEVEL FILTERING \par ``it is advised to
+  remove any bins (rows/columns) from the dataset that have either very noisy
+  or too low of a signal.'' (Lajoie et al., 2015, p. 6). ``normally found in
+  genomic regions with low mappability or high repeat content, such as around
+  telomeres and centromeres.'' (Lajoie et al., 2015, p. 6) \par compare signals
+  from single bin to the signal of all bins \par BIASES from (``MCB 182 Lecture
+  10.4 - Chromatin conformation capture (Hi-C) assays'', 2020) \par matrix to
+  represent the number of interactions \par normalized with the expected read
+  counts matrix \par take the matrix and compute the correlation matrix \par
+  correlation when there are a lot of neighbors in the loci \par (maintain a
+  similar behavior) \par blocks of rows with similar behavior \par --{$>$} PCA
+  to find the similars (PC1 takes the most of the differences) \par there is a
+  bias due to the GC content \par bias to the fact that you have to ligate
+  biotine \par BALANCING \par Oother than the direct correction of the biases
+  listed, there is another algoritghm that can be used \par
+  ``Sinkhorn-Knoppbalancing algorithm'' (Lajoie et al., 2015, p. 7) \par
+  ``since we are interrogating the entire interaction space in an unbiased
+  manner, each fragment/bin should be observed approximately the same number of
+  timesin the experiment'' (Lajoie et al., 2015, p. 7) \par --{$>$} equilizing
+  the sum ove the rows and the cols \par INTERPRETATION OF SIGNALS \par
+  differentiate signal from noise, interpret patterns \par defects \par 1- each
+  observation involve a population of cells, not single cells. if a structure
+  has a low HiC signal, it could simply mean that the cells have different
+  structures and are not consistent. \par 2- genomic compartments found through
+  PCA --{$>$} difficult to compare diffent methods results \par 3- frequencies
+  but not distances \par 4-``These patterns vary in scale, from genome-wide
+  patterns to point interactions between loci, and in their ubiquity, from
+  constant between different species to condition-specific. Due to the
+  speculative nature of biological interpretation of interaction patterns and
+  the aforementioned complication'' (Lajoie et al., 2015, p. 8) \par POSSIBLE
+  PATTERNS \par CIS-TRANS INTERACTION RATIO \par genome-level patterns, square
+  blocks. Higher interaction freq on average of pairs of loci in the same
+  chromosome (cis) than loci which reside on different chromosomes (trans) \par
+  due to chromosome territories \par way to evaluate qual data \par ``a noisier
+  experiment will result in a lower ratio between cis and trans interactions.''
+  (Lajoie et al., 2015, p. 9) \par ``cis/trans ratio in high quality
+  experiments are in the range 40-60 for the human genome.'' (Lajoie et al.,
+  2015, p. 9) \par (Lajoie et al., 2015, p. 25) \par DISTANCE DEPENDENT
+  INTERACTION FREQUENCIES \par ``In the interaction matrix this pattern appears
+  as a gradual decrease of interaction frequency the further one moves away
+  from the diagonal (decay).'' (Lajoie et al., 2015, p. 9) \par some physical
+  models can predict the structural variability inprinted in the HIC essay \par
+  ``pinteraction(x,y)=Z*dist(x,y)-1.5. In fact, this specific decay matches the
+  distance-dependent interaction frequency observed in yeast'' (Lajoie et al.,
+  2015, p. 9) \par notice that sev. polymer models can produce the same decay
+  func \par GENOMIC COMPARTMENTS \par position-specific \par ``Genomic
+  compartments have been found to be correlated with chromatin state, including
+  DNA accessibility, gene density, replication timing, GC content and histone
+  marks (Lieberman-Aiden et al. 2009)'' (Lajoie et al., 2015, p. 11) \par
+  alternating blocks 1-10 MB \par two possible types: A B \par ``A-type
+  compartments are defined as the euchromatic gene-dense regions while B
+  compartments are defined as gene-poor heterochromatic region'' (Lajoie et
+  al., 2015, p. 11) \par high plasticity, different in cell-types and
+  biological condition \par TOPOLOGICAL DOMAINS (TADs) \par sub-Mb distance
+  \par small blocks appearing at the diagonl \par ``it is hypothesized that
+  TADs specify elementary regulatory micro-environments in which promoters
+  interact with local enhancers('' (Lajoie et al., 2015, p. 11) \par several
+  methods to find the TADs \par ``some genomic features such as CTCF and
+  cohesin binding have been shown to be enriched at TAD boundaries'' (Lajoie et
+  al., 2015, p. 12) \par POINT INTERACTIONS \par ``Given sufficient resolution,
+  we expect such point interactions to appear as a local enrichment in contact
+  probability.'' (Lajoie et al., 2015, p. 12) \par --{$>$} define background
+  model with interaction patterns but also TADs \par significant points
+  corrected for multiple testing \par could be not easy to distinguish noise
+  \par careful interpretation of biological significance \par POLYMER MODELLING
+  \par problems \par ``chromatin physics is limited and chromatin structure is
+  much less constrained than protein structure.'' (Lajoie et al., 2015, p. 13)
+  \par chromatin fibers very long \par very variable (highly stochastic
+  structure) \par two possible ways \par consensus structure: a single that is
+  consistent with 3D matrix \par --{$>$} assume frequency interaction -
+  distance correlation \par ensemble \par ``ypically try to create a set of
+  structures such that either the average distances or the contact probability
+  between every two loci are consistent with the observed interaction
+  frequencies'' (Lajoie et al., 2015, p. 14) \par --{$>$} difficult
+  interpretation}.
 
 \bibitem{distefanoHiCconstrainedPhysicalModels2016}
 \bibinfo{author}{Di~Stefano, M.}, \bibinfo{author}{Paulsen, J.},
@@ -147,26 +299,26 @@
 \newblock \bibinfo{journal}{\bibinfo{title}{Hi-{{C-constrained}} physical
   models of human chromosomes recover functionally-related properties of genome
   organization}}.
-\newblock {\emph{\JournalTitle{Sci Rep}}} \textbf{\bibinfo{volume}{6}},
-  \bibinfo{pages}{35985}, \doiprefix\url{10.1038/srep35985}
-  (\bibinfo{year}{2016}).
+\newblock {\emph{\JournalTitle{Scientific Reports}}}
+  \textbf{\bibinfo{volume}{6}}, \bibinfo{pages}{35985},
+  \doiprefix\url{10.1038/srep35985} (\bibinfo{year}{2016}).
 
 \bibitem{halversonMeltRingsChromosome2014}
 \bibinfo{author}{Halverson, J.~D.}, \bibinfo{author}{Smrek, J.},
   \bibinfo{author}{Kremer, K.} \& \bibinfo{author}{Grosberg, A.~Y.}
 \newblock \bibinfo{journal}{\bibinfo{title}{From a melt of rings to chromosome
   territories: The role of topological constraints in genome folding}}.
-\newblock {\emph{\JournalTitle{Rep Prog Phys}}} \textbf{\bibinfo{volume}{77}},
-  \bibinfo{pages}{022601}, \doiprefix\url{10.1088/0034-4885/77/2/022601}
-  (\bibinfo{year}{2014}).
+\newblock {\emph{\JournalTitle{Reports on Progress in Physics. Physical Society
+  (Great Britain)}}} \textbf{\bibinfo{volume}{77}}, \bibinfo{pages}{022601},
+  \doiprefix\url{10.1088/0034-4885/77/2/022601} (\bibinfo{year}{2014}).
 
 \bibitem{lieberman-aidenComprehensiveMappingLong2009}
 \bibinfo{author}{{Lieberman-Aiden}, E.} \emph{et~al.}
 \newblock \bibinfo{journal}{\bibinfo{title}{Comprehensive mapping of long range
   interactions reveals folding principles of the human genome}}.
-\newblock {\emph{\JournalTitle{Science}}} \textbf{\bibinfo{volume}{326}},
-  \bibinfo{pages}{289--293}, \doiprefix\url{10.1126/science.1181369}
-  (\bibinfo{year}{2009}).
+\newblock {\emph{\JournalTitle{Science (New York, N.Y.)}}}
+  \textbf{\bibinfo{volume}{326}}, \bibinfo{pages}{289--293},
+  \doiprefix\url{10.1126/science.1181369} (\bibinfo{year}{2009}).
 
 \bibitem{razin3DGenomics2019}
 \bibinfo{author}{Razin, S.}, \bibinfo{author}{Ulianov, S.} \&
@@ -180,9 +332,9 @@
 \bibinfo{author}{Kremer, K.} \& \bibinfo{author}{Grest, G.~S.}
 \newblock \bibinfo{journal}{\bibinfo{title}{Dynamics of entangled linear
   polymer melts: {{A}} molecular-dynamics simulation}}.
-\newblock {\emph{\JournalTitle{J. Chem. Phys.}}} \textbf{\bibinfo{volume}{92}},
-  \bibinfo{pages}{5057--5086}, \doiprefix\url{10.1063/1.458541}
-  (\bibinfo{year}{1990}).
+\newblock {\emph{\JournalTitle{The Journal of Chemical Physics}}}
+  \textbf{\bibinfo{volume}{92}}, \bibinfo{pages}{5057--5086},
+  \doiprefix\url{10.1063/1.458541} (\bibinfo{year}{1990}).
 
 \bibitem{grosbergGiantMoleculesHere2011}
 \bibinfo{author}{Grosberg, A.~J.}, \bibinfo{author}{Chochlov, A.~R.} \&
@@ -190,6 +342,41 @@
 \newblock \emph{\bibinfo{title}{Giant Molecules: Here, There, and Everywhere}}
   (\bibinfo{publisher}{World Scientific}, \bibinfo{address}{New Jersey},
   \bibinfo{year}{2011}), \bibinfo{edition}{2. ed} edn.
+\newblock \bibinfo{note}{\textbf{Dynamics of polymeric fluids} \par viscous
+  liquid, made of entangled polymer chains. (HIGH viscosity - internal friction
+  larger than in water) \par (Grosberg et al., 2011, p. 256) ~``can we
+  calculate the force f which must be exerted on the upper plate to maintain
+  its motion with speed v and, therefore, to maintain a simple shear flow of
+  the liquid'' (Grosberg et al., 2011, p. 256). OBV it depends on the area of
+  the plate, the viscosity, the speed that you want to reach. Also the more are
+  the strata between the plate and the bottom, the lower is the necessary force
+  to exert. nu is coefficient for viscosity. \par \textbf{``The Mathematics of
+  a Simple Polymer Coil''}\textbf{ (Grosberg et al., 2011, p. 112)} \par The
+  motion of a random chain could be sinthetized with a random motion. ``Since a
+  Brownian particle moves due to collisions with molecules, its path breaks
+  into a sequence of many very short flights and turns. In this sense, a
+  Brownian trajectory is pretty similar to the shape of the polymer chains''
+  (Grosberg et al., 2011, p. 115). An example is a man that follows a random
+  path, taking afterwards that path \par difference random and Brownian path
+  \par (Grosberg et al., 2011, p. 115) \par In the latter case, R is the root
+  mean square displacement frownian \par lR can be also rewritten as \par
+  (Grosberg et al., 2011, p. 116) \par where L is the contour length and l is
+  the analog for the polimer of the Einstein-Smoluchowski result \par This type
+  of correlation can be actually found and demostrated as in ``Derivation of
+  the ``Square Root'' Law'' (Grosberg et al., 2011, p. 118) \par In a polimer
+  \par ``Interactions between such monomers during their collisions are known
+  as volume interactions. They occur in the bulk of a polymer coil, or inside
+  its ``volume'' --- in contrast to ``linear'' interactions that hold together
+  the neighboring monomers along the chain'' (Grosberg et al., 2011, p. 117)
+  \par A random coil generated by a DNA helix would generate an R hich is \par
+  (Grosberg et al., 2011, p. 117) \par --{$>$} not sufficient, more
+  interactions are needed to restrict ulteriorly the volume \par persistence
+  length governs the flexibility of a polymer \par comes from the Kuhn length,
+  set to be equal to 100 nm in the DNA and indicated with leff in the following
+  equation \par (Grosberg et al., 2011, p. 121) \par the kuhn length is a sort
+  of memory of the structure along a chain \par s {$<<$} l --{$>$} costheta
+  gives 1 \par s {$>>$} l --{$>$} costheta gives 0 \par The kuhn length is
+  twice the persistence length}.
 
 \bibitem{bucklePolymerSimulationsHeteromorphic2018}
 \bibinfo{author}{Buckle, A.}, \bibinfo{author}{Brackley, C.~A.},
@@ -201,15 +388,28 @@
 \newblock {\emph{\JournalTitle{Molecular Cell}}} \textbf{\bibinfo{volume}{72}},
   \bibinfo{pages}{786--797.e11}, \doiprefix\url{10.1016/j.molcel.2018.09.016}
   (\bibinfo{year}{2018}).
+\newblock \bibinfo{note}{H3K27ac epienetic marks + chromatin accesibility
+  (ATAC) + structural anchors (CTCF) \par INTRODUCTION \par INTERACTION BETWEEN
+  NUCLEOSOMES CHROMAIN BINDING PROTEINS AND STRUCTURAL COMPONENTS \par
+  disrupted at transcriptional hotspots, compact in other ocations \par
+  previoudly developed TF model \par ``complexes of TFs and polymerase form
+  enhancer-promoter interactions to organize active regions, while PRC
+  (polycomb repressor complex) or HP1 proteins might arrange inactive and
+  repressed regions'' (Buckle et al., 2018, p. 786) \par used in combination
+  with LE (loop extrusion) --{$>$} not very good results \par PAX6 \par ``Pax6
+  is surrounded by constitutively expressed genes and multiple enhancers,
+  providing a paradigm for complex genetic interactions'' (Buckle et al., 2018,
+  p. 786) \par (Buckle et al., 2018, p. 787) \par RESULTS \par PREDICT LOCUS
+  FOLDING ONLY IN SOME CELL LINES}.
 
 \bibitem{tanCelltypespecificPrediction3D2023}
 \bibinfo{author}{Tan, J.} \emph{et~al.}
 \newblock \bibinfo{journal}{\bibinfo{title}{Cell-type-specific prediction of
   {{3D}} chromatin organization enables high-throughput in silico genetic
   screening}}.
-\newblock {\emph{\JournalTitle{Nat Biotechnol}}} \textbf{\bibinfo{volume}{41}},
-  \bibinfo{pages}{1140--1150}, \doiprefix\url{10.1038/s41587-022-01612-8}
-  (\bibinfo{year}{2023}).
+\newblock {\emph{\JournalTitle{Nature Biotechnology}}}
+  \textbf{\bibinfo{volume}{41}}, \bibinfo{pages}{1140--1150},
+  \doiprefix\url{10.1038/s41587-022-01612-8} (\bibinfo{year}{2023}).
 
 \bibitem{steveplimptonLAMMPS}
 \bibinfo{author}{{Steve Plimpton}}, \bibinfo{author}{{Aidan Thompson}},
@@ -268,7 +468,7 @@
   \bibinfo{author}{Draeger, A.}
 \newblock \bibinfo{journal}{\bibinfo{title}{Human foetal lung ({{IMR-90}})
   cells: {{Myofibroblasts}} with smooth muscle-like contractile properties}}.
-\newblock {\emph{\JournalTitle{Cell Motil.}}} \textbf{\bibinfo{volume}{34}},
+\newblock {\emph{\JournalTitle{Cell Motility}}} \textbf{\bibinfo{volume}{34}},
   \bibinfo{pages}{288--298},
   \doiprefix\url{10.1002/(SICI)1097-0169(1996)34:4<288::AID-CM4>3.0.CO;2-4}
   (\bibinfo{year}{1996}).
@@ -285,9 +485,11 @@
 \bibinfo{author}{Maiser, A.} \emph{et~al.}
 \newblock \bibinfo{journal}{\bibinfo{title}{Super-resolution in situ analysis
   of active ribosomal {{DNA}} chromatin organization in the nucleolus}}.
-\newblock {\emph{\JournalTitle{Sci Rep}}} \textbf{\bibinfo{volume}{10}},
-  \bibinfo{pages}{7462}, \doiprefix\url{10.1038/s41598-020-64589-x}
-  (\bibinfo{year}{2020}).
+\newblock {\emph{\JournalTitle{Scientific Reports}}}
+  \textbf{\bibinfo{volume}{10}}, \bibinfo{pages}{7462},
+  \doiprefix\url{10.1038/s41598-020-64589-x} (\bibinfo{year}{2020}).
+\newblock \bibinfo{note}{Nucleolar dimension around 100
+  microm{\textasciicircum}3}.
 
 \bibitem{ConadCorsoLodi}
 \bibinfo{title}{{Conad Corso Lodi 130, 20139 Milano (MI) {\textbar} Conad}}.
@@ -300,9 +502,9 @@
 \newblock \bibinfo{journal}{\bibinfo{title}{The {{Role}} of {{Chromatin
   Density}} in {{Cell Population Heterogeneity}} during {{Stem Cell
   Differentiation}}}}.
-\newblock {\emph{\JournalTitle{Sci Rep}}} \textbf{\bibinfo{volume}{7}},
-  \bibinfo{pages}{13307}, \doiprefix\url{10.1038/s41598-017-13731-3}
-  (\bibinfo{year}{2017}).
+\newblock {\emph{\JournalTitle{Scientific Reports}}}
+  \textbf{\bibinfo{volume}{7}}, \bibinfo{pages}{13307},
+  \doiprefix\url{10.1038/s41598-017-13731-3} (\bibinfo{year}{2017}).
 
 \bibitem{robinsonIgvJsEmbeddable2020}
 \bibinfo{author}{Robinson, J.~T.}, \bibinfo{author}{Thorvaldsd{\'o}ttir, H.},
@@ -352,14 +554,67 @@
 \newblock \bibinfo{journal}{\bibinfo{title}{{{HiCRep}}: Assessing the
   reproducibility of {{Hi-C}} data using a stratum-adjusted correlation
   coefficient}}.
-\newblock {\emph{\JournalTitle{Genome Res}}} \textbf{\bibinfo{volume}{27}},
-  \bibinfo{pages}{1939--1949}, \doiprefix\url{10.1101/gr.220640.117}
-  (\bibinfo{year}{2017}).
+\newblock {\emph{\JournalTitle{Genome Research}}}
+  \textbf{\bibinfo{volume}{27}}, \bibinfo{pages}{1939--1949},
+  \doiprefix\url{10.1101/gr.220640.117} (\bibinfo{year}{2017}).
+\newblock \bibinfo{note}{Methods to confront Hi-C maps \par Pearson and
+  Spearman \par ignore spatial features \par SCC \par (Yang et al., 2017, p.
+  1941) \par quantifies differences better \par ``. However, Hi-C data have
+  certain unique characteristics, including domain structures (such as
+  topological association domain [TAD] and A/B compartments) and distance
+  dependence, which refers to the fact that the chromatin interaction
+  frequencies between two genomic loci, on average, decrease substantially as
+  their genomic distance increases.'' (Yang et al., 2017, p. 1939) \par The
+  smoothing process is very important: ``the SCC analysis on unsmoothed data no
+  longer recapitulates the expected relationships among cell lineages,
+  indicating that the smoothing stage is an indispensable component of HiCRep''
+  (Yang et al., 2017, p. 1942). Also, ``our smoothing procedure improves the
+  performance of Pearson- and Spearman-based approaches (Supplemental Fig.
+  S3C,D), confirming its effectiveness.'' (Yang et al., 2017, p. 1942) \par
+  patterns \par ``One prominent pattern is the strong decay of interaction
+  frequency as genomic distance increases between interaction loci'' (Yang et
+  al., 2017, p. 1940) \par (Yang et al., 2017, p. 1940) dependence on genomic
+  distance \par Pearson correlation coefficient show little difference between
+  HiC of different samples --{$>$} no distinguish real biological replicates
+  from unrelated \par ``Another important pattern of Hi-C data is the domain
+  structure in contact maps.'' (Yang et al., 2017, p. 1940) \par stable across
+  cell types \par Pearson and Spearman do not ~take into consideration domains,
+  they just consider points in the matrix \par ``As a result, two biological
+  replicates that have highly similar domain structures may have a low Spearman
+  correlation coefficient; conversely, a sample may have a higher Spearman
+  correlation with an unrelated sample than with its biological replicates when
+  the stochastic variation is high.'' (Yang et al., 2017, p. 1940) \par Tests
+  \par gives better results when confronting pseudo-replicates, replicates and
+  different cell lines \par (Yang et al., 2017, p. 1942) SCC allows the
+  separation of different cells \par increases monotonicaly when increasing
+  sequencing at low coverages, remains fixed at a certain value of coverage,
+  reflecting saturation \par Sequencing depth when increased increases the
+  reproducibility up to a certain plateau (Yang et al., 2017, p. 1945) \par
+  (Yang et al., 2017, p. 1944) the scc monotonically decreases with the
+  sequencing depth, contrarily to other matrices \par Allows good anallysis of
+  cell lineages, contrarily to Spearman and pearson \par stages of program \par
+  1- ``The first stage is smoothing the raw contact matrix in order to reduce
+  local noise in the contact map and to make domain structures more visible.
+  The smoothing is accomplished by applying a 2D mean filter, which replaces
+  the read count of each contact in the contact map with the average counts of
+  all contacts in its neighborhood'' (Yang et al., 2017, p. 1941) \par (Yang et
+  al., 2017, p. 1946) \par ``o handle this issue, we first smoothed the contact
+  map before assessing reproducibility. Although smoothing will reduce the
+  individual spatial resolution, it can improve the contiguity of the regions
+  with elevated interaction,'' (Yang et al., 2017, p. 1946) \par span size h
+  \par tuning, too small --{$>$} no enhance domain boundaries; too big --{$>$}
+  boundaries blurry \par The value for the neighborhood in a matrix of 10 000
+  resolution is preferentially 20 \par 2- ``we stratified the smoothed
+  chromatin interactions according to their genomic distance, and then we
+  applied a novel stratum-adjusted correlation coefficient statistic (SCC)''
+  (Yang et al., 2017, p. 1941) \par Pearson coeff are aggregated in a
+  stratum-specific way THORUGH a weighted average, weights from CMH \par
+  Cochran-Mantel-Haenszel statistic M{\textasciicircum}2}.
 
 \bibitem{robinsonIntegrativeGenomicsViewer2011c}
 \bibinfo{author}{Robinson, J.~T.}
 \newblock \bibinfo{journal}{\bibinfo{title}{Integrative genomics viewer}}.
-\newblock {\emph{\JournalTitle{C O Rresp O N N Ce}}}
+\newblock {\emph{\JournalTitle{c o rresp o n de n ce}}}
   \textbf{\bibinfo{volume}{29}}, \bibinfo{pages}{3} (\bibinfo{year}{2011}).
 
 \end{thebibliography}
