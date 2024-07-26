@@ -1,0 +1,38 @@
+\documentclass[11pt, twoside]{book}
+\input{prefix}  % Place all packages and function definitions in the prefix file
+
+
+\begin{document}
+
+\title{}
+\author{}
+\date{}
+
+% Do not add page numbers
+\pagenumbering{gobble}
+% \input{chapters/00_title_page/title_page}
+
+\tableofcontents
+    % Start page number on abstract
+    
+% \listoffigures
+% \listoftables
+    \cleardoublepage
+    \pagenumbering{arabic}
+    % Insert page number in every page
+    \pagestyle{plain}
+    % \input{chapters/01_abstract/abstract}
+    % \input{chapters/02_introduction/introduction}
+    % \input{chapters/03_objectives/objectives}
+    % \input{/home/maurizio/Documents/GitHub/3DCS/Maurizio/tesi/chapters/04_materials_and_methods/modified_methods_v4.tex}
+    \input{chapters/05_results/modified_results.tex}
+    % \input{chapters/06_discussion/discussion}
+    % \input{chapters/07_conclusions/conclusions}
+    % Stop page number after last numbered chapter
+    \cleardoublepage
+    \pagenumbering{gobble}
+    % \input{chapters/90_appendix_i/appendix_i}
+    % \input{chapters/91_appendix_ii/appendix_ii}
+    
+    {\footnotesize \bibliography{ChromProj.bib}}
+\end{document}

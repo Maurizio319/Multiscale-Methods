@@ -8,47 +8,121 @@ Two methods were then considered to add the variables, which are expressed in al
 Because of the fact that beads of different states could act coordinately in defining the quality of the results, the algorithm \ref{algo: comparison} was devised. It represents a stepwise solution which allows to solve partially the problem at the cost of more simulations to perform. In fact, any choices of parameters are deleted and rethought during the process, in a manner that tries to avoid local \textit{optima}.\\
 
 \begin{algorithm}[H]
-    \caption{Greedy matrix comparison}\label{algo: greedy comparison}
-    \KwResult{Best performing greedy model}
-    \ForAll{attraction parameter}{
-        Construct models by adding the most present attraction parameter to the previous step configuration \;
-        Compute SCC of the model with respect to the reference ranging among a list of possible values\;
-        Select the value of the parameter which gives the best results\;
-        Add that parameter (attraction) with that value to the model\;
-    }
-    \Return{Best greedy model}\;
-    % \tcc{The states are taken from the most populated to the least populated}
-\end{algorithm}
+    \caption{Step-wise process for matrix comparison}\label{algo:comparison}
+    \KwIn{\textit{current\_model}: Chain to be simulated associated to \textit{Ps} array of zeroed parameters, \\ \textit{reference}: Reference matrix}
+    \KwOut{Final model and set of associated parameters}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{algorithm}[H]
-    \caption{Step-wise process for matrix comparison}\label{algo: comparison}
-    \KwResult{Best model}
-    $loop = 0$\;
-    Continue = False\;
-    \While{Continue == True}{
-        $loop$ = $loop$ + 1\;
-        Continue = False\;
-        Construct models by adding the most present attraction parameter to the $(loop-1)^{\text{th}}$ step configuration \;
-        Compute SCC of the model with respect to the reference ranging among a list of possible values\;
-        Select the value of the parameter which gives the best results\;
-        \If{addition gives better results}{
-            Add that parameter (attraction) with that value to the model\;
-            Continue = True
+    \BlankLine
+    $new\_models = []$\;
+    \While{any $P=0$ in $Ps$}{
+        \BlankLine
+        \textbf{\underline{ADDITION}}\;
+        \ForEach{$P$ in $Ps$ if $P = 0$}{
+            $ind\_P \gets$ \textit{index of P in Ps}\;
+            \ForEach{\textit{val} in $test\_vals$}{
+                $addition\_Ps \gets Ps$\;
+                $addition\_Ps[ind\_P] \gets val$\;
+                \textbf{Build} \textit{test\_model(addition\_Ps)}\;
+                \textbf{Get} SCC from \textit{test\_model} and \textit{reference}\;
+                \textbf{Add} \textit{test\_model} to \textit{new\_models}
             }
-        $loop$ = $loop$ + 1\;
-        \ForAll{state in model}{
-            Remove that state from the model\;
-            Vary the value associated to the state with the highest frequency among those remaining\;
-        Compute SCC of each model with respect to the reference ranging among a list of possible values\
         }
-        Select the reduced model which gives the best results\;
-        \If{removal gives better results}{
-            Perform the reduction\;
-        Continue = True
+        \textit{SCCs} $= [SCC_i$ for $m_i$ in $new\_models$]\;
+        $current\_model = new\_model_{argmax(SCCs)}$\;
+        $Ps \gets Ps$ \textit{of current\_model}\;
+        
+        \BlankLine
+        \textbf{\underline{REMOVAL}}\;
+        \textit{removal\_models} $\gets []$\;
+        \ForEach{\textit{P in Ps}}{
+            \If{any removal\_condition}{
+                $ind\_P \gets$ \textit{index of P in Ps}\;
+                $Ps[ind\_P] \gets 0$\;
+                \textbf{Perform} \textbf{ADDITION} $\rightarrow$ \textbf{Add} \textit{add\_model to removal\_models}
+            }
+        $removal\_model = removal\_models_{argmax(SCCs)}$\;
+        $Ps\_removal \gets Ps$ \textit{of removal\_model}\;
         }
-        }
-        \Return{Best model}
+        \If{\textit{SCC} of \textit{removal\_model} \textit{>} \textit{SCC} of \textit{add\_model}}{
+            $current\_model \gets removal\_model$\;
+            $Ps \gets Ps\_{removal}$\;
+        }  
+    }
+
 \end{algorithm}
 
+
+% \begin{algorithm}[H]
+%     \caption{Step-wise process for matrix comparison}\label{algo:comparison}
+%     \KwResult{Best model}
+%     Set \textit{test\_additions}\;
+%     Set \textit{fixed\_interactions}\;
+%     Set \textit{variable\_interactions}\;
+%     Set \textit{start\_values}\;
+%     Set \textit{removal\_conditions}\;
+%     $newparam \gets True$\;
+%     $loop \gets 0$\;
+%     $Continue \gets \text{True}$\;
+
+%     \While{$Continue$}{
+%         $loop \gets loop + 1$\;
+%         $SCCs \gets []$\;
+
+%         \If{$newparam$}{
+%             \ForEach{\textit{interaction} \textbf{in} \textit{variable\_interactions}}{
+%                 $value\_interaction \gets start\_values[\textit{interaction}]$\;
+%                 \ForEach{\textit{addition} \textbf{in} \textit{test\_additions}}{
+%                     $value\_interaction \gets value\_interaction + \textit{addition}$\;
+
+%                     \If{$value\_interaction \geq 0$}{
+%                         $type\_interaction \gets \textit{"attraction"}$
+%                     } 
+%                     \Else{
+%                         $type\_interaction \gets \textit{"repulsion"}$
+%                     }
+%                     Construct model by adding \textit{interaction} with value \textit{value\_interaction} to the $(loop-1)^{\text{th}}$ step configuration\;
+%                     Compute \textit{SCC} of the model with respect to the reference matrix\;
+%                     Append \textit{SCC} to \textit{SCCs}\;
+%                 }
+%             }
+
+%             Get the interaction and the value of the interaction that generates the highest \textit{SCC} among \textit{SCCs}, \textit{best\_interaction} and \textit{best\_value} respectively\; 
+
+%             $start\_values[\textit{best\_interaction}] \gets best\_value$\;
+%             Append \textit{best\_interaction} to \textit{fixed\_interactions}\;
+%             Remove \textit{best\_interaction} from \textit{variable\_interactions}\;
+%             $newparam \gets False$\;
+%         }
+%         \Else{
+%             \ForEach{\textit{interaction} \textbf{in} \textit{fixed\_interactions}}{
+%                 \If{$\textit{interaction} \neq \textit{best\_interaction}$}{
+%                     \If{any \textit{removal\_condition} \textbf{in} \textit{removal\_conditions}}{
+%                         Remove \textit{interaction} from model\;
+%                         Remove \textit{interaction} from \textit{fixed\_interactions}\;
+%                         Append \textit{interaction} to \textit{variable\_interactions}\;
+
+%                         \ForEach{\textit{var\_interaction} \textbf{in} \textit{variable\_interactions}}{
+%                             $value\_interaction \gets start\_values[\textit{var\_interaction}]$\;
+%                             \ForEach{\textit{addition} \textbf{in} \textit{test\_additions}}{
+%                                 $value\_interaction \gets value\_interaction + \textit{addition}$\;
+
+%                                 \If{$value\_interaction \geq 0$}{
+%                                     $type\_interaction \gets \textit{"attraction"}$
+%                                 } 
+%                                 \Else{
+%                                     $type\_interaction \gets \textit{"repulsion"}$
+%                                 }
+%                                 Construct model by adding \textit{interaction} with value \textit{value\_interaction} to the $(loop-1)^{\text{th}}$ step configuration\;
+%                                 Compute \textit{SCC} of the model with respect to the reference matrix\;
+%                                 Append \textit{SCC} to \textit{SCCs}\;
+%                             }
+%                         }
+%                     }
+%                 }
+%             }
+%             Get and reproduce the configuration that generates the highest \textit{SCC} among \textit{SCCs}\;
+%         }
+%         \textbf{if not} \textit{variable\_interactions}: $Continue \gets False$
+
+%     }
+% \end{algorithm}

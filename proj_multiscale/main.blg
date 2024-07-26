@@ -5,10 +5,9 @@ Reallocating 'name_of_file' (item size: 1) to 14 items.
 The style file: naturemag-doi.bst
 Reallocating 'name_of_file' (item size: 1) to 17 items.
 Database file #1: bibliography.bib
-Warning--I didn't find a database entry for "HomePage2023"
 You've used 44 entries,
             2380 wiz_defined-function locations,
-            1330 strings with 40412 characters,
+            1328 strings with 41400 characters,
 and the built_in function-call counts, 16677 in all, are:
 = -- 1141
 > -- 434
@@ -47,4 +46,3 @@ warning$ -- 0
 while$ -- 87
 width$ -- 46
 write$ -- 510
-(There was 1 warning)
